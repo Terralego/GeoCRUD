@@ -1,5 +1,25 @@
 [
 {
+    "model": "template_model.template",
+    "pk": 1,
+    "fields": {
+        "name": "ODT Sheet",
+        "template_file": "demo/template_model/city.odt",
+        "added": "2020-06-03T13:06:48.936Z",
+        "updated": "2020-06-04T08:04:34.658Z"
+    }
+},
+{
+    "model": "template_model.template",
+    "pk": 2,
+    "fields": {
+        "name": "PDF sheet",
+        "template_file": "demo/template_model/test.pdf",
+        "added": "2020-06-04T12:41:08.730Z",
+        "updated": "2020-06-08T15:45:57.983Z"
+    }
+},
+{
     "model": "mapbox_baselayer.mapbaselayer",
     "pk": 2,
     "fields": {
@@ -38,7 +58,7 @@
     "pk": 1,
     "fields": {
         "base_layer": 2,
-        "url": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        "url": "//a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
     }
 },
 {
@@ -46,7 +66,7 @@
     "pk": 2,
     "fields": {
         "base_layer": 2,
-        "url": "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        "url": "//b.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
     }
 },
 {
@@ -54,7 +74,7 @@
     "pk": 3,
     "fields": {
         "base_layer": 2,
-        "url": "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        "url": "//c.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
     }
 },
 {
@@ -82,157 +102,12 @@
     }
 },
 {
-    "model": "geostore.layergroup",
-    "pk": 1,
-    "fields": {
-        "created_at": "2020-05-29T09:51:38.431Z",
-        "updated_at": "2020-05-29T09:51:38.431Z",
-        "name": "default",
-        "slug": "default",
-        "layers": []
-    }
-},
-{
-    "model": "geostore.feature",
-    "pk": 1,
-    "fields": {
-        "created_at": "2020-05-29T12:06:51.388Z",
-        "updated_at": "2020-05-29T12:07:34.220Z",
-        "geom": "SRID=4326;POINT (1.053269710780654 44.14937686939209)",
-        "identifier": "cdb59756-3744-4cbd-8697-58dc00a51d11",
-        "properties": {
-            "city": "Moissac",
-            "name": "My point",
-            "country": "France"
-        },
-        "layer": 1,
-        "source": null,
-        "target": null
-    }
-},
-{
-    "model": "geostore.feature",
-    "pk": 3,
-    "fields": {
-        "created_at": "2020-06-02T08:38:32.441Z",
-        "updated_at": "2020-06-03T10:14:48.239Z",
-        "geom": "SRID=4326;LINESTRING (0.6186565148843215 43.15000746817492, 1.052001384333693 43.18793411665754, 1.27734071644619 43.40240688457808, 1.364009690336559 43.64121639893997, 1.589349022450307 43.75400671757558, 2.05736148145462 43.95399891150689, 2.265367018790215 43.99142277574362)",
-        "identifier": "20b8c133-426c-42da-989f-315ab7399998",
-        "properties": {
-            "name": "Via Tolosa",
-            "length": 50.5,
-            "duration": 1.5
-        },
-        "layer": 2,
-        "source": null,
-        "target": null
-    }
-},
-{
-    "model": "geostore.feature",
-    "pk": 4,
-    "fields": {
-        "created_at": "2020-06-02T08:42:54.210Z",
-        "updated_at": "2020-06-03T10:03:56.737Z",
-        "geom": "SRID=4326;MULTIPOLYGON (((1.410277827721074 43.68586677970227, 1.440406291302077 43.68877164578829, 1.441410573421815 43.6502707535713, 1.467297822859738 43.64713900439632, 1.469870307043014 43.64568027257738, 1.475457544096397 43.65440683438305, 1.481725043169859 43.65809147854007, 1.493736487437503 43.6620080393709, 1.501667500584999 43.67206674469216, 1.519744578733533 43.65099741409123, 1.492628961510665 43.63282826359035, 1.497650372107135 43.61901603434442, 1.512714603898818 43.59283679137572, 1.499658936344643 43.56965578729375, 1.505684629060824 43.55874020525033, 1.498654654224878 43.53617506817604, 1.454466240971957 43.55000631556747, 1.429359187987414 43.55073418805476, 1.417307802554999 43.54054317332638, 1.372115107182339 43.54927843429036, 1.351025182675643 43.57693174317004, 1.346003772078032 43.60893550554097, 1.370106542944004 43.631473391169, 1.397222160166908 43.63220027907517, 1.411282109838818 43.66054204993699, 1.410277827721074 43.68586677970227)))",
-        "identifier": "39ddcb7a-964a-4e6f-9588-4dd0c721d17e",
-        "properties": {
-            "name": "Toulouse",
-            "zip_codes": [
-                "31000",
-                "31100",
-                "31200",
-                "31300",
-                "31300",
-                "31500"
-            ],
-            "population": 453000,
-            "description": "<p><strong>Toulouse</strong> (<a href=\"https://en.wikipedia.org/wiki/Help:IPA/English\" rel=\"noopener noreferrer\" target=\"_blank\">/tu\u02d0\u02c8lu\u02d0z/</a>,<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-4\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[4]</sup></a> <a href=\"https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key\" rel=\"noopener noreferrer\" target=\"_blank\"><em>too-LOOZ</em></a>; French:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Help:IPA/French\" rel=\"noopener noreferrer\" target=\"_blank\">[tuluz]</a> (<a href=\"https://en.wikipedia.org/wiki/File:Fr-Toulouse.ogg\" rel=\"noopener noreferrer\" target=\"_blank\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png\" alt=\"About this sound\" width=\"11\" height=\"11\"></a><a href=\"https://upload.wikimedia.org/wikipedia/commons/d/d8/Fr-Toulouse.ogg\" rel=\"noopener noreferrer\" target=\"_blank\">listen</a>); <a href=\"https://en.wikipedia.org/wiki/Occitan_language\" rel=\"noopener noreferrer\" target=\"_blank\">Occitan</a>: <em>Tolosa</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Occitan\" rel=\"noopener noreferrer\" target=\"_blank\">[tu\u02c8luzo]</a>; <a href=\"https://en.wikipedia.org/wiki/Latin_language\" rel=\"noopener noreferrer\" target=\"_blank\">Latin</a>: <em>Tolosa</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Latin\" rel=\"noopener noreferrer\" target=\"_blank\">[to\u02c8lo\u02d0sa]</a>) is the capital of the French <a href=\"https://en.wikipedia.org/wiki/Departments_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">department</a> of <a href=\"https://en.wikipedia.org/wiki/Haute-Garonne\" rel=\"noopener noreferrer\" target=\"_blank\">Haute-Garonne</a> and of the <a href=\"https://en.wikipedia.org/wiki/Regions_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">region</a> of <a href=\"https://en.wikipedia.org/wiki/Occitanie\" rel=\"noopener noreferrer\" target=\"_blank\">Occitanie</a>. The city is on the banks of the <a href=\"https://en.wikipedia.org/wiki/Garonne\" rel=\"noopener noreferrer\" target=\"_blank\">River Garonne</a>, 150 kilometres (93 miles) from the <a href=\"https://en.wikipedia.org/wiki/Mediterranean_Sea\" rel=\"noopener noreferrer\" target=\"_blank\">Mediterranean Sea</a>, 230&nbsp;km (143&nbsp;mi) from the <a href=\"https://en.wikipedia.org/wiki/Atlantic_Ocean\" rel=\"noopener noreferrer\" target=\"_blank\">Atlantic Ocean</a> and 680&nbsp;km (420&nbsp;mi) from <a href=\"https://en.wikipedia.org/wiki/Paris\" rel=\"noopener noreferrer\" target=\"_blank\">Paris</a>. It is the fourth-largest city in <a href=\"https://en.wikipedia.org/wiki/France\" rel=\"noopener noreferrer\" target=\"_blank\">France</a>, with 466,297 inhabitants as of January 2014. In France, Toulouse is called the \"Pink City\" (<em>La Ville Rose</em>).</p><p>The Toulouse Metro area, with 1,312,304 inhabitants as of 2014, is France's fourth-largest metropolitan area, after Paris, <a href=\"https://en.wikipedia.org/wiki/Lyon\" rel=\"noopener noreferrer\" target=\"_blank\">Lyon</a> and <a href=\"https://en.wikipedia.org/wiki/Marseille\" rel=\"noopener noreferrer\" target=\"_blank\">Marseille</a>, and ahead of <a href=\"https://en.wikipedia.org/wiki/Lille\" rel=\"noopener noreferrer\" target=\"_blank\">Lille</a> and <a href=\"https://en.wikipedia.org/wiki/Bordeaux\" rel=\"noopener noreferrer\" target=\"_blank\">Bordeaux</a>.</p><p>Toulouse is the centre of the European aerospace industry, with the headquarters of <a href=\"https://en.wikipedia.org/wiki/Airbus\" rel=\"noopener noreferrer\" target=\"_blank\">Airbus</a> (formerly EADS), the <a href=\"https://en.wikipedia.org/wiki/SPOT_(satellites)\" rel=\"noopener noreferrer\" target=\"_blank\">SPOT satellite system</a>, <a href=\"https://en.wikipedia.org/wiki/ATR_(aircraft_manufacturer)\" rel=\"noopener noreferrer\" target=\"_blank\">ATR</a> and the <a href=\"https://en.wikipedia.org/wiki/Aerospace_Valley\" rel=\"noopener noreferrer\" target=\"_blank\">Aerospace Valley</a>. It also hosts the European headquarters of <a href=\"https://en.wikipedia.org/wiki/Intel\" rel=\"noopener noreferrer\" target=\"_blank\">Intel</a> and <a href=\"https://en.wikipedia.org/wiki/CNES\" rel=\"noopener noreferrer\" target=\"_blank\">CNES</a>'s <a href=\"https://en.wikipedia.org/wiki/Toulouse_Space_Centre\" rel=\"noopener noreferrer\" target=\"_blank\">Toulouse Space Centre</a> (CST), the largest space centre in Europe.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-5\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[5]</sup></a> <a href=\"https://en.wikipedia.org/wiki/Thales_Alenia_Space\" rel=\"noopener noreferrer\" target=\"_blank\">Thales Alenia Space</a>, <a href=\"https://en.wikipedia.org/wiki/ATR_(aircraft_manufacturer)\" rel=\"noopener noreferrer\" target=\"_blank\">ATR</a>, <a href=\"https://en.wikipedia.org/wiki/Safran\" rel=\"noopener noreferrer\" target=\"_blank\">SAFRAN</a>, <a href=\"https://en.wikipedia.org/wiki/Liebherr_Aerospace\" rel=\"noopener noreferrer\" target=\"_blank\">Liebherr-Aerospace</a> and <a href=\"https://en.wikipedia.org/wiki/Airbus_Defence_and_Space\" rel=\"noopener noreferrer\" target=\"_blank\">Airbus Defence and Space</a> also have a significant presence in Toulouse.</p><p>The <a href=\"https://en.wikipedia.org/wiki/University_of_Toulouse\" rel=\"noopener noreferrer\" target=\"_blank\">University of Toulouse</a> is one of the oldest in Europe (founded in 1229) and, with more than 103,000 students, it is the fourth-largest university campus in France, after the universities of <a href=\"https://en.wikipedia.org/wiki/University_of_Paris\" rel=\"noopener noreferrer\" target=\"_blank\">Paris</a>, <a href=\"https://en.wikipedia.org/wiki/University_of_Lyon\" rel=\"noopener noreferrer\" target=\"_blank\">Lyon</a> and <a href=\"https://en.wikipedia.org/wiki/University_of_Lille\" rel=\"noopener noreferrer\" target=\"_blank\">Lille</a>.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-6\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[6]</sup></a></p><p>The air route between <a href=\"https://en.wikipedia.org/wiki/Toulouse%E2%80%93Blagnac_Airport\" rel=\"noopener noreferrer\" target=\"_blank\">Toulouse\u2013Blagnac</a> and <a href=\"https://en.wikipedia.org/wiki/Paris_Orly_Airport\" rel=\"noopener noreferrer\" target=\"_blank\">Paris Orly</a> is the busiest in Europe, transporting 2.4&nbsp;million passengers in 2014.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-7\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[7]</sup></a> According to the rankings of <a href=\"https://en.wikipedia.org/wiki/L%27Express\" rel=\"noopener noreferrer\" target=\"_blank\"><em>L'Express</em></a> and <a href=\"https://en.wikipedia.org/wiki/Challenges_(magazine)\" rel=\"noopener noreferrer\" target=\"_blank\"><em>Challenges</em></a>, Toulouse is the most dynamic French city.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-8\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[8]</sup></a><a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-9\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[9]</sup></a><a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-10\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[10]</sup></a></p><p>Founded by the Romans, the city was the capital of the <a href=\"https://en.wikipedia.org/wiki/Visigothic_Kingdom\" rel=\"noopener noreferrer\" target=\"_blank\">Visigothic Kingdom</a> in the 5th century and the capital of the <a href=\"https://en.wikipedia.org/wiki/Provinces_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">province</a> of <a href=\"https://en.wikipedia.org/wiki/Languedoc\" rel=\"noopener noreferrer\" target=\"_blank\">Languedoc</a> in the <a href=\"https://en.wikipedia.org/wiki/Late_Middle_Ages\" rel=\"noopener noreferrer\" target=\"_blank\">Late Middle Ages</a> and <a href=\"https://en.wikipedia.org/wiki/Early_modern_period\" rel=\"noopener noreferrer\" target=\"_blank\">early modern period</a> (provinces were abolished during the <a href=\"https://en.wikipedia.org/wiki/French_Revolution\" rel=\"noopener noreferrer\" target=\"_blank\">French Revolution</a>), making it the unofficial capital of the cultural region of <a href=\"https://en.wikipedia.org/wiki/Occitania\" rel=\"noopener noreferrer\" target=\"_blank\">Occitania</a> (Southern France). It is now the capital of the <a href=\"https://en.wikipedia.org/wiki/Occitanie\" rel=\"noopener noreferrer\" target=\"_blank\">Occitanie</a> <a href=\"https://en.wikipedia.org/wiki/R%C3%A9gion_in_France\" rel=\"noopener noreferrer\" target=\"_blank\">region</a>, the second largest region in <a href=\"https://en.wikipedia.org/wiki/Metropolitan_France\" rel=\"noopener noreferrer\" target=\"_blank\">Metropolitan France</a>.</p><p>A city with unique architecture made of pinkish <a href=\"https://en.wikipedia.org/wiki/Terracotta\" rel=\"noopener noreferrer\" target=\"_blank\">terracotta</a> bricks, which earned it the nickname <em>la Ville Rose</em> (\"the Pink City\"), Toulouse counts two <a href=\"https://en.wikipedia.org/wiki/UNESCO\" rel=\"noopener noreferrer\" target=\"_blank\">UNESCO</a> <a href=\"https://en.wikipedia.org/wiki/World_Heritage_Site\" rel=\"noopener noreferrer\" target=\"_blank\">World Heritage Sites</a>, the <a href=\"https://en.wikipedia.org/wiki/Canal_du_Midi\" rel=\"noopener noreferrer\" target=\"_blank\">Canal du Midi</a> (designated in 1996 and shared with other cities), and the <a href=\"https://en.wikipedia.org/wiki/Basilica_of_St._Sernin,_Toulouse\" rel=\"noopener noreferrer\" target=\"_blank\">Basilica of St. Sernin</a>, the largest remaining Romanesque building in Europe,<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-11\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[11]</sup></a> designated in 1998 because of its significance to the <a href=\"https://en.wikipedia.org/wiki/World_Heritage_Sites_of_the_Routes_of_Santiago_de_Compostela_in_France\" rel=\"noopener noreferrer\" target=\"_blank\">Santiago de Compostela pilgrimage route</a>.</p>",
-            "main_picture": "data:image/jpeg;name=terra_geocrud/features/4/data_file/main_picture/Montage_Toulouse_3.jpg;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
-        },
-        "layer": 3,
-        "source": null,
-        "target": null
-    }
-},
-{
-    "model": "geostore.layerextrageom",
-    "pk": 1,
-    "fields": {
-        "created_at": "2020-06-02T12:49:16.800Z",
-        "updated_at": "2020-06-02T12:49:50.640Z",
-        "settings": {},
-        "geom_type": 4,
-        "layer": 2,
-        "order": 0,
-        "slug": "information-desks",
-        "title": "Information Desks",
-        "editable": true
-    }
-},
-{
-    "model": "geostore.layerextrageom",
-    "pk": 2,
-    "fields": {
-        "created_at": "2020-06-03T09:54:35.376Z",
-        "updated_at": "2020-06-03T09:54:35.376Z",
-        "settings": {},
-        "geom_type": 0,
-        "layer": 3,
-        "order": 0,
-        "slug": "center",
-        "title": "Center",
-        "editable": true
-    }
-},
-{
-    "model": "geostore.layerextrageom",
-    "pk": 3,
-    "fields": {
-        "created_at": "2020-06-03T09:54:35.381Z",
-        "updated_at": "2020-06-03T09:54:58.917Z",
-        "settings": {},
-        "geom_type": 0,
-        "layer": 3,
-        "order": 1,
-        "slug": "centroid",
-        "title": "Centro\u00efd",
-        "editable": true
-    }
-},
-{
-    "model": "geostore.featureextrageom",
-    "pk": 1,
-    "fields": {
-        "created_at": "2020-06-02T12:49:35.295Z",
-        "updated_at": "2020-06-02T12:49:35.295Z",
-        "feature": 3,
-        "layer_extra_geom": 1,
-        "geom": "SRID=4326;POINT (0.7387104906842978 43.1834232214955)",
-        "properties": {},
-        "identifier": "366b2a5a-e1cc-477d-821f-c332d0239ccd"
-    }
-},
-{
-    "model": "geostore.featureextrageom",
-    "pk": 2,
-    "fields": {
-        "created_at": "2020-06-03T10:03:56.754Z",
-        "updated_at": "2020-06-03T10:03:56.754Z",
-        "feature": 4,
-        "layer_extra_geom": 2,
-        "geom": "SRID=4326;POINT (1.45279883639887 43.59720101461766)",
-        "properties": {},
-        "identifier": "52a0e8fd-4a52-4196-99cb-4946e81d98a1"
-    }
-},
-{
     "model": "terra_geocrud.crudgroupview",
     "pk": 1,
     "fields": {
         "name": "Outdoor Activities",
         "order": 20,
-        "pictogram": "crud/groups/pictograms/images.png"
+        "pictogram": "demo/crud/groups/pictograms/images.png"
     }
 },
 {
@@ -249,7 +124,7 @@
     "pk": 1,
     "fields": {
         "name": "Points",
-        "order": 20,
+        "order": 30,
         "object_name": "",
         "object_name_plural": "",
         "group": null,
@@ -273,12 +148,12 @@
     "pk": 2,
     "fields": {
         "name": "Treks",
-        "order": 10,
+        "order": 20,
         "object_name": "trek",
         "object_name_plural": "treks",
         "group": 1,
         "layer": 2,
-        "pictogram": "crud/views/pictograms/unnamed.png",
+        "pictogram": "demo/crud/views/pictograms/unnamed.png",
         "map_style": {
             "type": "line",
             "paint": {
@@ -313,12 +188,12 @@
     "pk": 3,
     "fields": {
         "name": "Cities",
-        "order": 3,
+        "order": 10,
         "object_name": "city",
         "object_name_plural": "cities",
         "group": 2,
         "layer": 3,
-        "pictogram": "crud/views/pictograms/administration-2031343_640.png",
+        "pictogram": "demo/crud/views/pictograms/administration-2031343_640.png",
         "map_style": {
             "type": "fill",
             "paint": {
@@ -344,7 +219,10 @@
         "settings": {},
         "feature_title_property": 7,
         "visible": true,
-        "templates": [],
+        "templates": [
+            1,
+            2
+        ],
         "default_list_properties": [
             7,
             8,
@@ -394,6 +272,26 @@
         "label": "Others",
         "slug": "others",
         "pictogram": ""
+    }
+},
+{
+    "model": "terra_geocrud.attachmentcategory",
+    "pk": 1,
+    "fields": {
+        "name": "Gallery",
+        "pictogram": ""
+    }
+},
+{
+    "model": "terra_geocrud.featurepicture",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-06-04T09:20:47.895Z",
+        "updated_at": "2020-06-04T09:20:47.895Z",
+        "category": 1,
+        "legend": "Capture-d%u2019\u00e9cran-2018-10-17-\u00e0-09.42.10.png",
+        "feature": 3,
+        "image": "demo/terra_geocrud/features/3/pictures/Capture-du2019\u00e9cran-2018-10-17-\u00e0-09.42.10.png"
     }
 },
 {
@@ -610,1137 +508,209 @@
     }
 },
 {
-    "model": "auth.permission",
-    "pk": 1,
-    "fields": {
-        "name": "Can add log entry",
-        "content_type": 1,
-        "codename": "add_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 2,
-    "fields": {
-        "name": "Can change log entry",
-        "content_type": 1,
-        "codename": "change_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 3,
-    "fields": {
-        "name": "Can delete log entry",
-        "content_type": 1,
-        "codename": "delete_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 4,
-    "fields": {
-        "name": "Can view log entry",
-        "content_type": 1,
-        "codename": "view_logentry"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 5,
-    "fields": {
-        "name": "Can add permission",
-        "content_type": 2,
-        "codename": "add_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 6,
-    "fields": {
-        "name": "Can change permission",
-        "content_type": 2,
-        "codename": "change_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 7,
-    "fields": {
-        "name": "Can delete permission",
-        "content_type": 2,
-        "codename": "delete_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 8,
-    "fields": {
-        "name": "Can view permission",
-        "content_type": 2,
-        "codename": "view_permission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 9,
-    "fields": {
-        "name": "Can add group",
-        "content_type": 3,
-        "codename": "add_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 10,
-    "fields": {
-        "name": "Can change group",
-        "content_type": 3,
-        "codename": "change_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 11,
-    "fields": {
-        "name": "Can delete group",
-        "content_type": 3,
-        "codename": "delete_group"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 12,
-    "fields": {
-        "name": "Can view group",
-        "content_type": 3,
-        "codename": "view_group"
-    }
-},
-{
-    "model": "auth.permission",
+    "model": "terra_geocrud.crudviewproperty",
     "pk": 13,
     "fields": {
-        "name": "Can add content type",
-        "content_type": 4,
-        "codename": "add_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-        "name": "Can change content type",
-        "content_type": 4,
-        "codename": "change_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-        "name": "Can delete content type",
-        "content_type": 4,
-        "codename": "delete_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-        "name": "Can view content type",
-        "content_type": 4,
-        "codename": "view_contenttype"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-        "name": "Can add session",
-        "content_type": 5,
-        "codename": "add_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-        "name": "Can change session",
-        "content_type": 5,
-        "codename": "change_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-        "name": "Can delete session",
-        "content_type": 5,
-        "codename": "delete_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-        "name": "Can view session",
-        "content_type": 5,
-        "codename": "view_session"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-        "name": "Can add template",
-        "content_type": 6,
-        "codename": "add_template"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-        "name": "Can change template",
-        "content_type": 6,
-        "codename": "change_template"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-        "name": "Can delete template",
-        "content_type": 6,
-        "codename": "delete_template"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-        "name": "Can view template",
-        "content_type": 6,
-        "codename": "view_template"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-        "name": "Can add revision",
-        "content_type": 7,
-        "codename": "add_revision"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-        "name": "Can change revision",
-        "content_type": 7,
-        "codename": "change_revision"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-        "name": "Can delete revision",
-        "content_type": 7,
-        "codename": "delete_revision"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-        "name": "Can view revision",
-        "content_type": 7,
-        "codename": "view_revision"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-        "name": "Can add version",
-        "content_type": 8,
-        "codename": "add_version"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-        "name": "Can change version",
-        "content_type": 8,
-        "codename": "change_version"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-        "name": "Can delete version",
-        "content_type": 8,
-        "codename": "delete_version"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-        "name": "Can view version",
-        "content_type": 8,
-        "codename": "view_version"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 33,
-    "fields": {
-        "name": "Can add kv store",
-        "content_type": 9,
-        "codename": "add_kvstore"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 34,
-    "fields": {
-        "name": "Can change kv store",
-        "content_type": 9,
-        "codename": "change_kvstore"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 35,
-    "fields": {
-        "name": "Can delete kv store",
-        "content_type": 9,
-        "codename": "delete_kvstore"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 36,
-    "fields": {
-        "name": "Can view kv store",
-        "content_type": 9,
-        "codename": "view_kvstore"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 37,
-    "fields": {
-        "name": "Can add Map base layers",
-        "content_type": 10,
-        "codename": "add_mapbaselayer"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 38,
-    "fields": {
-        "name": "Can change Map base layers",
-        "content_type": 10,
-        "codename": "change_mapbaselayer"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 39,
-    "fields": {
-        "name": "Can delete Map base layers",
-        "content_type": 10,
-        "codename": "delete_mapbaselayer"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 40,
-    "fields": {
-        "name": "Can view Map base layers",
-        "content_type": 10,
-        "codename": "view_mapbaselayer"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 41,
-    "fields": {
-        "name": "Can add base layer tile",
-        "content_type": 11,
-        "codename": "add_baselayertile"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 42,
-    "fields": {
-        "name": "Can change base layer tile",
-        "content_type": 11,
-        "codename": "change_baselayertile"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 43,
-    "fields": {
-        "name": "Can delete base layer tile",
-        "content_type": 11,
-        "codename": "delete_baselayertile"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 44,
-    "fields": {
-        "name": "Can view base layer tile",
-        "content_type": 11,
-        "codename": "view_baselayertile"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 45,
-    "fields": {
-        "name": "Can add terra user",
-        "content_type": 12,
-        "codename": "add_terrauser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 46,
-    "fields": {
-        "name": "Can change terra user",
-        "content_type": 12,
-        "codename": "change_terrauser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 47,
-    "fields": {
-        "name": "Can delete terra user",
-        "content_type": 12,
-        "codename": "delete_terrauser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 48,
-    "fields": {
-        "name": "Can view terra user",
-        "content_type": 12,
-        "codename": "view_terrauser"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 49,
-    "fields": {
-        "name": "Can add read model",
-        "content_type": 13,
-        "codename": "add_readmodel"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 50,
-    "fields": {
-        "name": "Can change read model",
-        "content_type": 13,
-        "codename": "change_readmodel"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 51,
-    "fields": {
-        "name": "Can delete read model",
-        "content_type": 13,
-        "codename": "delete_readmodel"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 52,
-    "fields": {
-        "name": "Can view read model",
-        "content_type": 13,
-        "codename": "view_readmodel"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 53,
-    "fields": {
-        "name": "Can add terra permission",
-        "content_type": 14,
-        "codename": "add_terrapermission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 54,
-    "fields": {
-        "name": "Can change terra permission",
-        "content_type": 14,
-        "codename": "change_terrapermission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 55,
-    "fields": {
-        "name": "Can delete terra permission",
-        "content_type": 14,
-        "codename": "delete_terrapermission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 56,
-    "fields": {
-        "name": "Can view terra permission",
-        "content_type": 14,
-        "codename": "view_terrapermission"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 57,
-    "fields": {
-        "name": "Is able to create, delete, update users",
-        "content_type": 14,
-        "codename": "can_manage_users"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 58,
-    "fields": {
-        "name": "Is able to create, delete, update groups",
-        "content_type": 14,
-        "codename": "can_manage_groups"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 59,
-    "fields": {
-        "name": "Can add feature",
-        "content_type": 15,
-        "codename": "add_feature"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 60,
-    "fields": {
-        "name": "Can change feature",
-        "content_type": 15,
-        "codename": "change_feature"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 61,
-    "fields": {
-        "name": "Can delete feature",
-        "content_type": 15,
-        "codename": "delete_feature"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 62,
-    "fields": {
-        "name": "Can view feature",
-        "content_type": 15,
-        "codename": "view_feature"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 63,
-    "fields": {
-        "name": "Can add feature relation",
-        "content_type": 16,
-        "codename": "add_featurerelation"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 64,
-    "fields": {
-        "name": "Can change feature relation",
-        "content_type": 16,
-        "codename": "change_featurerelation"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 65,
-    "fields": {
-        "name": "Can delete feature relation",
-        "content_type": 16,
-        "codename": "delete_featurerelation"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 66,
-    "fields": {
-        "name": "Can view feature relation",
-        "content_type": 16,
-        "codename": "view_featurerelation"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 67,
-    "fields": {
-        "name": "Can add layer",
-        "content_type": 17,
-        "codename": "add_layer"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 68,
-    "fields": {
-        "name": "Can change layer",
-        "content_type": 17,
-        "codename": "change_layer"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 69,
-    "fields": {
-        "name": "Can delete layer",
-        "content_type": 17,
-        "codename": "delete_layer"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 70,
-    "fields": {
-        "name": "Can view layer",
-        "content_type": 17,
-        "codename": "view_layer"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 71,
-    "fields": {
-        "name": "Has all permissions on layers",
-        "content_type": 17,
-        "codename": "can_manage_layers"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 72,
-    "fields": {
-        "name": "Is able to export layers",
-        "content_type": 17,
-        "codename": "can_export_layers"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 73,
-    "fields": {
-        "name": "Is able to import layers",
-        "content_type": 17,
-        "codename": "can_import_layers"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 74,
-    "fields": {
-        "name": "Can add layer relation",
-        "content_type": 18,
-        "codename": "add_layerrelation"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 75,
-    "fields": {
-        "name": "Can change layer relation",
-        "content_type": 18,
-        "codename": "change_layerrelation"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 76,
-    "fields": {
-        "name": "Can delete layer relation",
-        "content_type": 18,
-        "codename": "delete_layerrelation"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 77,
-    "fields": {
-        "name": "Can view layer relation",
-        "content_type": 18,
-        "codename": "view_layerrelation"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 78,
-    "fields": {
-        "name": "Can add layer group",
-        "content_type": 19,
-        "codename": "add_layergroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 79,
-    "fields": {
-        "name": "Can change layer group",
-        "content_type": 19,
-        "codename": "change_layergroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 80,
-    "fields": {
-        "name": "Can delete layer group",
-        "content_type": 19,
-        "codename": "delete_layergroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 81,
-    "fields": {
-        "name": "Can view layer group",
-        "content_type": 19,
-        "codename": "view_layergroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 82,
-    "fields": {
-        "name": "Can add layer extra geom",
-        "content_type": 20,
-        "codename": "add_layerextrageom"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 83,
-    "fields": {
-        "name": "Can change layer extra geom",
-        "content_type": 20,
-        "codename": "change_layerextrageom"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 84,
-    "fields": {
-        "name": "Can delete layer extra geom",
-        "content_type": 20,
-        "codename": "delete_layerextrageom"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 85,
-    "fields": {
-        "name": "Can view layer extra geom",
-        "content_type": 20,
-        "codename": "view_layerextrageom"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 86,
-    "fields": {
-        "name": "Can add feature extra geom",
-        "content_type": 21,
-        "codename": "add_featureextrageom"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 87,
-    "fields": {
-        "name": "Can change feature extra geom",
-        "content_type": 21,
-        "codename": "change_featureextrageom"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 88,
-    "fields": {
-        "name": "Can delete feature extra geom",
-        "content_type": 21,
-        "codename": "delete_featureextrageom"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 89,
-    "fields": {
-        "name": "Can view feature extra geom",
-        "content_type": 21,
-        "codename": "view_featureextrageom"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 90,
-    "fields": {
-        "name": "Can add Group",
-        "content_type": 22,
-        "codename": "add_crudgroupview"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 91,
-    "fields": {
-        "name": "Can change Group",
-        "content_type": 22,
-        "codename": "change_crudgroupview"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 92,
-    "fields": {
-        "name": "Can delete Group",
-        "content_type": 22,
-        "codename": "delete_crudgroupview"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 93,
-    "fields": {
-        "name": "Can view Group",
-        "content_type": 22,
-        "codename": "view_crudgroupview"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 94,
-    "fields": {
-        "name": "Can add View",
-        "content_type": 23,
-        "codename": "add_crudview"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 95,
-    "fields": {
-        "name": "Can change View",
-        "content_type": 23,
-        "codename": "change_crudview"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 96,
-    "fields": {
-        "name": "Can delete View",
-        "content_type": 23,
-        "codename": "delete_crudview"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 97,
-    "fields": {
-        "name": "Can view View",
-        "content_type": 23,
-        "codename": "view_crudview"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 98,
-    "fields": {
-        "name": "Can add Feature properties display group",
-        "content_type": 24,
-        "codename": "add_featurepropertydisplaygroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 99,
-    "fields": {
-        "name": "Can change Feature properties display group",
-        "content_type": 24,
-        "codename": "change_featurepropertydisplaygroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 100,
-    "fields": {
-        "name": "Can delete Feature properties display group",
-        "content_type": 24,
-        "codename": "delete_featurepropertydisplaygroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 101,
-    "fields": {
-        "name": "Can view Feature properties display group",
-        "content_type": 24,
-        "codename": "view_featurepropertydisplaygroup"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 102,
-    "fields": {
-        "name": "Can add Attachment category",
-        "content_type": 25,
-        "codename": "add_attachmentcategory"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 103,
-    "fields": {
-        "name": "Can change Attachment category",
-        "content_type": 25,
-        "codename": "change_attachmentcategory"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 104,
-    "fields": {
-        "name": "Can delete Attachment category",
-        "content_type": 25,
-        "codename": "delete_attachmentcategory"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 105,
-    "fields": {
-        "name": "Can view Attachment category",
-        "content_type": 25,
-        "codename": "view_attachmentcategory"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 106,
-    "fields": {
-        "name": "Can add Feature picture",
-        "content_type": 26,
-        "codename": "add_featurepicture"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 107,
-    "fields": {
-        "name": "Can change Feature picture",
-        "content_type": 26,
-        "codename": "change_featurepicture"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 108,
-    "fields": {
-        "name": "Can delete Feature picture",
-        "content_type": 26,
-        "codename": "delete_featurepicture"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 109,
-    "fields": {
-        "name": "Can view Feature picture",
-        "content_type": 26,
-        "codename": "view_featurepicture"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 110,
-    "fields": {
-        "name": "Can add Feature attachment",
-        "content_type": 27,
-        "codename": "add_featureattachment"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 111,
-    "fields": {
-        "name": "Can change Feature attachment",
-        "content_type": 27,
-        "codename": "change_featureattachment"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 112,
-    "fields": {
-        "name": "Can delete Feature attachment",
-        "content_type": 27,
-        "codename": "delete_featureattachment"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 113,
-    "fields": {
-        "name": "Can view Feature attachment",
-        "content_type": 27,
-        "codename": "view_featureattachment"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 114,
-    "fields": {
-        "name": "Can add ExtraLayer style",
-        "content_type": 28,
-        "codename": "add_extralayerstyle"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 115,
-    "fields": {
-        "name": "Can change ExtraLayer style",
-        "content_type": 28,
-        "codename": "change_extralayerstyle"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 116,
-    "fields": {
-        "name": "Can delete ExtraLayer style",
-        "content_type": 28,
-        "codename": "delete_extralayerstyle"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 117,
-    "fields": {
-        "name": "Can view ExtraLayer style",
-        "content_type": 28,
-        "codename": "view_extralayerstyle"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 118,
-    "fields": {
-        "name": "Can add crud view property",
-        "content_type": 29,
-        "codename": "add_crudviewproperty"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 119,
-    "fields": {
-        "name": "Can change crud view property",
-        "content_type": 29,
-        "codename": "change_crudviewproperty"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 120,
-    "fields": {
-        "name": "Can delete crud view property",
-        "content_type": 29,
-        "codename": "delete_crudviewproperty"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 121,
-    "fields": {
-        "name": "Can view crud view property",
-        "content_type": 29,
-        "codename": "view_crudviewproperty"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 122,
-    "fields": {
-        "name": "GEOCRUD: Can create / edit / delete views / groups and associated layers.",
-        "content_type": 14,
-        "codename": "can_manage_views"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 123,
-    "fields": {
-        "name": "GEOCRUD: Can read feature detail.",
-        "content_type": 14,
-        "codename": "can_view_feature"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 124,
-    "fields": {
-        "name": "GEOCRUD: Can create feature",
-        "content_type": 14,
-        "codename": "can_add_feature"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 125,
-    "fields": {
-        "name": "GEOCRUD: Can change feature",
-        "content_type": 14,
-        "codename": "can_change_feature"
-    }
-},
-{
-    "model": "auth.permission",
-    "pk": 126,
-    "fields": {
-        "name": "GEOCRUD: Can delete feature",
-        "content_type": 14,
-        "codename": "can_delete_feature"
+        "view": 3,
+        "group": 4,
+        "key": "population_date",
+        "json_schema": {
+            "type": "string",
+            "title": "Population date",
+            "format": "date"
+        },
+        "ui_schema": {},
+        "required": false,
+        "order": 60
+    }
+},
+{
+    "model": "geostore.layergroup",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-05-29T09:51:38.431Z",
+        "updated_at": "2020-05-29T09:51:38.431Z",
+        "name": "default",
+        "slug": "default",
+        "layers": []
+    }
+},
+{
+    "model": "geostore.feature",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-05-29T12:06:51.388Z",
+        "updated_at": "2020-05-29T12:07:34.220Z",
+        "geom": "SRID=4326;POINT (1.053269710780654 44.14937686939209)",
+        "identifier": "cdb59756-3744-4cbd-8697-58dc00a51d11",
+        "properties": {
+            "city": "Moissac",
+            "name": "My point",
+            "country": "France"
+        },
+        "layer": 1,
+        "source": null,
+        "target": null
+    }
+},
+{
+    "model": "geostore.feature",
+    "pk": 3,
+    "fields": {
+        "created_at": "2020-06-02T08:38:32.441Z",
+        "updated_at": "2020-06-04T09:21:15.335Z",
+        "geom": "SRID=4326;LINESTRING (0.6679052983204481 43.00077845981207, 0.9125205501466098 43.11493977410817, 1.052001384333693 43.18793411665754, 1.27734071644619 43.40240688457808, 1.446434808051407 43.60878780073844)",
+        "identifier": "20b8c133-426c-42da-989f-315ab7399998",
+        "properties": {
+            "name": "Via Tolosa",
+            "length": 50.5,
+            "duration": 1.5,
+            "description": "<p>This is \"Via Tolosana\"</p><p><img src=\"/config/media/demo/terra_geocrud/features/3/pictures/Capture-du2019%C3%A9cran-2018-10-17-%C3%A0-09.42.10.png\"></p>"
+        },
+        "layer": 2,
+        "source": null,
+        "target": null
+    }
+},
+{
+    "model": "geostore.feature",
+    "pk": 4,
+    "fields": {
+        "created_at": "2020-06-02T08:42:54.210Z",
+        "updated_at": "2020-06-04T13:26:58.235Z",
+        "geom": "SRID=4326;MULTIPOLYGON (((1.410277827721074 43.68586677970227, 1.440406291302077 43.68877164578829, 1.442411087363922 43.65277473555057, 1.443240830460151 43.64794058796411, 1.445575139707131 43.65377475386984, 1.45006991376107 43.6517168872162, 1.450412772041091 43.65206595935649, 1.452706390354052 43.65078372264384, 1.460818333209431 43.66045745790683, 1.46536404060393 43.65978263458248, 1.468398705799473 43.65566587880744, 1.468827736257936 43.65219003192806, 1.467409798274787 43.65120010901688, 1.467297822859738 43.64713900439632, 1.469870307043014 43.64568027257738, 1.472206931168611 43.64642901031348, 1.473411735029713 43.64510517771525, 1.475071524596133 43.64445976990456, 1.475711124862981 43.6416974628309, 1.519744578733533 43.65099741409123, 1.492628961510665 43.63282826359035, 1.497650372107135 43.61901603434442, 1.512714603898818 43.59283679137572, 1.499658936344643 43.56965578729375, 1.505684629060824 43.55874020525033, 1.498654654224878 43.53617506817604, 1.454466240971957 43.55000631556747, 1.429359187987414 43.55073418805476, 1.417307802554999 43.54054317332638, 1.372115107182339 43.54927843429036, 1.351025182675643 43.57693174317004, 1.366150690402318 43.60875315935156, 1.381355239008403 43.62169034913082, 1.397222160166908 43.63220027907517, 1.392320538669447 43.66222173098827, 1.410277827721074 43.68586677970227)))",
+        "identifier": "39ddcb7a-964a-4e6f-9588-4dd0c721d17e",
+        "properties": {
+            "name": "Toulouse",
+            "zip_codes": [
+                "31000",
+                "31100",
+                "31200",
+                "31300",
+                "31300",
+                "31500"
+            ],
+            "population": 453000,
+            "description": "<p><strong>Toulouse</strong> (<a href=\"https://en.wikipedia.org/wiki/Help:IPA/English\" rel=\"noopener noreferrer\" target=\"_blank\">/tu\u02d0\u02c8lu\u02d0z/</a>,<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-4\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[4]</sup></a> <a href=\"https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key\" rel=\"noopener noreferrer\" target=\"_blank\"><em>too-LOOZ</em></a>; French:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Help:IPA/French\" rel=\"noopener noreferrer\" target=\"_blank\">[tuluz]</a> (<a href=\"https://en.wikipedia.org/wiki/File:Fr-Toulouse.ogg\" rel=\"noopener noreferrer\" target=\"_blank\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png\" alt=\"About this sound\" width=\"11\" height=\"11\"></a><a href=\"https://upload.wikimedia.org/wikipedia/commons/d/d8/Fr-Toulouse.ogg\" rel=\"noopener noreferrer\" target=\"_blank\">listen</a>); <a href=\"https://en.wikipedia.org/wiki/Occitan_language\" rel=\"noopener noreferrer\" target=\"_blank\">Occitan</a>: <em>Tolosa</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Occitan\" rel=\"noopener noreferrer\" target=\"_blank\">[tu\u02c8luzo]</a>; <a href=\"https://en.wikipedia.org/wiki/Latin_language\" rel=\"noopener noreferrer\" target=\"_blank\">Latin</a>: <em>Tolosa</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Latin\" rel=\"noopener noreferrer\" target=\"_blank\">[to\u02c8lo\u02d0sa]</a>) is the capital of the French <a href=\"https://en.wikipedia.org/wiki/Departments_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">department</a> of <a href=\"https://en.wikipedia.org/wiki/Haute-Garonne\" rel=\"noopener noreferrer\" target=\"_blank\">Haute-Garonne</a> and of the <a href=\"https://en.wikipedia.org/wiki/Regions_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">region</a> of <a href=\"https://en.wikipedia.org/wiki/Occitanie\" rel=\"noopener noreferrer\" target=\"_blank\">Occitanie</a>. The city is on the banks of the <a href=\"https://en.wikipedia.org/wiki/Garonne\" rel=\"noopener noreferrer\" target=\"_blank\">River Garonne</a>, 150 kilometres (93 miles) from the <a href=\"https://en.wikipedia.org/wiki/Mediterranean_Sea\" rel=\"noopener noreferrer\" target=\"_blank\">Mediterranean Sea</a>, 230&nbsp;km (143&nbsp;mi) from the <a href=\"https://en.wikipedia.org/wiki/Atlantic_Ocean\" rel=\"noopener noreferrer\" target=\"_blank\">Atlantic Ocean</a> and 680&nbsp;km (420&nbsp;mi) from <a href=\"https://en.wikipedia.org/wiki/Paris\" rel=\"noopener noreferrer\" target=\"_blank\">Paris</a>. It is the fourth-largest city in <a href=\"https://en.wikipedia.org/wiki/France\" rel=\"noopener noreferrer\" target=\"_blank\">France</a>, with 466,297 inhabitants as of January 2014. In France, Toulouse is called the \"Pink City\" (<em>La Ville Rose</em>).</p><p>The Toulouse Metro area, with 1,312,304 inhabitants as of 2014, is France's fourth-largest metropolitan area, after Paris, <a href=\"https://en.wikipedia.org/wiki/Lyon\" rel=\"noopener noreferrer\" target=\"_blank\">Lyon</a> and <a href=\"https://en.wikipedia.org/wiki/Marseille\" rel=\"noopener noreferrer\" target=\"_blank\">Marseille</a>, and ahead of <a href=\"https://en.wikipedia.org/wiki/Lille\" rel=\"noopener noreferrer\" target=\"_blank\">Lille</a> and <a href=\"https://en.wikipedia.org/wiki/Bordeaux\" rel=\"noopener noreferrer\" target=\"_blank\">Bordeaux</a>.</p><p>Toulouse is the centre of the European aerospace industry, with the headquarters of <a href=\"https://en.wikipedia.org/wiki/Airbus\" rel=\"noopener noreferrer\" target=\"_blank\">Airbus</a> (formerly EADS), the <a href=\"https://en.wikipedia.org/wiki/SPOT_(satellites)\" rel=\"noopener noreferrer\" target=\"_blank\">SPOT satellite system</a>, <a href=\"https://en.wikipedia.org/wiki/ATR_(aircraft_manufacturer)\" rel=\"noopener noreferrer\" target=\"_blank\">ATR</a> and the <a href=\"https://en.wikipedia.org/wiki/Aerospace_Valley\" rel=\"noopener noreferrer\" target=\"_blank\">Aerospace Valley</a>. It also hosts the European headquarters of <a href=\"https://en.wikipedia.org/wiki/Intel\" rel=\"noopener noreferrer\" target=\"_blank\">Intel</a> and <a href=\"https://en.wikipedia.org/wiki/CNES\" rel=\"noopener noreferrer\" target=\"_blank\">CNES</a>'s <a href=\"https://en.wikipedia.org/wiki/Toulouse_Space_Centre\" rel=\"noopener noreferrer\" target=\"_blank\">Toulouse Space Centre</a> (CST), the largest space centre in Europe.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-5\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[5]</sup></a> <a href=\"https://en.wikipedia.org/wiki/Thales_Alenia_Space\" rel=\"noopener noreferrer\" target=\"_blank\">Thales Alenia Space</a>, <a href=\"https://en.wikipedia.org/wiki/ATR_(aircraft_manufacturer)\" rel=\"noopener noreferrer\" target=\"_blank\">ATR</a>, <a href=\"https://en.wikipedia.org/wiki/Safran\" rel=\"noopener noreferrer\" target=\"_blank\">SAFRAN</a>, <a href=\"https://en.wikipedia.org/wiki/Liebherr_Aerospace\" rel=\"noopener noreferrer\" target=\"_blank\">Liebherr-Aerospace</a> and <a href=\"https://en.wikipedia.org/wiki/Airbus_Defence_and_Space\" rel=\"noopener noreferrer\" target=\"_blank\">Airbus Defence and Space</a> also have a significant presence in Toulouse.</p><p>The <a href=\"https://en.wikipedia.org/wiki/University_of_Toulouse\" rel=\"noopener noreferrer\" target=\"_blank\">University of Toulouse</a> is one of the oldest in Europe (founded in 1229) and, with more than 103,000 students, it is the fourth-largest university campus in France, after the universities of <a href=\"https://en.wikipedia.org/wiki/University_of_Paris\" rel=\"noopener noreferrer\" target=\"_blank\">Paris</a>, <a href=\"https://en.wikipedia.org/wiki/University_of_Lyon\" rel=\"noopener noreferrer\" target=\"_blank\">Lyon</a> and <a href=\"https://en.wikipedia.org/wiki/University_of_Lille\" rel=\"noopener noreferrer\" target=\"_blank\">Lille</a>.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-6\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[6]</sup></a></p><p>The air route between <a href=\"https://en.wikipedia.org/wiki/Toulouse%E2%80%93Blagnac_Airport\" rel=\"noopener noreferrer\" target=\"_blank\">Toulouse\u2013Blagnac</a> and <a href=\"https://en.wikipedia.org/wiki/Paris_Orly_Airport\" rel=\"noopener noreferrer\" target=\"_blank\">Paris Orly</a> is the busiest in Europe, transporting 2.4&nbsp;million passengers in 2014.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-7\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[7]</sup></a> According to the rankings of <a href=\"https://en.wikipedia.org/wiki/L%27Express\" rel=\"noopener noreferrer\" target=\"_blank\"><em>L'Express</em></a> and <a href=\"https://en.wikipedia.org/wiki/Challenges_(magazine)\" rel=\"noopener noreferrer\" target=\"_blank\"><em>Challenges</em></a>, Toulouse is the most dynamic French city.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-8\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[8]</sup></a><a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-9\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[9]</sup></a><a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-10\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[10]</sup></a></p><p>Founded by the Romans, the city was the capital of the <a href=\"https://en.wikipedia.org/wiki/Visigothic_Kingdom\" rel=\"noopener noreferrer\" target=\"_blank\">Visigothic Kingdom</a> in the 5th century and the capital of the <a href=\"https://en.wikipedia.org/wiki/Provinces_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">province</a> of <a href=\"https://en.wikipedia.org/wiki/Languedoc\" rel=\"noopener noreferrer\" target=\"_blank\">Languedoc</a> in the <a href=\"https://en.wikipedia.org/wiki/Late_Middle_Ages\" rel=\"noopener noreferrer\" target=\"_blank\">Late Middle Ages</a> and <a href=\"https://en.wikipedia.org/wiki/Early_modern_period\" rel=\"noopener noreferrer\" target=\"_blank\">early modern period</a> (provinces were abolished during the <a href=\"https://en.wikipedia.org/wiki/French_Revolution\" rel=\"noopener noreferrer\" target=\"_blank\">French Revolution</a>), making it the unofficial capital of the cultural region of <a href=\"https://en.wikipedia.org/wiki/Occitania\" rel=\"noopener noreferrer\" target=\"_blank\">Occitania</a> (Southern France). It is now the capital of the <a href=\"https://en.wikipedia.org/wiki/Occitanie\" rel=\"noopener noreferrer\" target=\"_blank\">Occitanie</a> <a href=\"https://en.wikipedia.org/wiki/R%C3%A9gion_in_France\" rel=\"noopener noreferrer\" target=\"_blank\">region</a>, the second largest region in <a href=\"https://en.wikipedia.org/wiki/Metropolitan_France\" rel=\"noopener noreferrer\" target=\"_blank\">Metropolitan France</a>.</p><p>A city with unique architecture made of pinkish <a href=\"https://en.wikipedia.org/wiki/Terracotta\" rel=\"noopener noreferrer\" target=\"_blank\">terracotta</a> bricks, which earned it the nickname <em>la Ville Rose</em> (\"the Pink City\"), Toulouse counts two <a href=\"https://en.wikipedia.org/wiki/UNESCO\" rel=\"noopener noreferrer\" target=\"_blank\">UNESCO</a> <a href=\"https://en.wikipedia.org/wiki/World_Heritage_Site\" rel=\"noopener noreferrer\" target=\"_blank\">World Heritage Sites</a>, the <a href=\"https://en.wikipedia.org/wiki/Canal_du_Midi\" rel=\"noopener noreferrer\" target=\"_blank\">Canal du Midi</a> (designated in 1996 and shared with other cities), and the <a href=\"https://en.wikipedia.org/wiki/Basilica_of_St._Sernin,_Toulouse\" rel=\"noopener noreferrer\" target=\"_blank\">Basilica of St. Sernin</a>, the largest remaining Romanesque building in Europe,<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-11\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[11]</sup></a> designated in 1998 because of its significance to the <a href=\"https://en.wikipedia.org/wiki/World_Heritage_Sites_of_the_Routes_of_Santiago_de_Compostela_in_France\" rel=\"noopener noreferrer\" target=\"_blank\">Santiago de Compostela pilgrimage route</a>.</p>",
+            "main_picture": "data:image/jpeg;name=demo/terra_geocrud/features/4/data_file/main_picture/Montage_Toulouse_3.jpg;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=",
+            "population_date": "2020-06-04"
+        },
+        "layer": 3,
+        "source": null,
+        "target": null
+    }
+},
+{
+    "model": "geostore.feature",
+    "pk": 5,
+    "fields": {
+        "created_at": "2020-06-03T12:56:51.406Z",
+        "updated_at": "2020-06-04T13:24:25.242Z",
+        "geom": "SRID=4326;MULTIPOLYGON (((2.227430862168148 48.84853211471912, 2.253445780230947 48.84449293296566, 2.256199197047039 48.83785533075422, 2.25704073612323 48.8346824850972, 2.261193122643191 48.83418913643339, 2.264824693800364 48.83431124060493, 2.26892275041024 48.83441963483352, 2.276388452040237 48.83413208940382, 2.279607954318322 48.83276181876502, 2.282272596710953 48.82972830655953, 2.308470698100137 48.82518963172438, 2.335358223209994 48.81974267928291, 2.364314019481952 48.8161110487757, 2.377566854443501 48.82095973655538, 2.384662697240401 48.82477467677248, 2.390526298579005 48.82642605583081, 2.39984852909879 48.82910702723052, 2.404040219042486 48.8293658926564, 2.412104667843465 48.8247574108513, 2.416438444574424 48.82479746264883, 2.420280647513692 48.8241936882423, 2.426968119156413 48.82418433129919, 2.43099853542742 48.82303611469368, 2.435356535684576 48.82012162660089, 2.442178506960118 48.81800488127726, 2.449319216878706 48.81803664757274, 2.454399885456268 48.81700452892977, 2.458803593770085 48.81707656511736, 2.463126516143745 48.81948911361252, 2.465753808729573 48.8251914379702, 2.466366561425133 48.82725621982289, 2.464693682359353 48.82791629969302, 2.465028638886793 48.83154356159491, 2.466327120242681 48.83298485128955, 2.468554639851618 48.83378797983602, 2.469829383544919 48.83629651730755, 2.463591035271548 48.84561043127636, 2.44015062876511 48.84787889517639, 2.416710222259411 48.84288813894904, 2.422225612025727 48.83653554803811, 2.416710222259411 48.83472037407975, 2.413263103655993 48.83744311035289, 2.413915603486629 48.84713124845885, 2.414866208047329 48.85111471481503, 2.41357043935767 48.85408766564467, 2.41395252737675 48.86012682454722, 2.414242358721253 48.86881980863345, 2.412500755021596 48.87674783824883, 2.409430529261783 48.88015094585668, 2.405530245580678 48.88110812225307, 2.401513879902097 48.88263780347845, 2.400106687265577 48.88399290314985, 2.399337945646892 48.88542429789445, 2.399628753945962 48.8882297195714, 2.397714607483636 48.89456511342885, 2.395337339591833 48.89830577256464, 2.390824278083385 48.89851391505383, 2.367761138085314 48.90274439012632, 2.327774562281718 48.90274439012632, 2.298818766008935 48.89594614977193, 2.279936610469576 48.88209400479641, 2.279212453337919 48.87748653096457, 2.258765957932412 48.88044165691605, 2.255065907773229 48.87423124790064, 2.24662012935869 48.87577312778939, 2.232072783312958 48.86797243424493, 2.228082181626263 48.86246474289689, 2.225304489112659 48.85456231550575, 2.227430862168148 48.84853211471912)))",
+        "identifier": "24b9c8d7-3c8d-4ed3-a0c9-345988ffa0a5",
+        "properties": {
+            "name": "Paris",
+            "zip_codes": [
+                "75000",
+                "75001",
+                "75002",
+                "75003",
+                "75004",
+                "75005",
+                "75006",
+                "75007",
+                "75008",
+                "75009",
+                "75010",
+                "75011",
+                "75012",
+                "75013",
+                "75014",
+                "75015",
+                "75016",
+                "75017",
+                "75018",
+                "75019",
+                "75020"
+            ],
+            "population": 2187526,
+            "description": "<p><strong>Paris</strong> (French pronunciation:&nbsp;\u200b<a href=\"https://en.wikipedia.org/wiki/Help:IPA/French\" rel=\"noopener noreferrer\" target=\"_blank\">[pa\u0281i]</a> (<a href=\"https://en.wikipedia.org/wiki/File:Paris1.ogg\" rel=\"noopener noreferrer\" target=\"_blank\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png\" alt=\"About this sound\" width=\"11\" height=\"11\"></a><a href=\"https://upload.wikimedia.org/wikipedia/commons/2/2c/Paris1.ogg\" rel=\"noopener noreferrer\" target=\"_blank\">listen</a>)) is the <a href=\"https://en.wikipedia.org/wiki/Capital_city\" rel=\"noopener noreferrer\" target=\"_blank\">capital</a> and <a href=\"https://en.wikipedia.org/wiki/List_of_communes_in_France_with_over_20,000_inhabitants\" rel=\"noopener noreferrer\" target=\"_blank\">most populous city</a> of <a href=\"https://en.wikipedia.org/wiki/France\" rel=\"noopener noreferrer\" target=\"_blank\">France</a>, with a <a href=\"https://en.wikipedia.org/wiki/Population\" rel=\"noopener noreferrer\" target=\"_blank\">population</a> of 2,148,271 residents (official estimate, 1 January 2020) in an area of 105 square kilometres (41 square miles).<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-INSEE-1893198-1\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[1]</sup></a> Since the 17th century, Paris has been one of Europe's major centres of <a href=\"https://en.wikipedia.org/wiki/Finance\" rel=\"noopener noreferrer\" target=\"_blank\">finance</a>, <a href=\"https://en.wikipedia.org/wiki/Diplomacy\" rel=\"noopener noreferrer\" target=\"_blank\">diplomacy</a>, <a href=\"https://en.wikipedia.org/wiki/Commerce\" rel=\"noopener noreferrer\" target=\"_blank\">commerce</a>, <a href=\"https://en.wikipedia.org/wiki/Fashion\" rel=\"noopener noreferrer\" target=\"_blank\">fashion</a>, <a href=\"https://en.wikipedia.org/wiki/Science\" rel=\"noopener noreferrer\" target=\"_blank\">science</a> and <a href=\"https://en.wikipedia.org/wiki/Arts\" rel=\"noopener noreferrer\" target=\"_blank\">arts</a>. The City of Paris is the centre and seat of government of the <a href=\"https://en.wikipedia.org/wiki/%C3%8Ele-de-France\" rel=\"noopener noreferrer\" target=\"_blank\">\u00cele-de-France</a>, or Paris Region, which has an estimated official 2020 population of 12,278,210, or about 18 percent of the population of France.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-INSEE-1893198-1\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[1]</sup></a> The Paris Region had a <a href=\"https://en.wikipedia.org/wiki/Gross_domestic_product\" rel=\"noopener noreferrer\" target=\"_blank\">GDP</a> of \u20ac709 billion ($808 billion) in 2017.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-Euro-PR-3\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[3]</sup></a> According to the <a href=\"https://en.wikipedia.org/wiki/Economist_Intelligence_Unit\" rel=\"noopener noreferrer\" target=\"_blank\">Economist Intelligence Unit</a> Worldwide Cost of Living Survey in 2018, Paris was the second most expensive city in the world, after <a href=\"https://en.wikipedia.org/wiki/Singapore\" rel=\"noopener noreferrer\" target=\"_blank\">Singapore</a>, and ahead of <a href=\"https://en.wikipedia.org/wiki/Z%C3%BCrich\" rel=\"noopener noreferrer\" target=\"_blank\">Z\u00fcrich</a>, <a href=\"https://en.wikipedia.org/wiki/Hong_Kong\" rel=\"noopener noreferrer\" target=\"_blank\">Hong Kong</a>, <a href=\"https://en.wikipedia.org/wiki/Oslo\" rel=\"noopener noreferrer\" target=\"_blank\">Oslo</a> and <a href=\"https://en.wikipedia.org/wiki/Geneva\" rel=\"noopener noreferrer\" target=\"_blank\">Geneva</a>.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-4\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[4]</sup></a> Another source ranked Paris as most expensive, on a par with Singapore and Hong Kong, in 2018.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-5\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[5]</sup></a></p><p>The city is a major railway, highway and air-transport hub served by two international airports: <a href=\"https://en.wikipedia.org/wiki/Paris-Charles_de_Gaulle_Airport\" rel=\"noopener noreferrer\" target=\"_blank\">Paris-Charles de Gaulle</a> (the second busiest airport in Europe) and <a href=\"https://en.wikipedia.org/wiki/Paris-Orly_Airport\" rel=\"noopener noreferrer\" target=\"_blank\">Paris-Orly</a>.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-6\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[6]</sup></a><a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-7\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[7]</sup></a> Opened in 1900, the city's subway system, the <a href=\"https://en.wikipedia.org/wiki/Paris_M%C3%A9tro\" rel=\"noopener noreferrer\" target=\"_blank\">Paris M\u00e9tro</a>, serves 5.23 million passengers daily;<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-8\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[8]</sup></a> it is the second busiest metro system in Europe after the <a href=\"https://en.wikipedia.org/wiki/Moscow_Metro\" rel=\"noopener noreferrer\" target=\"_blank\">Moscow Metro</a>. <a href=\"https://en.wikipedia.org/wiki/Gare_du_Nord\" rel=\"noopener noreferrer\" target=\"_blank\">Gare du Nord</a> is the 24th busiest railway station in the world, but the first located outside Japan, with 262 million passengers in 2015.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-9\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[9]</sup></a> Paris is especially known for its museums and architectural landmarks: the <a href=\"https://en.wikipedia.org/wiki/Louvre\" rel=\"noopener noreferrer\" target=\"_blank\">Louvre</a> was the most visited art museum in the world in 2019, with 9.6 million visitors.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-Visitors-10\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[10]</sup></a> <a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-11\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[11]</sup></a> The <a href=\"https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay\" rel=\"noopener noreferrer\" target=\"_blank\">Mus\u00e9e d'Orsay</a>, <a href=\"https://en.wikipedia.org/wiki/Mus%C3%A9e_Marmottan_Monet\" rel=\"noopener noreferrer\" target=\"_blank\">Mus\u00e9e Marmottan Monet</a>, and <a href=\"https://en.wikipedia.org/wiki/Mus%C3%A9e_de_l%27Orangerie\" rel=\"noopener noreferrer\" target=\"_blank\">Mus\u00e9e de l'Orangerie</a> are noted for their collections of French <a href=\"https://en.wikipedia.org/wiki/Impressionist\" rel=\"noopener noreferrer\" target=\"_blank\">Impressionist</a> art, the <a href=\"https://en.wikipedia.org/wiki/Pompidou_Centre\" rel=\"noopener noreferrer\" target=\"_blank\">Pompidou Centre</a> <a href=\"https://en.wikipedia.org/wiki/Mus%C3%A9e_National_d%27Art_Moderne\" rel=\"noopener noreferrer\" target=\"_blank\">Mus\u00e9e National d'Art Moderne</a> has the largest collection of <a href=\"https://en.wikipedia.org/wiki/Modern_art\" rel=\"noopener noreferrer\" target=\"_blank\">modern</a> and <a href=\"https://en.wikipedia.org/wiki/Contemporary_art\" rel=\"noopener noreferrer\" target=\"_blank\">contemporary art</a> in Europe, and the <a href=\"https://en.wikipedia.org/wiki/Mus%C3%A9e_Rodin\" rel=\"noopener noreferrer\" target=\"_blank\">Mus\u00e9e Rodin</a> and <a href=\"https://en.wikipedia.org/wiki/Mus%C3%A9e_Picasso\" rel=\"noopener noreferrer\" target=\"_blank\">Mus\u00e9e Picasso</a> exhibit the works of the two noted Parisians. The historical district along the Seine in the city centre is classified as a <a href=\"https://en.wikipedia.org/wiki/UNESCO_Heritage_Site\" rel=\"noopener noreferrer\" target=\"_blank\">UNESCO Heritage Site</a>, and popular landmarks in the city centre included the <a href=\"https://en.wikipedia.org/wiki/Notre_Dame_de_Paris\" rel=\"noopener noreferrer\" target=\"_blank\">Cathedral of Notre Dame de Paris</a>, now closed for renovation after the 15 April 2019 fire. Other popular tourist sites include the Gothic royal chapel of <a href=\"https://en.wikipedia.org/wiki/Sainte-Chapelle\" rel=\"noopener noreferrer\" target=\"_blank\">Sainte-Chapelle</a>, both on the <a href=\"https://en.wikipedia.org/wiki/%C3%8Ele_de_la_Cit%C3%A9\" rel=\"noopener noreferrer\" target=\"_blank\">\u00cele de la Cit\u00e9</a>; the <a href=\"https://en.wikipedia.org/wiki/Eiffel_Tower\" rel=\"noopener noreferrer\" target=\"_blank\">Eiffel Tower</a>, constructed for the <a href=\"https://en.wikipedia.org/wiki/Exposition_Universelle_(1889)\" rel=\"noopener noreferrer\" target=\"_blank\">Paris Universal Exposition of 1889</a>; the <a href=\"https://en.wikipedia.org/wiki/Grand_Palais\" rel=\"noopener noreferrer\" target=\"_blank\">Grand Palais</a> and <a href=\"https://en.wikipedia.org/wiki/Petit_Palais\" rel=\"noopener noreferrer\" target=\"_blank\">Petit Palais</a>, built for the <a href=\"https://en.wikipedia.org/wiki/Exposition_Universelle_(1900)\" rel=\"noopener noreferrer\" target=\"_blank\">Paris Universal Exposition of 1900</a>; the <a href=\"https://en.wikipedia.org/wiki/Arc_de_Triomphe\" rel=\"noopener noreferrer\" target=\"_blank\">Arc de Triomphe</a> on the <a href=\"https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es\" rel=\"noopener noreferrer\" target=\"_blank\">Champs-\u00c9lys\u00e9es</a>, and the <a href=\"https://en.wikipedia.org/wiki/Sacr%C3%A9-C%C5%93ur,_Paris\" rel=\"noopener noreferrer\" target=\"_blank\">Basilica of Sacr\u00e9-Coeur</a> on the hill of <a href=\"https://en.wikipedia.org/wiki/Montmartre\" rel=\"noopener noreferrer\" target=\"_blank\">Montmartre</a>.</p><p>Paris received 17.5 million visitors in 2018, measured by hotel stays, with the largest numbers of foreign visitors coming from the United States, the United Kingdom, Germany and China.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-ReferenceC-12\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[12]</sup></a> It was ranked as the sixth most visited travel destination in the world in 2018, after <a href=\"https://en.wikipedia.org/wiki/Hong_Kong\" rel=\"noopener noreferrer\" target=\"_blank\">Hong Kong</a>, <a href=\"https://en.wikipedia.org/wiki/Bangkok\" rel=\"noopener noreferrer\" target=\"_blank\">Bangkok</a>, <a href=\"https://en.wikipedia.org/wiki/London\" rel=\"noopener noreferrer\" target=\"_blank\">London</a>, <a href=\"https://en.wikipedia.org/wiki/Macao\" rel=\"noopener noreferrer\" target=\"_blank\">Macao</a> and <a href=\"https://en.wikipedia.org/wiki/Singapore\" rel=\"noopener noreferrer\" target=\"_blank\">Singapore</a>.<a href=\"https://en.wikipedia.org/wiki/Paris#cite_note-13\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[13]</sup></a> The <a href=\"https://en.wikipedia.org/wiki/Association_football\" rel=\"noopener noreferrer\" target=\"_blank\">football</a> club <a href=\"https://en.wikipedia.org/wiki/Paris_Saint-Germain_F.C.\" rel=\"noopener noreferrer\" target=\"_blank\">Paris Saint-Germain</a> and the <a href=\"https://en.wikipedia.org/wiki/Rugby_union\" rel=\"noopener noreferrer\" target=\"_blank\">rugby union</a> club <a href=\"https://en.wikipedia.org/wiki/Stade_Fran%C3%A7ais\" rel=\"noopener noreferrer\" target=\"_blank\">Stade Fran\u00e7ais</a> are based in Paris. The 80,000-seat <a href=\"https://en.wikipedia.org/wiki/Stade_de_France\" rel=\"noopener noreferrer\" target=\"_blank\">Stade de France</a>, built for the <a href=\"https://en.wikipedia.org/wiki/1998_FIFA_World_Cup\" rel=\"noopener noreferrer\" target=\"_blank\">1998 FIFA World Cup</a>, is located just north of Paris in the neighbouring commune of <a href=\"https://en.wikipedia.org/wiki/Saint-Denis,_Seine-Saint-Denis\" rel=\"noopener noreferrer\" target=\"_blank\">Saint-Denis</a>. Paris hosts the annual <a href=\"https://en.wikipedia.org/wiki/French_Open\" rel=\"noopener noreferrer\" target=\"_blank\">French Open</a> <a href=\"https://en.wikipedia.org/wiki/Grand_Slam_(tennis)\" rel=\"noopener noreferrer\" target=\"_blank\">Grand Slam</a> <a href=\"https://en.wikipedia.org/wiki/Tennis\" rel=\"noopener noreferrer\" target=\"_blank\">tennis</a> tournament on the red clay of <a href=\"https://en.wikipedia.org/wiki/Stade_Roland_Garros\" rel=\"noopener noreferrer\" target=\"_blank\">Roland Garros</a>. The city hosted the Olympic Games in <a href=\"https://en.wikipedia.org/wiki/1900_Summer_Olympics\" rel=\"noopener noreferrer\" target=\"_blank\">1900</a>, <a href=\"https://en.wikipedia.org/wiki/1924_Summer_Olympics\" rel=\"noopener noreferrer\" target=\"_blank\">1924</a> and will host the <a href=\"https://en.wikipedia.org/wiki/2024_Summer_Olympics\" rel=\"noopener noreferrer\" target=\"_blank\">2024 Summer Olympics</a>. The <a href=\"https://en.wikipedia.org/wiki/1938_FIFA_World_Cup\" rel=\"noopener noreferrer\" target=\"_blank\">1938</a> and <a href=\"https://en.wikipedia.org/wiki/1998_FIFA_World_Cup\" rel=\"noopener noreferrer\" target=\"_blank\">1998 FIFA World Cups</a>, the <a href=\"https://en.wikipedia.org/wiki/2007_Rugby_World_Cup\" rel=\"noopener noreferrer\" target=\"_blank\">2007 Rugby World Cup</a>, as well as the <a href=\"https://en.wikipedia.org/wiki/1960_European_Nations%27_Cup\" rel=\"noopener noreferrer\" target=\"_blank\">1960</a>, <a href=\"https://en.wikipedia.org/wiki/UEFA_Euro_1984\" rel=\"noopener noreferrer\" target=\"_blank\">1984</a> and <a href=\"https://en.wikipedia.org/wiki/UEFA_Euro_2016\" rel=\"noopener noreferrer\" target=\"_blank\">2016</a> <a href=\"https://en.wikipedia.org/wiki/UEFA_European_Championship\" rel=\"noopener noreferrer\" target=\"_blank\">UEFA European Championships</a> were also held in the city. Every July, the <a href=\"https://en.wikipedia.org/wiki/Tour_de_France\" rel=\"noopener noreferrer\" target=\"_blank\">Tour de France</a> <a href=\"https://en.wikipedia.org/wiki/Road_bicycle_racing\" rel=\"noopener noreferrer\" target=\"_blank\">bicycle race</a> finishes on the <a href=\"https://en.wikipedia.org/wiki/Avenue_des_Champs-%C3%89lys%C3%A9es\" rel=\"noopener noreferrer\" target=\"_blank\">Avenue des Champs-\u00c9lys\u00e9es</a> in Paris.</p>",
+            "main_picture": "data:image/png;name=demo/terra_geocrud/features/5/data_file/main_picture/paris.png;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+        },
+        "layer": 3,
+        "source": null,
+        "target": null
+    }
+},
+{
+    "model": "geostore.layerextrageom",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-06-02T12:49:16.800Z",
+        "updated_at": "2020-06-02T12:49:50.640Z",
+        "settings": {},
+        "geom_type": 4,
+        "layer": 2,
+        "order": 0,
+        "slug": "information-desks",
+        "title": "Information Desks",
+        "editable": true
+    }
+},
+{
+    "model": "geostore.layerextrageom",
+    "pk": 2,
+    "fields": {
+        "created_at": "2020-06-03T09:54:35.376Z",
+        "updated_at": "2020-06-03T09:54:35.376Z",
+        "settings": {},
+        "geom_type": 0,
+        "layer": 3,
+        "order": 0,
+        "slug": "center",
+        "title": "Center",
+        "editable": true
+    }
+},
+{
+    "model": "geostore.layerextrageom",
+    "pk": 3,
+    "fields": {
+        "created_at": "2020-06-03T09:54:35.381Z",
+        "updated_at": "2020-06-03T09:54:58.917Z",
+        "settings": {},
+        "geom_type": 0,
+        "layer": 3,
+        "order": 1,
+        "slug": "centroid",
+        "title": "Centro\u00efd",
+        "editable": true
+    }
+},
+{
+    "model": "geostore.featureextrageom",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-06-02T12:49:35.295Z",
+        "updated_at": "2020-06-02T12:49:35.295Z",
+        "feature": 3,
+        "layer_extra_geom": 1,
+        "geom": "SRID=4326;POINT (0.7387104906842978 43.1834232214955)",
+        "properties": {},
+        "identifier": "366b2a5a-e1cc-477d-821f-c332d0239ccd"
+    }
+},
+{
+    "model": "geostore.featureextrageom",
+    "pk": 2,
+    "fields": {
+        "created_at": "2020-06-03T10:03:56.754Z",
+        "updated_at": "2020-06-03T10:03:56.754Z",
+        "feature": 4,
+        "layer_extra_geom": 2,
+        "geom": "SRID=4326;POINT (1.45279883639887 43.59720101461766)",
+        "properties": {},
+        "identifier": "52a0e8fd-4a52-4196-99cb-4946e81d98a1"
     }
 },
 {
@@ -1810,7 +780,7 @@
     "pk": 3,
     "fields": {
         "created_at": "2020-06-02T08:40:15.731Z",
-        "updated_at": "2020-06-03T09:54:58.904Z",
+        "updated_at": "2020-06-04T09:23:11.269Z",
         "settings": {},
         "geom_type": 6,
         "name": "cities",
@@ -1840,6 +810,11 @@
                     "type": "string",
                     "title": "Main picture",
                     "format": "data-url"
+                },
+                "population_date": {
+                    "type": "string",
+                    "title": "Population date",
+                    "format": "date"
                 }
             }
         },
