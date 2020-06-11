@@ -19,16 +19,16 @@ ENV CACHE = '08'
 COPY requirements.txt /app/requirements.txt
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
 
-COPY src /app/src
 COPY .docker/entrypoint.sh /usr/local/bin
+COPY .docker/wait-for-postgres.sh /usr/local/bin
+COPY src /app/src
 
 RUN chown django:django -R /app
 
 WORKDIR /app/src
 USER django
 
-EXPOSE 8000
 
 ENTRYPOINT ["entrypoint.sh"]
 
-CMD ["./wait-for-postgres.sh", "gunicorn", "project.wsgi:application", "-w", "2", "--timeout", "600", "--bind", "0.0.0.0:8000", "--worker-tmp-dir", "/dev/shm"]
+CMD ["gunicorn", "project.wsgi:application", "-w", "2", "--timeout", "600", "--bind", "0.0.0.0:8000", "--worker-tmp-dir", "/dev/shm"]

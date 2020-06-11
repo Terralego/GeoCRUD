@@ -28,7 +28,6 @@ services:
       - memcached
       - postgres
     working_dir: /app/src
-    command: ./wait-for-postgres.sh ./manage.py runserver 0.0.0.0:8000
 
   mbglrenderer:
     image: consbio/mbgl-renderer:0.4.0

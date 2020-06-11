@@ -6,4 +6,4 @@ cd /app/src || exit
 ./manage.py collectstatic --no-input
 
 # exec
-exec "$@"
+exec /usr/local/bin/wait-for-postgres.sh "$@"
