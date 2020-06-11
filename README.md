@@ -57,7 +57,7 @@ make run (or docker-compose up)
   * By adding dependencies in requirements.txt (we recommend to use pip-tools / edit requirements.in / generate requirements.txt / rebuild with docker-compose)
   * By editing basic values in .env file (see project/settings/{base.py | prod.py} to see available environment variables)
   * By adding your own code in conf/custom.py (add django apps, customize code and functions, all settings variables are accessible and editable)
-  * By access /config endpoint with a super user access to create and set Crud views / Data layers / Map base layers et set some other settings
+  * By access /api/admin with a super user access to create and set Crud views / Data layers / Map base layers et set some other settings.
 
 ## Create a superuser
 
