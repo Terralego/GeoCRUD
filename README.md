@@ -3,8 +3,8 @@
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![GitHub Issues](https://img.shields.io/github/issues/terralego/visu-back.svg)](https://github.com/terralego/visu-back/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/terralego/visu-back.svg)](https://github.com/terralego/visu-back//pulls)
+  [![GitHub Issues](https://img.shields.io/github/issues/terralego/visu-back.svg)](https://github.com/terralego/geocrud/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/terralego/visu-back.svg)](https://github.com/terralego/geocrud/pulls)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -13,6 +13,7 @@
 
 <p align="center"> GeoCRUD is a Geographic CRUD editor base on terralego.
     <br>
+    @powered with <strong>django-geostore</strong>
 </p>
 
 ## Prerequisites
@@ -51,7 +52,13 @@ make up (or docker-compose up)
   * By adding your own code in conf/custom.py (add django apps, customize code and functions, all settings variables are accessible and editable)
   * By access /config endpoint with a super user access to create and set Crud views / Data layers / Map base layers et set some other settings
 
-#### Other dependency settings
+## Create a 1rst superuser
+
+docker-compose run --rm django ./manage.py createsuperuser
+
+## Load demo
+
+* docker-compose run --rm django ./manage.py loaddata /app/fixtures/demo.json
 
 
 
@@ -82,10 +89,11 @@ SSL_ENABLE=True in your .env field and restart stack
 
 * Always define at least one property and sync schemas for crud views
 * Always keep at least one map base layer functional
-* MapBox base layer will crash if you don't define MAPBOX_TOKEN. SO disable it in backend api admin
+* MapBox base layer will crash if you don't define MAPBOX_TOKEN. So don't use mapbox base layers without it
 * In local environment, some feature are unavailable
   * Access media urls in templates. That's because django container can't deals with nginx 127.0.0.1 based urls or relative urls.
   It will be working if you use a public DNS. If you use private DNS, make sure django container can resolve it (ex: by adding an extra_host entry)
-* Some map base layers are not available in mapbox-gl-renderer container because they are allowed by referer.
-  * In this case, add a location in conf/nginx/nginx.conf that proxify request to tile url with good referer, and use this new local in mapbox base layer config.
-* Keep care of HAProxy. In some cases, django container should make request on public DNS. The network stack should be ok for the container/
+* Some map base layers are not available in mapbox-gl-renderer container because they are only allowed by referer.
+  * In this case, add a location in conf/nginx/nginx.conf that proxify request to tile url with good referer, and use this new local URL in mapbox base layer config.
+* Keep care of HAProxy
+  * In some cases, django container should make request on public DNS. The network stack should be ok for resolving DNS in django containers.Some nginx headers are used to says django if https is enabled or not, so in some case you should force it in nginx.conf file.
