@@ -20,7 +20,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./src:/app/src
+      #- ./src:/app/src
       - ./data:/app/public/data  # mount public folder to add data / keep media files
       - ./conf/custom.py:/app/src/project/settings/custom.py
       - static:/app/public/static  # django static hidden volume
