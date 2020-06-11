@@ -1,7 +1,6 @@
 update_front:
 	git submodule init
 	git submodule update
-	cd front/ && git pull && cd ..
 
 front: update_front
 	docker-compose build --build-arg NODE=$(shell cat ./front/.nvmrc | tr -d 'v') front
