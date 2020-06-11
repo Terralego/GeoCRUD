@@ -8,4 +8,4 @@ __pycache__/
 !.gitkeep
 /data/media/cache/
 /doc/_build/
-/cypress/node_modules/
+src/project/settings/custom.py
