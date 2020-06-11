@@ -3,8 +3,8 @@
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-  [![GitHub Issues](https://img.shields.io/github/issues/terralego/visu-back.svg)](https://github.com/terralego/geocrud/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/terralego/visu-back.svg)](https://github.com/terralego/geocrud/pulls)
+  [![GitHub Issues](https://img.shields.io/github/issues/Terralego/GeoCRUD.svg)](https://github.com/terralego/geocrud/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/terralego/geocrud.svg)](https://github.com/terralego/geocrud/pulls)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
