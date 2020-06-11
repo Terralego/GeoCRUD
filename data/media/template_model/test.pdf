@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<style>
+		@page {
+  size: Letter; /* Change from the default size of A4 */
+  margin: 2.5cm; /* Set margin on each page */
+}
+		</style>
+	
+	</head>
+<body>
+	{% load map_tags %}
+	<img src="{{ object.layer.crud_view.pictogram.url }}" />
+	TESSSSST : {{ object.properties.name }} <br/>
+	Hein ??? <br/>
+	{{ request.build_absolute_uri }}
+	{% map_image_url_loader feature_included=True base_layer='opentopomap' width=1280 height=800  %}
+	<img src="{% map_image_url_loader feature_included=True base_layer='opentopomap' width=1280 height=800  %}" alt="test"  />
+</body>
+</html>

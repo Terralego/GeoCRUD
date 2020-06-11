@@ -1,0 +1,2150 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "template_model",
+        "model": "template"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "reversion",
+        "model": "revision"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "reversion",
+        "model": "version"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "thumbnail",
+        "model": "kvstore"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "mapbox_baselayer",
+        "model": "mapbaselayer"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "mapbox_baselayer",
+        "model": "baselayertile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "terra_accounts",
+        "model": "terrauser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "terra_accounts",
+        "model": "readmodel"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "terra_accounts",
+        "model": "terrapermission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "geostore",
+        "model": "feature"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "geostore",
+        "model": "featurerelation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "geostore",
+        "model": "layer"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "geostore",
+        "model": "layerrelation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "geostore",
+        "model": "layergroup"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "geostore",
+        "model": "layerextrageom"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+        "app_label": "geostore",
+        "model": "featureextrageom"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 22,
+    "fields": {
+        "app_label": "terra_geocrud",
+        "model": "crudgroupview"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 23,
+    "fields": {
+        "app_label": "terra_geocrud",
+        "model": "crudview"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 24,
+    "fields": {
+        "app_label": "terra_geocrud",
+        "model": "featurepropertydisplaygroup"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 25,
+    "fields": {
+        "app_label": "terra_geocrud",
+        "model": "attachmentcategory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 26,
+    "fields": {
+        "app_label": "terra_geocrud",
+        "model": "featurepicture"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 27,
+    "fields": {
+        "app_label": "terra_geocrud",
+        "model": "featureattachment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 28,
+    "fields": {
+        "app_label": "terra_geocrud",
+        "model": "extralayerstyle"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 29,
+    "fields": {
+        "app_label": "terra_geocrud",
+        "model": "crudviewproperty"
+    }
+},
+{
+    "model": "mapbox_baselayer.mapbaselayer",
+    "pk": 1,
+    "fields": {
+        "name": "Mapbox",
+        "order": 2,
+        "slug": "mapbox",
+        "base_layer_type": "mapbox",
+        "map_box_url": "mapbox://styles/makinacorpus/cjx4u80lx1lbr1clfcpadcqh3",
+        "sprite": "",
+        "glyphs": "",
+        "min_zoom": 0,
+        "max_zoom": 22,
+        "tile_size": 512,
+        "attribution": ""
+    }
+},
+{
+    "model": "mapbox_baselayer.mapbaselayer",
+    "pk": 2,
+    "fields": {
+        "name": "OSM",
+        "order": 0,
+        "slug": "osm",
+        "base_layer_type": "raster",
+        "map_box_url": "",
+        "sprite": "",
+        "glyphs": "",
+        "min_zoom": 0,
+        "max_zoom": 19,
+        "tile_size": 256,
+        "attribution": "OpenStreetMap"
+    }
+},
+{
+    "model": "mapbox_baselayer.mapbaselayer",
+    "pk": 3,
+    "fields": {
+        "name": "OpenTopoMap",
+        "order": 1,
+        "slug": "opentopomap",
+        "base_layer_type": "raster",
+        "map_box_url": "",
+        "sprite": "",
+        "glyphs": "",
+        "min_zoom": 0,
+        "max_zoom": 19,
+        "tile_size": 256,
+        "attribution": ""
+    }
+},
+{
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 1,
+    "fields": {
+        "base_layer": 2,
+        "url": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    }
+},
+{
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 2,
+    "fields": {
+        "base_layer": 2,
+        "url": "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    }
+},
+{
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 3,
+    "fields": {
+        "base_layer": 2,
+        "url": "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    }
+},
+{
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 4,
+    "fields": {
+        "base_layer": 3,
+        "url": "https://a.tile.opentopomap.org/{z}/{x}/{y}.png"
+    }
+},
+{
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 5,
+    "fields": {
+        "base_layer": 3,
+        "url": "https://b.tile.opentopomap.org/{z}/{x}/{y}.png"
+    }
+},
+{
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 6,
+    "fields": {
+        "base_layer": 3,
+        "url": "https://c.tile.opentopomap.org/{z}/{x}/{y}.png"
+    }
+},
+{
+    "model": "geostore.layergroup",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-05-29T09:51:38.431Z",
+        "updated_at": "2020-05-29T09:51:38.431Z",
+        "name": "default",
+        "slug": "default",
+        "layers": []
+    }
+},
+{
+    "model": "geostore.feature",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-05-29T12:06:51.388Z",
+        "updated_at": "2020-05-29T12:07:34.220Z",
+        "geom": "SRID=4326;POINT (1.053269710780654 44.14937686939209)",
+        "identifier": "cdb59756-3744-4cbd-8697-58dc00a51d11",
+        "properties": {
+            "city": "Moissac",
+            "name": "My point",
+            "country": "France"
+        },
+        "layer": 1,
+        "source": null,
+        "target": null
+    }
+},
+{
+    "model": "geostore.feature",
+    "pk": 3,
+    "fields": {
+        "created_at": "2020-06-02T08:38:32.441Z",
+        "updated_at": "2020-06-03T10:14:48.239Z",
+        "geom": "SRID=4326;LINESTRING (0.6186565148843215 43.15000746817492, 1.052001384333693 43.18793411665754, 1.27734071644619 43.40240688457808, 1.364009690336559 43.64121639893997, 1.589349022450307 43.75400671757558, 2.05736148145462 43.95399891150689, 2.265367018790215 43.99142277574362)",
+        "identifier": "20b8c133-426c-42da-989f-315ab7399998",
+        "properties": {
+            "name": "Via Tolosa",
+            "length": 50.5,
+            "duration": 1.5
+        },
+        "layer": 2,
+        "source": null,
+        "target": null
+    }
+},
+{
+    "model": "geostore.feature",
+    "pk": 4,
+    "fields": {
+        "created_at": "2020-06-02T08:42:54.210Z",
+        "updated_at": "2020-06-03T10:03:56.737Z",
+        "geom": "SRID=4326;MULTIPOLYGON (((1.410277827721074 43.68586677970227, 1.440406291302077 43.68877164578829, 1.441410573421815 43.6502707535713, 1.467297822859738 43.64713900439632, 1.469870307043014 43.64568027257738, 1.475457544096397 43.65440683438305, 1.481725043169859 43.65809147854007, 1.493736487437503 43.6620080393709, 1.501667500584999 43.67206674469216, 1.519744578733533 43.65099741409123, 1.492628961510665 43.63282826359035, 1.497650372107135 43.61901603434442, 1.512714603898818 43.59283679137572, 1.499658936344643 43.56965578729375, 1.505684629060824 43.55874020525033, 1.498654654224878 43.53617506817604, 1.454466240971957 43.55000631556747, 1.429359187987414 43.55073418805476, 1.417307802554999 43.54054317332638, 1.372115107182339 43.54927843429036, 1.351025182675643 43.57693174317004, 1.346003772078032 43.60893550554097, 1.370106542944004 43.631473391169, 1.397222160166908 43.63220027907517, 1.411282109838818 43.66054204993699, 1.410277827721074 43.68586677970227)))",
+        "identifier": "39ddcb7a-964a-4e6f-9588-4dd0c721d17e",
+        "properties": {
+            "name": "Toulouse",
+            "zip_codes": [
+                "31000",
+                "31100",
+                "31200",
+                "31300",
+                "31300",
+                "31500"
+            ],
+            "population": 453000,
+            "description": "<p><strong>Toulouse</strong> (<a href=\"https://en.wikipedia.org/wiki/Help:IPA/English\" rel=\"noopener noreferrer\" target=\"_blank\">/tu\u02d0\u02c8lu\u02d0z/</a>,<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-4\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[4]</sup></a> <a href=\"https://en.wikipedia.org/wiki/Help:Pronunciation_respelling_key\" rel=\"noopener noreferrer\" target=\"_blank\"><em>too-LOOZ</em></a>; French:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Help:IPA/French\" rel=\"noopener noreferrer\" target=\"_blank\">[tuluz]</a> (<a href=\"https://en.wikipedia.org/wiki/File:Fr-Toulouse.ogg\" rel=\"noopener noreferrer\" target=\"_blank\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Loudspeaker.svg/11px-Loudspeaker.svg.png\" alt=\"About this sound\" width=\"11\" height=\"11\"></a><a href=\"https://upload.wikimedia.org/wikipedia/commons/d/d8/Fr-Toulouse.ogg\" rel=\"noopener noreferrer\" target=\"_blank\">listen</a>); <a href=\"https://en.wikipedia.org/wiki/Occitan_language\" rel=\"noopener noreferrer\" target=\"_blank\">Occitan</a>: <em>Tolosa</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Occitan\" rel=\"noopener noreferrer\" target=\"_blank\">[tu\u02c8luzo]</a>; <a href=\"https://en.wikipedia.org/wiki/Latin_language\" rel=\"noopener noreferrer\" target=\"_blank\">Latin</a>: <em>Tolosa</em> <a href=\"https://en.wikipedia.org/wiki/Help:IPA/Latin\" rel=\"noopener noreferrer\" target=\"_blank\">[to\u02c8lo\u02d0sa]</a>) is the capital of the French <a href=\"https://en.wikipedia.org/wiki/Departments_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">department</a> of <a href=\"https://en.wikipedia.org/wiki/Haute-Garonne\" rel=\"noopener noreferrer\" target=\"_blank\">Haute-Garonne</a> and of the <a href=\"https://en.wikipedia.org/wiki/Regions_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">region</a> of <a href=\"https://en.wikipedia.org/wiki/Occitanie\" rel=\"noopener noreferrer\" target=\"_blank\">Occitanie</a>. The city is on the banks of the <a href=\"https://en.wikipedia.org/wiki/Garonne\" rel=\"noopener noreferrer\" target=\"_blank\">River Garonne</a>, 150 kilometres (93 miles) from the <a href=\"https://en.wikipedia.org/wiki/Mediterranean_Sea\" rel=\"noopener noreferrer\" target=\"_blank\">Mediterranean Sea</a>, 230&nbsp;km (143&nbsp;mi) from the <a href=\"https://en.wikipedia.org/wiki/Atlantic_Ocean\" rel=\"noopener noreferrer\" target=\"_blank\">Atlantic Ocean</a> and 680&nbsp;km (420&nbsp;mi) from <a href=\"https://en.wikipedia.org/wiki/Paris\" rel=\"noopener noreferrer\" target=\"_blank\">Paris</a>. It is the fourth-largest city in <a href=\"https://en.wikipedia.org/wiki/France\" rel=\"noopener noreferrer\" target=\"_blank\">France</a>, with 466,297 inhabitants as of January 2014. In France, Toulouse is called the \"Pink City\" (<em>La Ville Rose</em>).</p><p>The Toulouse Metro area, with 1,312,304 inhabitants as of 2014, is France's fourth-largest metropolitan area, after Paris, <a href=\"https://en.wikipedia.org/wiki/Lyon\" rel=\"noopener noreferrer\" target=\"_blank\">Lyon</a> and <a href=\"https://en.wikipedia.org/wiki/Marseille\" rel=\"noopener noreferrer\" target=\"_blank\">Marseille</a>, and ahead of <a href=\"https://en.wikipedia.org/wiki/Lille\" rel=\"noopener noreferrer\" target=\"_blank\">Lille</a> and <a href=\"https://en.wikipedia.org/wiki/Bordeaux\" rel=\"noopener noreferrer\" target=\"_blank\">Bordeaux</a>.</p><p>Toulouse is the centre of the European aerospace industry, with the headquarters of <a href=\"https://en.wikipedia.org/wiki/Airbus\" rel=\"noopener noreferrer\" target=\"_blank\">Airbus</a> (formerly EADS), the <a href=\"https://en.wikipedia.org/wiki/SPOT_(satellites)\" rel=\"noopener noreferrer\" target=\"_blank\">SPOT satellite system</a>, <a href=\"https://en.wikipedia.org/wiki/ATR_(aircraft_manufacturer)\" rel=\"noopener noreferrer\" target=\"_blank\">ATR</a> and the <a href=\"https://en.wikipedia.org/wiki/Aerospace_Valley\" rel=\"noopener noreferrer\" target=\"_blank\">Aerospace Valley</a>. It also hosts the European headquarters of <a href=\"https://en.wikipedia.org/wiki/Intel\" rel=\"noopener noreferrer\" target=\"_blank\">Intel</a> and <a href=\"https://en.wikipedia.org/wiki/CNES\" rel=\"noopener noreferrer\" target=\"_blank\">CNES</a>'s <a href=\"https://en.wikipedia.org/wiki/Toulouse_Space_Centre\" rel=\"noopener noreferrer\" target=\"_blank\">Toulouse Space Centre</a> (CST), the largest space centre in Europe.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-5\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[5]</sup></a> <a href=\"https://en.wikipedia.org/wiki/Thales_Alenia_Space\" rel=\"noopener noreferrer\" target=\"_blank\">Thales Alenia Space</a>, <a href=\"https://en.wikipedia.org/wiki/ATR_(aircraft_manufacturer)\" rel=\"noopener noreferrer\" target=\"_blank\">ATR</a>, <a href=\"https://en.wikipedia.org/wiki/Safran\" rel=\"noopener noreferrer\" target=\"_blank\">SAFRAN</a>, <a href=\"https://en.wikipedia.org/wiki/Liebherr_Aerospace\" rel=\"noopener noreferrer\" target=\"_blank\">Liebherr-Aerospace</a> and <a href=\"https://en.wikipedia.org/wiki/Airbus_Defence_and_Space\" rel=\"noopener noreferrer\" target=\"_blank\">Airbus Defence and Space</a> also have a significant presence in Toulouse.</p><p>The <a href=\"https://en.wikipedia.org/wiki/University_of_Toulouse\" rel=\"noopener noreferrer\" target=\"_blank\">University of Toulouse</a> is one of the oldest in Europe (founded in 1229) and, with more than 103,000 students, it is the fourth-largest university campus in France, after the universities of <a href=\"https://en.wikipedia.org/wiki/University_of_Paris\" rel=\"noopener noreferrer\" target=\"_blank\">Paris</a>, <a href=\"https://en.wikipedia.org/wiki/University_of_Lyon\" rel=\"noopener noreferrer\" target=\"_blank\">Lyon</a> and <a href=\"https://en.wikipedia.org/wiki/University_of_Lille\" rel=\"noopener noreferrer\" target=\"_blank\">Lille</a>.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-6\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[6]</sup></a></p><p>The air route between <a href=\"https://en.wikipedia.org/wiki/Toulouse%E2%80%93Blagnac_Airport\" rel=\"noopener noreferrer\" target=\"_blank\">Toulouse\u2013Blagnac</a> and <a href=\"https://en.wikipedia.org/wiki/Paris_Orly_Airport\" rel=\"noopener noreferrer\" target=\"_blank\">Paris Orly</a> is the busiest in Europe, transporting 2.4&nbsp;million passengers in 2014.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-7\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[7]</sup></a> According to the rankings of <a href=\"https://en.wikipedia.org/wiki/L%27Express\" rel=\"noopener noreferrer\" target=\"_blank\"><em>L'Express</em></a> and <a href=\"https://en.wikipedia.org/wiki/Challenges_(magazine)\" rel=\"noopener noreferrer\" target=\"_blank\"><em>Challenges</em></a>, Toulouse is the most dynamic French city.<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-8\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[8]</sup></a><a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-9\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[9]</sup></a><a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-10\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[10]</sup></a></p><p>Founded by the Romans, the city was the capital of the <a href=\"https://en.wikipedia.org/wiki/Visigothic_Kingdom\" rel=\"noopener noreferrer\" target=\"_blank\">Visigothic Kingdom</a> in the 5th century and the capital of the <a href=\"https://en.wikipedia.org/wiki/Provinces_of_France\" rel=\"noopener noreferrer\" target=\"_blank\">province</a> of <a href=\"https://en.wikipedia.org/wiki/Languedoc\" rel=\"noopener noreferrer\" target=\"_blank\">Languedoc</a> in the <a href=\"https://en.wikipedia.org/wiki/Late_Middle_Ages\" rel=\"noopener noreferrer\" target=\"_blank\">Late Middle Ages</a> and <a href=\"https://en.wikipedia.org/wiki/Early_modern_period\" rel=\"noopener noreferrer\" target=\"_blank\">early modern period</a> (provinces were abolished during the <a href=\"https://en.wikipedia.org/wiki/French_Revolution\" rel=\"noopener noreferrer\" target=\"_blank\">French Revolution</a>), making it the unofficial capital of the cultural region of <a href=\"https://en.wikipedia.org/wiki/Occitania\" rel=\"noopener noreferrer\" target=\"_blank\">Occitania</a> (Southern France). It is now the capital of the <a href=\"https://en.wikipedia.org/wiki/Occitanie\" rel=\"noopener noreferrer\" target=\"_blank\">Occitanie</a> <a href=\"https://en.wikipedia.org/wiki/R%C3%A9gion_in_France\" rel=\"noopener noreferrer\" target=\"_blank\">region</a>, the second largest region in <a href=\"https://en.wikipedia.org/wiki/Metropolitan_France\" rel=\"noopener noreferrer\" target=\"_blank\">Metropolitan France</a>.</p><p>A city with unique architecture made of pinkish <a href=\"https://en.wikipedia.org/wiki/Terracotta\" rel=\"noopener noreferrer\" target=\"_blank\">terracotta</a> bricks, which earned it the nickname <em>la Ville Rose</em> (\"the Pink City\"), Toulouse counts two <a href=\"https://en.wikipedia.org/wiki/UNESCO\" rel=\"noopener noreferrer\" target=\"_blank\">UNESCO</a> <a href=\"https://en.wikipedia.org/wiki/World_Heritage_Site\" rel=\"noopener noreferrer\" target=\"_blank\">World Heritage Sites</a>, the <a href=\"https://en.wikipedia.org/wiki/Canal_du_Midi\" rel=\"noopener noreferrer\" target=\"_blank\">Canal du Midi</a> (designated in 1996 and shared with other cities), and the <a href=\"https://en.wikipedia.org/wiki/Basilica_of_St._Sernin,_Toulouse\" rel=\"noopener noreferrer\" target=\"_blank\">Basilica of St. Sernin</a>, the largest remaining Romanesque building in Europe,<a href=\"https://en.wikipedia.org/wiki/Toulouse#cite_note-11\" rel=\"noopener noreferrer\" target=\"_blank\"><sup>[11]</sup></a> designated in 1998 because of its significance to the <a href=\"https://en.wikipedia.org/wiki/World_Heritage_Sites_of_the_Routes_of_Santiago_de_Compostela_in_France\" rel=\"noopener noreferrer\" target=\"_blank\">Santiago de Compostela pilgrimage route</a>.</p>",
+            "main_picture": "data:image/jpeg;name=terra_geocrud/features/4/data_file/main_picture/Montage_Toulouse_3.jpg;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+        },
+        "layer": 3,
+        "source": null,
+        "target": null
+    }
+},
+{
+    "model": "geostore.layerextrageom",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-06-02T12:49:16.800Z",
+        "updated_at": "2020-06-02T12:49:50.640Z",
+        "settings": {},
+        "geom_type": 4,
+        "layer": 2,
+        "order": 0,
+        "slug": "information-desks",
+        "title": "Information Desks",
+        "editable": true
+    }
+},
+{
+    "model": "geostore.layerextrageom",
+    "pk": 2,
+    "fields": {
+        "created_at": "2020-06-03T09:54:35.376Z",
+        "updated_at": "2020-06-03T09:54:35.376Z",
+        "settings": {},
+        "geom_type": 0,
+        "layer": 3,
+        "order": 0,
+        "slug": "center",
+        "title": "Center",
+        "editable": true
+    }
+},
+{
+    "model": "geostore.layerextrageom",
+    "pk": 3,
+    "fields": {
+        "created_at": "2020-06-03T09:54:35.381Z",
+        "updated_at": "2020-06-03T09:54:58.917Z",
+        "settings": {},
+        "geom_type": 0,
+        "layer": 3,
+        "order": 1,
+        "slug": "centroid",
+        "title": "Centro\u00efd",
+        "editable": true
+    }
+},
+{
+    "model": "geostore.featureextrageom",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-06-02T12:49:35.295Z",
+        "updated_at": "2020-06-02T12:49:35.295Z",
+        "feature": 3,
+        "layer_extra_geom": 1,
+        "geom": "SRID=4326;POINT (0.7387104906842978 43.1834232214955)",
+        "properties": {},
+        "identifier": "366b2a5a-e1cc-477d-821f-c332d0239ccd"
+    }
+},
+{
+    "model": "geostore.featureextrageom",
+    "pk": 2,
+    "fields": {
+        "created_at": "2020-06-03T10:03:56.754Z",
+        "updated_at": "2020-06-03T10:03:56.754Z",
+        "feature": 4,
+        "layer_extra_geom": 2,
+        "geom": "SRID=4326;POINT (1.45279883639887 43.59720101461766)",
+        "properties": {},
+        "identifier": "52a0e8fd-4a52-4196-99cb-4946e81d98a1"
+    }
+},
+{
+    "model": "terra_geocrud.crudgroupview",
+    "pk": 1,
+    "fields": {
+        "name": "Outdoor Activities",
+        "order": 20,
+        "pictogram": "crud/groups/pictograms/images.png"
+    }
+},
+{
+    "model": "terra_geocrud.crudgroupview",
+    "pk": 2,
+    "fields": {
+        "name": "Administration",
+        "order": 10,
+        "pictogram": ""
+    }
+},
+{
+    "model": "terra_geocrud.crudview",
+    "pk": 1,
+    "fields": {
+        "name": "Points",
+        "order": 20,
+        "object_name": "",
+        "object_name_plural": "",
+        "group": null,
+        "layer": 1,
+        "pictogram": "",
+        "map_style": {},
+        "ui_schema": {},
+        "settings": {},
+        "feature_title_property": 1,
+        "visible": true,
+        "templates": [],
+        "default_list_properties": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "terra_geocrud.crudview",
+    "pk": 2,
+    "fields": {
+        "name": "Treks",
+        "order": 10,
+        "object_name": "trek",
+        "object_name_plural": "treks",
+        "group": 1,
+        "layer": 2,
+        "pictogram": "crud/views/pictograms/unnamed.png",
+        "map_style": {
+            "type": "line",
+            "paint": {
+                "line-color": "#0000FF",
+                "line-width": 3
+            }
+        },
+        "ui_schema": {
+            "length": {
+                "ui:help": "in Km"
+            },
+            "duration": {
+                "ui:help": "in Hours"
+            },
+            "description": {
+                "ui:field": "rte"
+            }
+        },
+        "settings": {},
+        "feature_title_property": 4,
+        "visible": true,
+        "templates": [],
+        "default_list_properties": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "terra_geocrud.crudview",
+    "pk": 3,
+    "fields": {
+        "name": "Cities",
+        "order": 3,
+        "object_name": "city",
+        "object_name_plural": "cities",
+        "group": 2,
+        "layer": 3,
+        "pictogram": "crud/views/pictograms/administration-2031343_640.png",
+        "map_style": {
+            "type": "fill",
+            "paint": {
+                "fill-color": "red",
+                "fill-opacity": 0.3
+            }
+        },
+        "ui_schema": {
+            "description": {
+                "ui:field": "rte"
+            },
+            "main_picture": {
+                "ui:options": {
+                    "accept": [
+                        ".jpg",
+                        ".png",
+                        ".bmp",
+                        ".gif"
+                    ]
+                }
+            }
+        },
+        "settings": {},
+        "feature_title_property": 7,
+        "visible": true,
+        "templates": [],
+        "default_list_properties": [
+            7,
+            8,
+            9
+        ]
+    }
+},
+{
+    "model": "terra_geocrud.featurepropertydisplaygroup",
+    "pk": 1,
+    "fields": {
+        "crud_view": 1,
+        "order": 20,
+        "label": "Administrative",
+        "slug": "administrative",
+        "pictogram": ""
+    }
+},
+{
+    "model": "terra_geocrud.featurepropertydisplaygroup",
+    "pk": 2,
+    "fields": {
+        "crud_view": 1,
+        "order": 10,
+        "label": "Infos",
+        "slug": "infos",
+        "pictogram": ""
+    }
+},
+{
+    "model": "terra_geocrud.featurepropertydisplaygroup",
+    "pk": 3,
+    "fields": {
+        "crud_view": 3,
+        "order": 10,
+        "label": "Infos",
+        "slug": "infos",
+        "pictogram": ""
+    }
+},
+{
+    "model": "terra_geocrud.featurepropertydisplaygroup",
+    "pk": 4,
+    "fields": {
+        "crud_view": 3,
+        "order": 20,
+        "label": "Others",
+        "slug": "others",
+        "pictogram": ""
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 1,
+    "fields": {
+        "view": 1,
+        "group": 2,
+        "key": "name",
+        "json_schema": {
+            "type": "string",
+            "title": "Name"
+        },
+        "ui_schema": {},
+        "required": false,
+        "order": 10
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 2,
+    "fields": {
+        "view": 1,
+        "group": 1,
+        "key": "city",
+        "json_schema": {
+            "type": "string",
+            "title": "City"
+        },
+        "ui_schema": {},
+        "required": false,
+        "order": 20
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 3,
+    "fields": {
+        "view": 1,
+        "group": 1,
+        "key": "country",
+        "json_schema": {
+            "type": "string",
+            "title": "Country"
+        },
+        "ui_schema": {},
+        "required": false,
+        "order": 30
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 4,
+    "fields": {
+        "view": 2,
+        "group": null,
+        "key": "name",
+        "json_schema": {
+            "type": "string",
+            "title": "Name"
+        },
+        "ui_schema": {},
+        "required": false,
+        "order": 10
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 5,
+    "fields": {
+        "view": 2,
+        "group": null,
+        "key": "length",
+        "json_schema": {
+            "type": "number",
+            "title": "Length"
+        },
+        "ui_schema": {
+            "ui:help": "in Km"
+        },
+        "required": false,
+        "order": 30
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 6,
+    "fields": {
+        "view": 2,
+        "group": null,
+        "key": "duration",
+        "json_schema": {
+            "type": "number",
+            "title": "Duration"
+        },
+        "ui_schema": {
+            "ui:help": "in Hours"
+        },
+        "required": false,
+        "order": 40
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 7,
+    "fields": {
+        "view": 3,
+        "group": 3,
+        "key": "name",
+        "json_schema": {
+            "type": "string",
+            "title": "Name"
+        },
+        "ui_schema": {},
+        "required": false,
+        "order": 10
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 8,
+    "fields": {
+        "view": 3,
+        "group": 4,
+        "key": "zip_codes",
+        "json_schema": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "title": "ZIP codes"
+        },
+        "ui_schema": {},
+        "required": false,
+        "order": 40
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 9,
+    "fields": {
+        "view": 3,
+        "group": 4,
+        "key": "population",
+        "json_schema": {
+            "type": "integer",
+            "title": "Population"
+        },
+        "ui_schema": {},
+        "required": false,
+        "order": 50
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 10,
+    "fields": {
+        "view": 3,
+        "group": 3,
+        "key": "main_picture",
+        "json_schema": {
+            "type": "string",
+            "title": "Main picture",
+            "format": "data-url"
+        },
+        "ui_schema": {
+            "ui:options": {
+                "accept": [
+                    ".jpg",
+                    ".png",
+                    ".bmp",
+                    ".gif"
+                ]
+            }
+        },
+        "required": false,
+        "order": 20
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 11,
+    "fields": {
+        "view": 3,
+        "group": 3,
+        "key": "description",
+        "json_schema": {
+            "type": "string",
+            "title": "Description"
+        },
+        "ui_schema": {
+            "ui:field": "rte"
+        },
+        "required": false,
+        "order": 30
+    }
+},
+{
+    "model": "terra_geocrud.crudviewproperty",
+    "pk": 12,
+    "fields": {
+        "view": 2,
+        "group": null,
+        "key": "description",
+        "json_schema": {
+            "type": "string",
+            "title": "Description"
+        },
+        "ui_schema": {
+            "ui:field": "rte"
+        },
+        "required": false,
+        "order": 20
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add template",
+        "content_type": 6,
+        "codename": "add_template"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change template",
+        "content_type": 6,
+        "codename": "change_template"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete template",
+        "content_type": 6,
+        "codename": "delete_template"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view template",
+        "content_type": 6,
+        "codename": "view_template"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add revision",
+        "content_type": 7,
+        "codename": "add_revision"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change revision",
+        "content_type": 7,
+        "codename": "change_revision"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete revision",
+        "content_type": 7,
+        "codename": "delete_revision"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view revision",
+        "content_type": 7,
+        "codename": "view_revision"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add version",
+        "content_type": 8,
+        "codename": "add_version"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change version",
+        "content_type": 8,
+        "codename": "change_version"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete version",
+        "content_type": 8,
+        "codename": "delete_version"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view version",
+        "content_type": 8,
+        "codename": "view_version"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add kv store",
+        "content_type": 9,
+        "codename": "add_kvstore"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change kv store",
+        "content_type": 9,
+        "codename": "change_kvstore"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete kv store",
+        "content_type": 9,
+        "codename": "delete_kvstore"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view kv store",
+        "content_type": 9,
+        "codename": "view_kvstore"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add Map base layers",
+        "content_type": 10,
+        "codename": "add_mapbaselayer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change Map base layers",
+        "content_type": 10,
+        "codename": "change_mapbaselayer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete Map base layers",
+        "content_type": 10,
+        "codename": "delete_mapbaselayer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view Map base layers",
+        "content_type": 10,
+        "codename": "view_mapbaselayer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add base layer tile",
+        "content_type": 11,
+        "codename": "add_baselayertile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change base layer tile",
+        "content_type": 11,
+        "codename": "change_baselayertile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete base layer tile",
+        "content_type": 11,
+        "codename": "delete_baselayertile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view base layer tile",
+        "content_type": 11,
+        "codename": "view_baselayertile"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add terra user",
+        "content_type": 12,
+        "codename": "add_terrauser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change terra user",
+        "content_type": 12,
+        "codename": "change_terrauser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete terra user",
+        "content_type": 12,
+        "codename": "delete_terrauser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view terra user",
+        "content_type": 12,
+        "codename": "view_terrauser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add read model",
+        "content_type": 13,
+        "codename": "add_readmodel"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change read model",
+        "content_type": 13,
+        "codename": "change_readmodel"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete read model",
+        "content_type": 13,
+        "codename": "delete_readmodel"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view read model",
+        "content_type": 13,
+        "codename": "view_readmodel"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add terra permission",
+        "content_type": 14,
+        "codename": "add_terrapermission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change terra permission",
+        "content_type": 14,
+        "codename": "change_terrapermission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete terra permission",
+        "content_type": 14,
+        "codename": "delete_terrapermission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view terra permission",
+        "content_type": 14,
+        "codename": "view_terrapermission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Is able to create, delete, update users",
+        "content_type": 14,
+        "codename": "can_manage_users"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Is able to create, delete, update groups",
+        "content_type": 14,
+        "codename": "can_manage_groups"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can add feature",
+        "content_type": 15,
+        "codename": "add_feature"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can change feature",
+        "content_type": 15,
+        "codename": "change_feature"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can delete feature",
+        "content_type": 15,
+        "codename": "delete_feature"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can view feature",
+        "content_type": 15,
+        "codename": "view_feature"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can add feature relation",
+        "content_type": 16,
+        "codename": "add_featurerelation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can change feature relation",
+        "content_type": 16,
+        "codename": "change_featurerelation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can delete feature relation",
+        "content_type": 16,
+        "codename": "delete_featurerelation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can view feature relation",
+        "content_type": 16,
+        "codename": "view_featurerelation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can add layer",
+        "content_type": 17,
+        "codename": "add_layer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can change layer",
+        "content_type": 17,
+        "codename": "change_layer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can delete layer",
+        "content_type": 17,
+        "codename": "delete_layer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can view layer",
+        "content_type": 17,
+        "codename": "view_layer"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Has all permissions on layers",
+        "content_type": 17,
+        "codename": "can_manage_layers"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Is able to export layers",
+        "content_type": 17,
+        "codename": "can_export_layers"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Is able to import layers",
+        "content_type": 17,
+        "codename": "can_import_layers"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can add layer relation",
+        "content_type": 18,
+        "codename": "add_layerrelation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can change layer relation",
+        "content_type": 18,
+        "codename": "change_layerrelation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can delete layer relation",
+        "content_type": 18,
+        "codename": "delete_layerrelation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can view layer relation",
+        "content_type": 18,
+        "codename": "view_layerrelation"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can add layer group",
+        "content_type": 19,
+        "codename": "add_layergroup"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can change layer group",
+        "content_type": 19,
+        "codename": "change_layergroup"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can delete layer group",
+        "content_type": 19,
+        "codename": "delete_layergroup"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 81,
+    "fields": {
+        "name": "Can view layer group",
+        "content_type": 19,
+        "codename": "view_layergroup"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 82,
+    "fields": {
+        "name": "Can add layer extra geom",
+        "content_type": 20,
+        "codename": "add_layerextrageom"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 83,
+    "fields": {
+        "name": "Can change layer extra geom",
+        "content_type": 20,
+        "codename": "change_layerextrageom"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 84,
+    "fields": {
+        "name": "Can delete layer extra geom",
+        "content_type": 20,
+        "codename": "delete_layerextrageom"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 85,
+    "fields": {
+        "name": "Can view layer extra geom",
+        "content_type": 20,
+        "codename": "view_layerextrageom"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 86,
+    "fields": {
+        "name": "Can add feature extra geom",
+        "content_type": 21,
+        "codename": "add_featureextrageom"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 87,
+    "fields": {
+        "name": "Can change feature extra geom",
+        "content_type": 21,
+        "codename": "change_featureextrageom"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 88,
+    "fields": {
+        "name": "Can delete feature extra geom",
+        "content_type": 21,
+        "codename": "delete_featureextrageom"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 89,
+    "fields": {
+        "name": "Can view feature extra geom",
+        "content_type": 21,
+        "codename": "view_featureextrageom"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 90,
+    "fields": {
+        "name": "Can add Group",
+        "content_type": 22,
+        "codename": "add_crudgroupview"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 91,
+    "fields": {
+        "name": "Can change Group",
+        "content_type": 22,
+        "codename": "change_crudgroupview"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 92,
+    "fields": {
+        "name": "Can delete Group",
+        "content_type": 22,
+        "codename": "delete_crudgroupview"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 93,
+    "fields": {
+        "name": "Can view Group",
+        "content_type": 22,
+        "codename": "view_crudgroupview"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 94,
+    "fields": {
+        "name": "Can add View",
+        "content_type": 23,
+        "codename": "add_crudview"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 95,
+    "fields": {
+        "name": "Can change View",
+        "content_type": 23,
+        "codename": "change_crudview"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 96,
+    "fields": {
+        "name": "Can delete View",
+        "content_type": 23,
+        "codename": "delete_crudview"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 97,
+    "fields": {
+        "name": "Can view View",
+        "content_type": 23,
+        "codename": "view_crudview"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 98,
+    "fields": {
+        "name": "Can add Feature properties display group",
+        "content_type": 24,
+        "codename": "add_featurepropertydisplaygroup"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 99,
+    "fields": {
+        "name": "Can change Feature properties display group",
+        "content_type": 24,
+        "codename": "change_featurepropertydisplaygroup"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+        "name": "Can delete Feature properties display group",
+        "content_type": 24,
+        "codename": "delete_featurepropertydisplaygroup"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 101,
+    "fields": {
+        "name": "Can view Feature properties display group",
+        "content_type": 24,
+        "codename": "view_featurepropertydisplaygroup"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 102,
+    "fields": {
+        "name": "Can add Attachment category",
+        "content_type": 25,
+        "codename": "add_attachmentcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 103,
+    "fields": {
+        "name": "Can change Attachment category",
+        "content_type": 25,
+        "codename": "change_attachmentcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 104,
+    "fields": {
+        "name": "Can delete Attachment category",
+        "content_type": 25,
+        "codename": "delete_attachmentcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 105,
+    "fields": {
+        "name": "Can view Attachment category",
+        "content_type": 25,
+        "codename": "view_attachmentcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 106,
+    "fields": {
+        "name": "Can add Feature picture",
+        "content_type": 26,
+        "codename": "add_featurepicture"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 107,
+    "fields": {
+        "name": "Can change Feature picture",
+        "content_type": 26,
+        "codename": "change_featurepicture"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 108,
+    "fields": {
+        "name": "Can delete Feature picture",
+        "content_type": 26,
+        "codename": "delete_featurepicture"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 109,
+    "fields": {
+        "name": "Can view Feature picture",
+        "content_type": 26,
+        "codename": "view_featurepicture"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 110,
+    "fields": {
+        "name": "Can add Feature attachment",
+        "content_type": 27,
+        "codename": "add_featureattachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 111,
+    "fields": {
+        "name": "Can change Feature attachment",
+        "content_type": 27,
+        "codename": "change_featureattachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 112,
+    "fields": {
+        "name": "Can delete Feature attachment",
+        "content_type": 27,
+        "codename": "delete_featureattachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 113,
+    "fields": {
+        "name": "Can view Feature attachment",
+        "content_type": 27,
+        "codename": "view_featureattachment"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 114,
+    "fields": {
+        "name": "Can add ExtraLayer style",
+        "content_type": 28,
+        "codename": "add_extralayerstyle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 115,
+    "fields": {
+        "name": "Can change ExtraLayer style",
+        "content_type": 28,
+        "codename": "change_extralayerstyle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 116,
+    "fields": {
+        "name": "Can delete ExtraLayer style",
+        "content_type": 28,
+        "codename": "delete_extralayerstyle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 117,
+    "fields": {
+        "name": "Can view ExtraLayer style",
+        "content_type": 28,
+        "codename": "view_extralayerstyle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 118,
+    "fields": {
+        "name": "Can add crud view property",
+        "content_type": 29,
+        "codename": "add_crudviewproperty"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 119,
+    "fields": {
+        "name": "Can change crud view property",
+        "content_type": 29,
+        "codename": "change_crudviewproperty"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 120,
+    "fields": {
+        "name": "Can delete crud view property",
+        "content_type": 29,
+        "codename": "delete_crudviewproperty"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 121,
+    "fields": {
+        "name": "Can view crud view property",
+        "content_type": 29,
+        "codename": "view_crudviewproperty"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 122,
+    "fields": {
+        "name": "GEOCRUD: Can create / edit / delete views / groups and associated layers.",
+        "content_type": 14,
+        "codename": "can_manage_views"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 123,
+    "fields": {
+        "name": "GEOCRUD: Can read feature detail.",
+        "content_type": 14,
+        "codename": "can_view_feature"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 124,
+    "fields": {
+        "name": "GEOCRUD: Can create feature",
+        "content_type": 14,
+        "codename": "can_add_feature"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 125,
+    "fields": {
+        "name": "GEOCRUD: Can change feature",
+        "content_type": 14,
+        "codename": "can_change_feature"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 126,
+    "fields": {
+        "name": "GEOCRUD: Can delete feature",
+        "content_type": 14,
+        "codename": "can_delete_feature"
+    }
+},
+{
+    "model": "terra_accounts.terrauser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$180000$oF0sFE8MazOZ$4Gwrvj+Tz+kgcDVwGHQu0hILUOS5Ile2GvbzCvstWd0=",
+        "last_login": "2020-06-03T09:48:56.950Z",
+        "is_superuser": true,
+        "uuid": "05ea8584-2b0b-46d3-89f1-0f38ca2b12de",
+        "email": "j.e.castagnede@gmail.com",
+        "properties": {},
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-05-29T09:52:19.892Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "terra_accounts.terrapermission",
+    "pk": 124,
+    "fields": {}
+},
+{
+    "model": "terra_accounts.terrapermission",
+    "pk": 125,
+    "fields": {}
+},
+{
+    "model": "terra_accounts.terrapermission",
+    "pk": 126,
+    "fields": {}
+},
+{
+    "model": "terra_accounts.terrapermission",
+    "pk": 58,
+    "fields": {}
+},
+{
+    "model": "terra_accounts.terrapermission",
+    "pk": 57,
+    "fields": {}
+},
+{
+    "model": "terra_accounts.terrapermission",
+    "pk": 122,
+    "fields": {}
+},
+{
+    "model": "terra_accounts.terrapermission",
+    "pk": 123,
+    "fields": {}
+},
+{
+    "model": "geostore.layer",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-05-29T11:58:05.814Z",
+        "updated_at": "2020-05-29T12:06:26.416Z",
+        "settings": {},
+        "geom_type": 0,
+        "name": "points",
+        "schema": {
+            "required": [],
+            "properties": {
+                "city": {
+                    "type": "string",
+                    "title": "City"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "country": {
+                    "type": "string",
+                    "title": "Country"
+                }
+            }
+        },
+        "authorized_groups": []
+    }
+},
+{
+    "model": "geostore.layer",
+    "pk": 2,
+    "fields": {
+        "created_at": "2020-06-02T08:35:07.178Z",
+        "updated_at": "2020-06-03T10:10:57.932Z",
+        "settings": {},
+        "geom_type": 1,
+        "name": "treks",
+        "schema": {
+            "required": [],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "length": {
+                    "type": "number",
+                    "title": "Length"
+                },
+                "duration": {
+                    "type": "number",
+                    "title": "Duration"
+                },
+                "description": {
+                    "type": "string",
+                    "title": "Description"
+                }
+            }
+        },
+        "authorized_groups": []
+    }
+},
+{
+    "model": "geostore.layer",
+    "pk": 3,
+    "fields": {
+        "created_at": "2020-06-02T08:40:15.731Z",
+        "updated_at": "2020-06-03T09:54:58.904Z",
+        "settings": {},
+        "geom_type": 6,
+        "name": "cities",
+        "schema": {
+            "required": [],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "zip_codes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "ZIP codes"
+                },
+                "population": {
+                    "type": "integer",
+                    "title": "Population"
+                },
+                "description": {
+                    "type": "string",
+                    "title": "Description"
+                },
+                "main_picture": {
+                    "type": "string",
+                    "title": "Main picture",
+                    "format": "data-url"
+                }
+            }
+        },
+        "authorized_groups": []
+    }
+}
+]

@@ -1,0 +1,55 @@
+version: "3"
+services:
+  postgres:
+    image: makinacorpus/pgrouting:10-2.5-2.6
+    ports:
+      - "127.0.0.1:${PGPORT}:${PGPORT}"
+    env_file:
+      - .env
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+  memcached:
+    image: memcached:1.6-alpine
+
+  django:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.back
+    tty: true
+    env_file:
+      - .env
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/public/data  # mount public folder to add data / keep media files
+      - ./conf/custom.py:/app/src/project/settings/custom.py
+      - static:/app/public/static  # django static hidden volume
+    depends_on:
+      - memcached
+      - postgres
+    working_dir: /app/src
+    command: ./wait-for-postgres.sh ./manage.py runserver 0.0.0.0:8000
+
+  mbglrenderer:
+    image: consbio/mbgl-renderer:0.4.0
+
+  front:
+    build:
+      context: ./front
+      dockerfile: ../.docker/Dockerfile.front
+      args:
+        NODE: 12.16
+    tty: true
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:3000:80"
+    depends_on:
+      - django
+    volumes:
+      - ./conf/nginx/:/etc/nginx/conf.d/:ro
+      - ./data/media/:/var/www/config/media/:ro
+      - static:/var/www/config/static/:ro
+volumes:
+  postgres:
+  static:

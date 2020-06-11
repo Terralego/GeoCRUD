@@ -1,0 +1,101 @@
+[
+  {
+    "model": "mapbox_baselayer.mapbaselayer",
+    "pk": 1,
+    "fields": {
+      "name": "Mapbox",
+      "order": 2,
+      "slug": "mapbox",
+      "base_layer_type": "mapbox",
+      "map_box_url": "mapbox://styles/makinacorpus/cjx4u80lx1lbr1clfcpadcqh3",
+      "sprite": "",
+      "glyphs": "",
+      "min_zoom": 0,
+      "max_zoom": 22,
+      "tile_size": 512,
+      "attribution": ""
+    }
+  },
+  {
+    "model": "mapbox_baselayer.mapbaselayer",
+    "pk": 2,
+    "fields": {
+      "name": "OSM",
+      "order": 0,
+      "slug": "osm",
+      "base_layer_type": "raster",
+      "map_box_url": "",
+      "sprite": "",
+      "glyphs": "",
+      "min_zoom": 0,
+      "max_zoom": 19,
+      "tile_size": 256,
+      "attribution": "OpenStreetMap"
+    }
+  },
+  {
+    "model": "mapbox_baselayer.mapbaselayer",
+    "pk": 3,
+    "fields": {
+      "name": "OpenTopoMap",
+      "order": 1,
+      "slug": "opentopomap",
+      "base_layer_type": "raster",
+      "map_box_url": "",
+      "sprite": "",
+      "glyphs": "",
+      "min_zoom": 0,
+      "max_zoom": 19,
+      "tile_size": 256,
+      "attribution": ""
+    }
+  },
+  {
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 1,
+    "fields": {
+      "base_layer": 2,
+      "url": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 2,
+    "fields": {
+      "base_layer": 2,
+      "url": "https://b.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 3,
+    "fields": {
+      "base_layer": 2,
+      "url": "https://c.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 4,
+    "fields": {
+      "base_layer": 3,
+      "url": "https://a.tile.opentopomap.org/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 5,
+    "fields": {
+      "base_layer": 3,
+      "url": "https://b.tile.opentopomap.org/{z}/{x}/{y}.png"
+    }
+  },
+  {
+    "model": "mapbox_baselayer.baselayertile",
+    "pk": 6,
+    "fields": {
+      "base_layer": 3,
+      "url": "https://c.tile.opentopomap.org/{z}/{x}/{y}.png"
+    }
+  }
+]

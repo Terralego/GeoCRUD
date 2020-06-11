@@ -1,0 +1,12 @@
+django==3.0.*  # Fix with last django available (or LTS)
+# django==2.2.*
+
+django-terra-geocrud
+
+# optionnal, if you want to expose API swagger / redoc
+drf-yasg
+
+# prod & supervision
+gunicorn[gevent]
+python-memcached
+sentry-sdk

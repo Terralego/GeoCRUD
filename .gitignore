@@ -1,0 +1,11 @@
+__pycache__/
+/venv/
+/.idea/
+/var/
+/.vscode/
+/.env
+.coverage
+!.gitkeep
+/data/media/cache/
+/doc/_build/
+/cypress/node_modules/
