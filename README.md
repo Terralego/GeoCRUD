@@ -11,7 +11,8 @@
 
 ---
 
-<p align="center"> GeoCRUD is a Geographic CRUD editor base on terralego.
+<p align="center"> GeoCRUD is a Geographic CRUD data editor based on terralego.
+    <br>
     <br>
     @powered with <strong>django-geostore</strong>
 </p>
@@ -36,12 +37,16 @@ the following requirements:
 ## Installation
 
 ```bash
-git clone ****
-cd ***
+git clone https://github.com/Terralego/GeoCRUD.git
+cd GeoCRUD
 git submodule init
 git submodule update
 cp .env.dist .env
-edit .env and set your custom configuration (at least choose a name, user and pwd for postgres conatiner)
+```
+
+* edit .env and set your custom configuration (at least choose a name, user and pwd for postgres container)
+
+```bash
 make all  (or docker-compose build)
 make run (or docker-compose up)
 ```
@@ -54,13 +59,17 @@ make run (or docker-compose up)
   * By adding your own code in conf/custom.py (add django apps, customize code and functions, all settings variables are accessible and editable)
   * By access /config endpoint with a super user access to create and set Crud views / Data layers / Map base layers et set some other settings
 
-## Create a 1rst superuser
+## Create a superuser
 
+```bash
 docker-compose run --rm django ./manage.py createsuperuser
+```
 
 ## Load demo
 
-* docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
+```bash
+docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
+```
 
 ## Access
 
@@ -71,6 +80,7 @@ docker-compose run --rm django ./manage.py createsuperuser
 * enable ssl in backend
 
 Once SSL configuration and / or frontend proxy configuration enabled, add
+
 SSL_ENABLE=True in your .env field and restart stack
 
 * add SENTRY_DSN or configure error tracking by email (configure EMAIL_ variables and set ADMINS tuple in custom.py)

@@ -4,7 +4,9 @@ import os
 from ..utils import str2bool
 
 ALLOWED_HOSTS = os.getenv('DOMAIN_NAME').split(',')
-DEBUG = True
+
+DEBUG = False
+
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',

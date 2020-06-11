@@ -189,7 +189,7 @@ EMAIL_SUBJECT_PREFIX = os.getenv('EMAIL_SUBJECT_PREFIX', "[GeoCRUD]")
 
 
 # django-geostore settings
-TERRA_TILES_HOSTNAMES = os.getenv('TERRA_TILES_HOSTNAMES', '').split(',')   # used to improve performances by generating tilejson wirth multiple dns (ex : a.tiles.my-instance.com, b.tiles.my_istances.com ...)
+TERRA_TILES_HOSTNAMES = os.getenv('TERRA_TILES_HOSTNAMES', '').split(',')   # used to improve performances by generating tilejson with multiple dns (ex : a.tiles.my-instance.com, b.tiles.my_istances.com ...)
 MAX_TILE_ZOOM = 15  # Vector tiles are usable on display up to max zoom + 3
 MIN_TILE_ZOOM = 2  # geostore bug if zoom < 2
 
