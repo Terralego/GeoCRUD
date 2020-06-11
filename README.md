@@ -43,7 +43,7 @@ git submodule update
 cp .env.dist .env
 edit .env and set your custom configuration (at least choose a name, user and pwd for postgres conatiner)
 make all  (or docker-compose build)
-make up (or docker-compose up)
+make run (or docker-compose up)
 ```
 
 ### Configuration & Customization
@@ -60,11 +60,11 @@ docker-compose run --rm django ./manage.py createsuperuser
 
 ## Load demo
 
-* docker-compose run --rm django ./manage.py loaddata /app/fixtures/demo.json
+* docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
 
 ## Access
 
-* By default and witjout frontend proxy, you should able to access by going to http://127.0.0.1:3000. Api admin is available at http://127.0.0.1:3000/api/admin 
+* By default and without frontend proxy, you should able to access by going to http://127.0.0.1:3000. Api admin is available at http://127.0.0.1:3000/api/admin 
 
 ## Recommended production settings
 
