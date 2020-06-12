@@ -10,7 +10,7 @@ DEBUG = False
 CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': os.getenv('MEMCACHED_HOST', 'memcached'),
+        'LOCATION': f"{os.getenv('MEMCACHED_HOST', 'memcached')}:{os.getenv('MEMCACHED_PORT', '11211')}",
     }
 }
 
