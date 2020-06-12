@@ -117,7 +117,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -131,7 +131,7 @@ DATABASES = {
 }
 
 # Password validation
-# https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -149,8 +149,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Internationalization
-# https://docs.djangoproject.com/en/2.0/topics/i18n/
-
+# https://docs.djangoproject.com/en/2.2/topics/i18n/
 LANGUAGE_CODE = os.getenv('LANGUAGE_CODE', 'en-us')
 TIME_ZONE = os.getenv('TZ', 'UTC')
 USE_I18N = True
@@ -158,14 +157,12 @@ USE_L10N = True
 USE_TZ = True
 
 # Backend api admin
-
 ADMIN_SITE_HEADER = os.getenv('ADMIN_SITE_HEADER', 'GeoCRUD Backend Configuration')
 ADMIN_SITE_TITLE = os.getenv('ADMIN_SITE_TITLE', 'Backend Configuration')
 ADMIN_INDEX_TITLE = os.getenv('ADMIN_INDEX_TITLE', '')
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
 STATICFILES_DIRS = [
     os.path.join(PROJECT_DIR, "static"),
 ]
