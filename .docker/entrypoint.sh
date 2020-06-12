@@ -2,6 +2,9 @@
 
 cd /app/src || exit
 
+# Activate venv
+. /app/venv/bin/activate
+
 ./manage.py migrate --no-input
 ./manage.py collectstatic --no-input
 

@@ -11,3 +11,5 @@ RUN [ "npm", "run", "build" ]
 FROM nginx:stable
 COPY --from=0 /usr/src/app/build/ /var/www/
 WORKDIR /var/www/
+
+HEALTHCHECK CMD curl --fail http://127.0.0.1/ || exit 1
