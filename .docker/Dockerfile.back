@@ -29,6 +29,7 @@ RUN chown django:django -R /app
 WORKDIR /app/src
 USER django
 
+HEALTHCHECK CMD curl --fail http://127.0.0.1:8000/api/admin || exit 1
 
 ENTRYPOINT ["entrypoint.sh"]
 
