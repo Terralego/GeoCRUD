@@ -121,11 +121,14 @@ SSL_ENABLE=True in your .env field and restart stack
 
 # CREDITS
 * powered by 
-  * <img src="https://makina-corpus.com/logo.svg" width="250" />
+  
+  <img src="https://avatars2.githubusercontent.com/u/546696?s=200&v=4" width="100" />
 * Made with :
   * [![Build Status](https://img.shields.io/gitlab/pipeline/terralego/terra-admin)]()
 [**terra-admin**](https://github.com/Terralego/terra-admin)
+
   * [![Build Status](https://travis-ci.org/Terralego/django-terra-geocrud.svg?branch=master)](https://travis-ci.org/Terralego/django-terra-geocrud)
 [**django-terra-geocrud**](https://github.com/Terralego/django-terra-geocrud)
+  
   * [![Build Status](https://travis-ci.org/Terralego/django-geostore.svg?branch=master)](https://travis-ci.org/Terralego/django-terra-geocrud)
 [**django-geostore**](https://github.com/Terralego/django-geostore)
