@@ -18,7 +18,7 @@
 ---
 
 <p align="center">
-    GeoCRUD is a Geographic CRUD data editor based on <a href="https://github.com/Terralego">Terralego tools</a>.
+    GeoCRUD is a Geographic data editor based on <a href="https://github.com/Terralego">Terralego tools</a>.
 </p>
 
 
