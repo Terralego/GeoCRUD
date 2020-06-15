@@ -161,10 +161,6 @@ SSL_ENABLE=True in your .env field and restart stack
 - Plug "Visu" to generate Read only interfaces
 - Improve django-terra-geocrud (multiple layout by layer, show and define relations, Generate DOCX and PDF sheets)
 
-# CREDITS
-* powered by 
-  
-  <img src="https://avatars2.githubusercontent.com/u/546696?s=200&v=4" width="100" />
  
 # ⛏️ Built Using <a name = "built_using"></a> 
   * [![Build Status](https://img.shields.io/gitlab/pipeline/terralego/terra-admin)]()
@@ -178,3 +174,6 @@ SSL_ENABLE=True in your .env field and restart stack
 
 # ✍️ Authors <a name = "authors"></a>
 - [@terralego](https://github.com/terralego) - Idea & Initial work
+* powered by 
+  
+  <img src="https://avatars2.githubusercontent.com/u/546696?s=200&v=4" width="100" />
