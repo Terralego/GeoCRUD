@@ -58,11 +58,7 @@ the following requirements:
 
 ## Installation
 
-These instructions will guide you to install the application on a development server.
-For production purpose, you should understand what you are doing, and use
-`docker-compose-prod.yml` file.
-
-Opp-back offers an API that is consumed by the frontend.
+These instructions will guide you to install the application on a production server.
 
 To install it we need to achieve the following steps:
 
@@ -111,7 +107,7 @@ docker-compose up (or make run)
 docker-compose run --rm django ./manage.py createsuperuser
 ```
 
-## Load demo
+## Load demo data
 
 ```bash
 docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
@@ -119,7 +115,9 @@ docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/de
 
 ## Access
 
-* By default and without frontend proxy, you should able to access by going to http://127.0.0.1:3000. Api admin is available at http://127.0.0.1:3000/api/admin 
+* By default and without frontend proxy, you should able to access by going to :
+  * http://127.0.0.1:3000 for frontend application
+  * http://127.0.0.1:3000/api/admin for API admin configuration
 
 
 ## Production
