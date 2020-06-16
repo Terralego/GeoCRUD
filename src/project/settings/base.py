@@ -122,7 +122,9 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': os.getenv('POSTGRES_DB'),
+        # with default docker stack, DB name should match user.
+        # Let use POSTGRES_DB with external postgres server
+        'NAME': os.getenv('POSTGRES_DB', os.getenv('POSTGRES_USER')),
         'HOST': os.getenv('POSTGRES_HOST'),
         'PORT': os.getenv('PGPORT'),
         'USER': os.getenv('POSTGRES_USER'),
