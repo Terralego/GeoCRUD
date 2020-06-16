@@ -38,9 +38,6 @@ services:
       dockerfile: ../.docker/Dockerfile.front
       args:
         NODE: 12.16
-    tty: true
-    env_file:
-      - .env
     ports:
       - "127.0.0.1:3000:80"
     depends_on:
