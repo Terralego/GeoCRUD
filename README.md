@@ -82,7 +82,7 @@ git submodule update
 cp .env.dist .env
 ```
 
-* edit .env and set your custom configuration (at least choose a name, user and pwd for postgres container)
+* edit .env and set your custom configuration (at least choose a password, and change default user "geocrud" for postgres container)
 
 * As you want, you can customize your GeoCRUD instance
   * By adding dependencies in requirements.txt (we recommend to use [pip-tools](https://pypi.org/project/pip-tools/) / edit requirements.in / generate requirements.txt / rebuild with docker-compose)
