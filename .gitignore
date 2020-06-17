@@ -9,3 +9,4 @@ __pycache__/
 /data/media/cache/
 /doc/_build/
 src/project/settings/custom.py
+cypress/node_modules

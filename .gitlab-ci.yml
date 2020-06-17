@@ -1,0 +1,31 @@
+image: docker:stable
+stages:
+  - e2e-tests
+
+cypress:
+  stage: e2e-tests
+  tags: [visu-cicd-docker]
+  image: docker/compose:latest
+  services:
+    - docker:dind
+
+  before_script:
+    - chown -R 1000:1000 .
+    - apk update
+    - apk upgrade
+    - apk add python3 python3-dev build-base gcc openssl-dev libc-dev make git docker-compose
+    - docker info
+    - git submodule init
+    - git submodule update
+
+  script:
+  - cp .env.dist .env
+  - sed -i 's/POSTGRES_USER=/POSTGRES_USER=gitlab/' .env
+  - sed -i 's/POSTGRES_PASSWORD=/POSTGRES_PASSWORD=gitlabpwd/' .env
+  - sed -i 's,TERRA_TILES_HOSTNAMES=http://127.0.0.1:3000,TERRA_TILES_HOSTNAMES=http://front,' .env
+  - sed -i 's,DOMAIN_NAME=127.0.0.1,DOMAIN_NAME=front,' .env
+  - docker-compose build
+  - docker-compose up -d
+  - docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/e2e.json
+  - docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
+  - docker-compose -f docker-compose.yml -f cypress/compose.yml run cypress cypress run
