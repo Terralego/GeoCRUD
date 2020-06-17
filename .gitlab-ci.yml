@@ -10,16 +10,22 @@ before_script:
 - docker info
 - apk update
 - apk upgrade
-- apk add python python-dev py-pip build-base gcc openssl-dev libc-dev make
+- apk add python python-dev py-pip build-base gcc openssl-dev libc-dev make git
+- apt install nodejs
+- node --version
+- npm --version
 - curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 - chmod +x /usr/local/bin/docker-compose
+- git submodule init
+- git submodule update
+- cd ./cypress
+- npm install .
 
-build:
-  stage: build
+Tests:
+  stage: test
   script:
   - cp .env.dist .env
   - sed -i 's/POSTGRES_USER=/POSTGRES_USER=gitlab/' .env
-  - sed -i 's/POSTGRES_DB=/POSTGRES_DB=gitlab/' .env
   - sed -i 's/POSTGRES_PASSWORD=/POSTGRES_PASSWORD=gitlabpwd/' .env
   - docker-compose build
   - docker-compose up -d

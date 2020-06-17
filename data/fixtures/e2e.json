@@ -6,7 +6,7 @@
         "email": "admin@admin.admin",
         "is_superuser": true,
         "is_staff": true,
-        "password": "_password_"
+        "password": "pbkdf2_sha256$180000$B13d1yq5qyDp$47yQ+ZYolQdMbNynYTOdPYHLydG5/XyETRHKumLuxaw="
     }
 }
 ]
