@@ -1,0 +1,12 @@
+[
+{
+    "model": "terra_accounts.TerraUser",
+    "pk": 1,
+    "fields": {
+        "email": "admin@admin.admin",
+        "is_superuser": true,
+        "is_staff": true,
+        "password": "_password_"
+    }
+}
+]
