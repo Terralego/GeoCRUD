@@ -10,7 +10,7 @@ before_script:
 - docker info
 - apk update
 - apk upgrade
-- apk add python python-dev py-pip build-base gcc openssl-dev libc-dev make git
+- apk add python3 python-dev build-base gcc openssl-dev libc-dev make git
 - apt install nodejs
 - node --version
 - npm --version
