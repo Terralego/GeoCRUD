@@ -10,8 +10,7 @@ before_script:
 - docker info
 - apk update
 - apk upgrade
-- apk add python3 python-dev build-base gcc openssl-dev libc-dev make git
-- apt install nodejs
+- apk add python3 python3-dev build-base gcc openssl-dev libc-dev make git nodejs
 - node --version
 - npm --version
 - curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
