@@ -33,6 +33,66 @@ describe('List ', () => {
       .click(120, 100)
       .click(100, 100);
     cy.get('button.CRUD-edit__submit').click()
+    cy.get('.details__list-edit-button').first().click({ force: true })
+    cy.get('input[label="Name"]').type('CityTest')
+    cy.get('button').contains("Sauvegarder").click()
+    cy.get('h2.details__title').should('contain', 'CityTest')
   })
-
+  it('Filter city', () => {
+    cy.visit('http://127.0.0.1:3000/CRUD/map/cities')
+    cy.get('input[type="search"][title="Rechercher dans la table"]').type('other')
+    cy.get('div.bp3-table-quadrant-scroll-container').should('not.contain', 'CityTest')
+    cy.wait(1000)
+    cy.get('input[type="search"][title="Rechercher dans la table"]').clear()
+    cy.get('input[type="search"][title="Rechercher dans la table"]').type('CityTest')
+    cy.get('div.bp3-table-quadrant-scroll-container').should('contain', 'CityTest')
+  })
+  it('Check properties filter', () => {
+    cy.visit('http://127.0.0.1:3000/CRUD/map/cities')
+    cy.wait(3000)
+    cy.get('button.bp3-intent-primary').contains("properties").click({force: true})
+    cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
+        expect($ch).to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="population"]').should(($ch) => {
+        expect($ch).to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="population_date"]').should(($ch) => {
+        expect($ch).not.to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="zip_codes"]').should(($ch) => {
+        expect($ch).to.be.checked
+    })
+  })
+  it('Remove properties filter', () => {
+    cy.visit('http://127.0.0.1:3000/CRUD/map/cities')
+    cy.wait(3000)
+    cy.get('button.bp3-intent-primary').contains("properties").click({force: true})
+    cy.get('input[type="checkbox"]').first().click({force: true})
+    cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
+        expect($ch).to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="population"]').should(($ch) => {
+        expect($ch).to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="population_date"]').should(($ch) => {
+        expect($ch).to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="zip_codes"]').should(($ch) => {
+        expect($ch).to.be.checked
+    })
+    cy.get('input[type="checkbox"]').first().click({force: true})
+        cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
+        expect($ch).not.to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="population"]').should(($ch) => {
+        expect($ch).not.to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="population_date"]').should(($ch) => {
+        expect($ch).not.to.be.checked
+    })
+    cy.get('input[type="checkbox"][value="zip_codes"]').should(($ch) => {
+        expect($ch).not.to.be.checked
+    })
+  })
 })
