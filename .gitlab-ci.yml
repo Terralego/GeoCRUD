@@ -14,8 +14,9 @@ cypress:
     - apk update
     - apk upgrade
     - apk add curl
-    - curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-    - apk add python3 python3-dev build-base gcc openssl-dev libc-dev make git nodejs
+    - curl -sL https://deb.nodesource.com/setup_14.x | -E bash -
+    - apk add nodejs
+    - apk add python3 python3-dev build-base gcc openssl-dev libc-dev make git
     - docker info
     - node --version
     - npm --version
