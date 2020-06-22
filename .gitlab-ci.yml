@@ -1,6 +1,7 @@
 image: docker:stable
 stages:
   - e2e-tests
+
 cypress:
   stage: e2e-tests
   tags: [GeoCRUD-docker]
@@ -15,6 +16,7 @@ cypress:
     REGISTRY_PASSWD: ""
     DOCKER_IMAGE: "${REGISTRY_URL}/terralego/GeoCRUD"
     DOCKER_IMAGE_CACHE: "/cache/${CI_PROJECT_PATH_SLUG}/docker-images"
+
   before_script:
     - echo "${REGISTRY_PASSWD}" |docker login -u ${REGISTRY_USER} --password-stdin ${REGISTRY_URL}
     - docker info
@@ -29,6 +31,7 @@ cypress:
     - git submodule update
     - cd ./cypress
     - npm install .
+
   script:
   - cp .env.dist .env
   - sed -i 's/POSTGRES_USER=/POSTGRES_USER=gitlab/' .env
