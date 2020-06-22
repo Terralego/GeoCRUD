@@ -23,6 +23,7 @@ cypress:
     - git submodule update
     - cd ./cypress
     - npm install .
+    - cd ..
 
   script:
   - cp .env.dist .env
