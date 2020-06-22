@@ -1,27 +1,34 @@
-image: docker:latest
-
-variables:
-  DOCKER_DRIVER: overlay
-
-services:
-- docker:dind
-
-before_script:
-- docker info
-- apk update
-- apk upgrade
-- apk add python3 python3-dev build-base gcc openssl-dev libc-dev make git nodejs
-- node --version
-- npm --version
-- curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-- chmod +x /usr/local/bin/docker-compose
-- git submodule init
-- git submodule update
-- cd ./cypress
-- npm install .
-
-Tests:
-  stage: test
+image: docker:stable
+stages:
+  - e2e-tests
+cypress:
+  stage: e2e-tests
+  tags: [GeoCRUD-docker]
+  image: docker/compose:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: "tcp://docker:2375/"
+    DOCKER_DRIVER: overlay2
+    REGISTRY_URL: "registry.makina-corpus.net"
+    REGISTRY_USER: ""
+    REGISTRY_PASSWD: ""
+    DOCKER_IMAGE: "${REGISTRY_URL}/terralego/GeoCRUD"
+    DOCKER_IMAGE_CACHE: "/cache/${CI_PROJECT_PATH_SLUG}/docker-images"
+  before_script:
+    - echo "${REGISTRY_PASSWD}" |docker login -u ${REGISTRY_USER} --password-stdin ${REGISTRY_URL}
+    - docker info
+    - apk update
+    - apk upgrade
+    - apk add python3 python3-dev build-base gcc openssl-dev libc-dev make git nodejs
+    - node --version
+    - npm --version
+    - curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    - chmod +x /usr/local/bin/docker-compose
+    - git submodule init
+    - git submodule update
+    - cd ./cypress
+    - npm install .
   script:
   - cp .env.dist .env
   - sed -i 's/POSTGRES_USER=/POSTGRES_USER=gitlab/' .env
