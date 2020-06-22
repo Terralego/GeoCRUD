@@ -27,7 +27,7 @@ cypress:
   - cp .env.dist .env
   - sed -i 's/POSTGRES_USER=/POSTGRES_USER=gitlab/' .env
   - sed -i 's/POSTGRES_PASSWORD=/POSTGRES_PASSWORD=gitlabpwd/' .env
-  - /usr/local/bin/docker-compose build
-  - /usr/local/bin/docker-compose up -d
-  - /usr/local/bin/docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/e2e.json
-  - /usr/local/bin/docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
+  - docker-compose build
+  - docker-compose up -d
+  - docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/e2e.json
+  - docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
