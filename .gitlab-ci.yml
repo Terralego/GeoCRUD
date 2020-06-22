@@ -4,7 +4,7 @@ stages:
 
 cypress:
   stage: e2e-tests
-  tags: [GeoCRUD-docker]
+  tags: [visu-cicd-docker]
   image: docker/compose:latest
   services:
     - docker:dind
