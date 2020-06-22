@@ -8,21 +8,12 @@ cypress:
   image: docker/compose:latest
   services:
     - docker:dind
-  variables:
-    DOCKER_HOST: "tcp://docker:2375/"
-    DOCKER_DRIVER: overlay2
-    REGISTRY_URL: "registry.makina-corpus.net"
-    REGISTRY_USER: ""
-    REGISTRY_PASSWD: ""
-    DOCKER_IMAGE: "${REGISTRY_URL}/terralego/GeoCRUD"
-    DOCKER_IMAGE_CACHE: "/cache/${CI_PROJECT_PATH_SLUG}/docker-images"
 
   before_script:
     - chown -R 1000:1000 .
     - apk update
     - apk upgrade
     - apk add python3 python3-dev build-base gcc openssl-dev libc-dev make git nodejs
-    - echo "${REGISTRY_PASSWD}" |docker login -u ${REGISTRY_USER} --password-stdin ${REGISTRY_URL}
     - docker info
     - node --version
     - npm --version
