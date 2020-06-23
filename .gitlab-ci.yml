@@ -31,3 +31,4 @@ cypress:
   - docker-compose up -d
   - docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/e2e.json
   - docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
+  - ./cypress/node_modules/.bin/cypress run
