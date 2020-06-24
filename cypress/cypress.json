@@ -1,0 +1,10 @@
+{
+  "fixturesFolder": false,
+  "supportFile": "support",
+  "integrationFolder": "integration",
+  "pluginsFile": false,
+  "screenshotsFolder": "screenshots",
+  "baseUrl": "http://127.0.0.1:3000",
+  "video": true,
+  "requestTimeout": 50000
+}
