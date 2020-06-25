@@ -4,6 +4,23 @@ describe('List ', () => {
       const password = 'admin'
       cy.login(email, password)
   })
+  it('Close/Open menu',() => {
+    cy.visit('CRUD/map/cities')
+    cy.get('.CRUD-nav__list').should('contain', 'Cities')
+    cy.get('[icon="menu-closed"]').click()
+    cy.get('.CRUD-nav__list').should('not.contain', 'Cities')
+    cy.get('[icon="menu-open"]').click()
+    cy.get('.CRUD-nav__list').should('contain', 'Cities')
+  })
+  it('Change layers mapbox',() => {
+    cy.visit('CRUD/map/cities')
+    cy.wait(3000)
+    cy.get('button.mapboxgl-ctrl-icon').children('[icon="layers"].bp3-icon.bp3-icon-layers').click()
+    cy.get('.bp3-overlay-open').should('contain', 'OSM')
+    cy.get('.mapboxgl-ctrl-attrib-inner').should('be.visible', 'OpenStreetMap')
+    cy.get('input[value="/api/mapbox-baselayer/mapbox-baselayers/3/tilejson/"]').click({force: true})
+    cy.get('.mapboxgl-ctrl-attrib-inner').should('not.be.visible', 'OpenStreetMap')
+  })
   it('Redirects to other list.', () => {
     cy.visit('CRUD/map/cities')
     cy.get('a.CRUD-nav__link').contains("Treks").click()
@@ -109,15 +126,50 @@ describe('List ', () => {
     cy.wait(3000)
     cy.get('button.bp3-intent-primary').children('[icon="arrows-vertical"]').click()
     cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
+    cy.get('.CRUD-map').should('be.visible')
     cy.get('[icon="minus"]').click()
     cy.get('.bp3-button-text').contains("Toulouse").should('not.be.visible')
+    cy.get('.CRUD-map').should('be.visible')
   })
-  it('Enlarge', () => {
+  it('Enlarge/Unlarge list', () => {
     cy.visit('CRUD/map/cities')
     cy.wait(3000)
     cy.get('button.bp3-intent-primary').children('[icon="arrows-vertical"]').click()
     cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
+    cy.get('.CRUD-map').should('be.visible')
     cy.get('.bp3-icon-maximize').click()
     cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
+    cy.get('.CRUD-map').should('not.be.visible')
+    cy.get('button.bp3-intent-primary').children('[icon="arrows-vertical"]').click()
+    cy.get('span.bp3-icon-minimize').click()
+    cy.get('.CRUD-map').should('be.visible')
+    cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
+  })
+  it('Show multi select layer, click center', () => {
+    // Here it  would be great to show other layers
+    cy.visit('CRUD/map/cities')
+    cy.wait(3000)
+    cy.get('button[icon="multi-select"]').click()
+    cy.get('input[value="CRUD-cities-center-3"]').click()
+  })
+  it('Picture', () => {
+    cy.visit('CRUD/map/cities')
+    cy.wait(3000)
+    cy.get('button.mapboxgl-ctrl-icon[aria-label="Capture"]').click()
+  })
+})
+describe('Detail ', () => {
+  beforeEach(() => {
+      const email = 'admin@admin.admin'
+      const password = 'admin'
+      cy.login(email, password)
+  })
+  it('Redirects to detail', () => {
+    cy.visit('CRUD/map/cities')
+    cy.wait(3000)
+    cy.get('.CRUD-map')
+      .click(110, 10)
+    //cy.get('a.table-header__create').click()
+    cy.get('h2.details__title').should('contain', 'Toulouse')
   })
 })
