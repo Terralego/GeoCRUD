@@ -16,6 +16,7 @@ services:
     build:
       context: .
       dockerfile: .docker/Dockerfile.back
+    image: juank/geocrud:latest
     tty: true
     env_file:
       - .env
