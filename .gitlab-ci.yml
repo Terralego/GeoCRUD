@@ -16,7 +16,7 @@ build:
     - cp .env.dist .env
     - sed -i 's/POSTGRES_USER=/POSTGRES_USER=gitlab/' .env
     - sed -i 's/POSTGRES_PASSWORD=/POSTGRES_PASSWORD=gitlabpwd/' .env
-    - echo "$CI_REGISTRY_PASSWORD" | docker login -u $CI_REGISTRY_USER --password-stdin
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin
 
   script:
     - docker-compose build django
