@@ -10,7 +10,7 @@ build:
 
   before_script:
     - apk update
-    - apk add git
+    - apk add git make
     - git submodule init
     - git submodule update
     - cp .env.dist .env
@@ -19,7 +19,7 @@ build:
     - echo "${REGISTRY_PASSWORD}" |docker login -u ${REGISTRY_USER} --password-stdin
 
   script:
-    - docker-compose build django front
+    - make build
     - docker tag juank/geocrud-back:latest juank/geocrud-back:$CI_COMMIT_SHORT_SHA
     - docker tag juank/geocrud-front:latest juank/geocrud-front:$CI_COMMIT_SHORT_SHA
     - docker push juank/geocrud-back:latest
