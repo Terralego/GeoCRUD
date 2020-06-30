@@ -5,8 +5,14 @@ cd /app/src || exit
 # Activate venv
 . /app/venv/bin/activate
 
-/usr/local/bin/wait-for-postgres.sh ./manage.py migrate --no-input
+echo "Waiting for postgres..."
+while ! nc -z $POSTGRES_HOST $PGPORT; do
+    sleep 0.1
+done
+echo "PostgreSQL started"
+
+./manage.py migrate --no-input
 ./manage.py collectstatic --no-input
 
 # exec
-exec /usr/local/bin/wait-for-postgres.sh "$@"
+exec "$@"
