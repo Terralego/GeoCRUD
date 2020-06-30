@@ -1,7 +1,7 @@
 django==3.0.*  # Fix with last django available (or LTS)
 # django==2.2.*
 
-django-terra-geocrud
+django-terra-geocrud[dev]  # install crud backend app with dev tools
 
 # optionnal, if you want to expose API swagger / redoc
 drf-yasg

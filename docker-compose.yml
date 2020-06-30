@@ -1,4 +1,4 @@
-version: "3"
+version: "3.7"
 services:
   postgres:
     image: makinacorpus/pgrouting:10-2.5-2.6
@@ -14,32 +14,23 @@ services:
 
   django:
     image: juank/geocrud-back:latest
-    build:
-      context: .
-      dockerfile: .docker/Dockerfile.back
     tty: true
     env_file:
       - .env
     volumes:
-      #- ./src:/app/src
       - ./data:/app/public/data  # mount public folder to add data / keep media files
       - ./conf/custom.py:/app/src/project/settings/custom.py
       - static:/app/public/static  # django static hidden volume
     depends_on:
       - memcached
       - postgres
-    working_dir: /app/src
+      - mbglrenderer
 
   mbglrenderer:
     image: consbio/mbgl-renderer:0.4.0
 
   front:
     image: juank/geocrud-front:latest
-    build:
-      context: ./front
-      dockerfile: ../.docker/Dockerfile.front
-      args:
-        NODE: 12.16
     ports:
       - "${FRONT_PORT}:80"
     env_file:
