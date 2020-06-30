@@ -11,11 +11,7 @@ build:
   before_script:
     - apk update
     - apk add git make
-    - git submodule init
-    - git submodule update
     - cp .env.dist .env
-    - sed -i 's/POSTGRES_USER=/POSTGRES_USER=gitlab/' .env
-    - sed -i 's/POSTGRES_PASSWORD=/POSTGRES_PASSWORD=gitlabpwd/' .env
 
   script:
     - echo "${REGISTRY_PASSWORD}" |docker login -u ${REGISTRY_USER} --password-stdin
