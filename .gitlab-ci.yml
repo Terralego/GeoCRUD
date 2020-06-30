@@ -16,6 +16,7 @@ build:
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
 
   script:
+    - docker-compose build django
     - docker tag juank/geocrud:latest juank/geocrud:$CI_COMMIT_SHA
     - docker push juank/geocrud:latest
     - docker push juank/geocrud:$CI_COMMIT_SHA
