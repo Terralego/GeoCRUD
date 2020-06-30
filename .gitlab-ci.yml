@@ -16,11 +16,11 @@ build:
     - cp .env.dist .env
     - sed -i 's/POSTGRES_USER=/POSTGRES_USER=gitlab/' .env
     - sed -i 's/POSTGRES_PASSWORD=/POSTGRES_PASSWORD=gitlabpwd/' .env
-    - echo "${REGISTRY_PASSWORD}" |docker login -u ${REGISTRY_USER} --password-stdin
 
   script:
+    - echo "${REGISTRY_PASSWORD}" |docker login -u ${REGISTRY_USER} --password-stdin
+    - make all
     - if ["$CI_COMMIT_REF_NAME" = "master"] then
-        make build;
         docker tag juank/geocrud-back:latest juank/geocrud-back:$CI_COMMIT_SHORT_SHA;
         docker tag juank/geocrud-front:latest juank/geocrud-front:$CI_COMMIT_SHORT_SHA;
         docker push juank/geocrud-back:$CI_COMMIT_SHORT_SHA;
