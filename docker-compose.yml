@@ -13,10 +13,10 @@ services:
     image: memcached:1.6-alpine
 
   django:
+    image: juank/geocrud-back:latest
     build:
       context: .
       dockerfile: .docker/Dockerfile.back
-    image: juank/geocrud:latest
     tty: true
     env_file:
       - .env
@@ -34,6 +34,7 @@ services:
     image: consbio/mbgl-renderer:0.4.0
 
   front:
+    image: juank/geocrud-front:latest
     build:
       context: ./front
       dockerfile: ../.docker/Dockerfile.front

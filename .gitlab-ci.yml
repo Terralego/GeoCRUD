@@ -19,7 +19,10 @@ build:
     - echo "${REGISTRY_PASSWORD}" |docker login -u ${REGISTRY_USER} --password-stdin
 
   script:
-    - docker-compose build django
-    - docker tag juank/geocrud:latest juank/geocrud:$CI_COMMIT_SHORT_SHA
-    - docker push juank/geocrud:latest
-    - docker push juank/geocrud:$CI_COMMIT_SHORT_SHA
+    - docker-compose build django front
+    - docker tag juank/geocrud-back:latest juank/geocrud-back:$CI_COMMIT_SHORT_SHA
+    - docker tag juank/geocrud-front:latest juank/geocrud-front:$CI_COMMIT_SHORT_SHA
+    - docker push juank/geocrud-back:latest
+    - docker push juank/geocrud-back:$CI_COMMIT_SHORT_SHA
+    - docker push juank/geocrud-front:latest
+    - docker push juank/geocrud-front:$CI_COMMIT_SHORT_SHA
