@@ -69,18 +69,13 @@ To install it we need to achieve the following steps:
 
 ### Get the latest version
 
-### Production
-
 ```bash
-mkdir -p /opt/geocrud
-cd geocrud
-# download docker-compose.yml file
-wget https://raw.githubusercontent.com/Terralego/GeoCRUD/master/docker-compose.yml
-# download envionment file
-wget https://raw.githubusercontent.com/Terralego/GeoCRUD/master/.env.dist
-# then, pull docker images
-docker-compose pull
+wget https://github.com/Terralego/GeoCRUD/archive/master.zip
+unzip master.zip GeoCRUD/
+cd GeoCRUD
 ```
+
+### Development
 
 ```bash
 git clone https://github.com/Terralego/GeoCRUD.git
