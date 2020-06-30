@@ -17,11 +17,11 @@ build:
     - echo "${REGISTRY_PASSWORD}" |docker login -u ${REGISTRY_USER} --password-stdin
     - make all
     - if ["$CI_COMMIT_REF_NAME" = "master"]; then
-        docker tag juank/geocrud-back:latest juank/geocrud-back:$CI_COMMIT_SHORT_SHA
-        docker tag juank/geocrud-front:latest juank/geocrud-front:$CI_COMMIT_SHORT_SHA
-        docker push juank/geocrud-back:$CI_COMMIT_SHORT_SHA
-        docker push juank/geocrud-front:$CI_COMMIT_SHORT_SHA
-        docker push juank/geocrud-back:latest
-        docker push juank/geocrud-front:latest
-      fi
+        docker tag juank/geocrud-back:latest juank/geocrud-back:$CI_COMMIT_SHORT_SHA;
+        docker tag juank/geocrud-front:latest juank/geocrud-front:$CI_COMMIT_SHORT_SHA;
+        docker push juank/geocrud-back:$CI_COMMIT_SHORT_SHA;
+        docker push juank/geocrud-front:$CI_COMMIT_SHORT_SHA;
+        docker push juank/geocrud-back:latest;
+        docker push juank/geocrud-front:latest;
+      fi;
 
