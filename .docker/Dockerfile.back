@@ -2,13 +2,13 @@ FROM makinacorpus/geodjango:bionic-3.8
 
 # required for next compilemessages
 ENV SECRET_KEY = 'override-me-override-me'
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
 RUN useradd -ms /bin/bash django
 RUN mkdir -p /app/public/data/media /app/public/static
 
-COPY .docker/entrypoint.sh /usr/local/bin
-
-RUN apt-get update -qq && apt-get install -y -qq libjpeg62 libjpeg62-dev zlib1g-dev libcairo2 libpango-1.0-0 \
+RUN apt-get update -qq && apt-get install -y -qq netcat libjpeg62 libjpeg62-dev zlib1g-dev libcairo2 libpango-1.0-0 \
     libpangocairo-1.0-0 libgdk-pixbuf2.0-0 libffi-dev shared-mime-info && \
     apt-get clean all && rm -rf /var/apt/lists/* && rm -rf /var/cache/apt/*
 
@@ -17,10 +17,13 @@ USER django
 
 RUN python3.8 -m venv /app/venv
 RUN /app/venv/bin/pip install --no-cache-dir pip setuptools wheel -U
+
 COPY requirements.txt /app/requirements.txt
 RUN /app/venv/bin/pip install --no-cache-dir -r /app/requirements.txt -U
 
+COPY .docker/entrypoint.sh /usr/local/bin
 COPY src /app/src
+
 USER root
 RUN chown django:django -R /app/src
 USER django
