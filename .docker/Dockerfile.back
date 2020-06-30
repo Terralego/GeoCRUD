@@ -2,8 +2,6 @@ FROM makinacorpus/geodjango:bionic-3.8
 
 # required for next compilemessages
 ENV SECRET_KEY = 'override-me-override-me'
-ENV POSTGRES_HOST=postgres
-ENV PGPORT=5432
 
 RUN useradd -ms /bin/bash django
 RUN mkdir -p /app/public/data/media /app/public/static
