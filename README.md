@@ -75,15 +75,6 @@ unzip master.zip GeoCRUD/
 cd GeoCRUD
 ```
 
-### Development
-
-```bash
-git clone https://github.com/Terralego/GeoCRUD.git
-cd GeoCRUD
-git submodule init
-git submodule update
-```
-
 ### Configuration
 
 Create environment file from template
@@ -108,15 +99,6 @@ After a last verification of the files, to run with docker, just type:
 ```bash
 docker-compose up
 ```
-
-### Development
-
-```bash
-docker-compose -f docker-compose.yml -f dev.yml build
-docker-compose -f docker-compose.yml -f dev.yml up
-```
-
-Note that django-debug-toolbar and API documentation /api/swagger and /api/redoc are auto enabled in development mode.
 
 ## Create a superuser
 
