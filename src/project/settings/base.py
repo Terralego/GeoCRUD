@@ -213,7 +213,7 @@ TERRA_APPLIANCE_SETTINGS = {
     "title": os.getenv("FRONTEND_TITLE", "GeoCRUD"),
     "theme": {
         "logo": {
-            "src": f"data:image/png;base64,{ get_b64_content(LOGO_PATH) }",
+            "src": "https://github.com/Terralego.png",
             "alt": os.getenv("FRONTEND_TITLE", "GeoCRUD")
         },
         "heading": os.getenv("FRONTEND_HEADING", ""),
