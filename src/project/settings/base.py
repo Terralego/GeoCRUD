@@ -187,9 +187,14 @@ DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', "ro-reply@geo.crud")
 EMAIL_SUBJECT_PREFIX = os.getenv('EMAIL_SUBJECT_PREFIX', "[GeoCRUD]")
 
 
-# django-geostore settings
-TERRA_TILES_HOSTNAMES = os.getenv('TERRA_TILES_HOSTNAMES', '').split(',')   # used to improve performances by generating tilejson with multiple dns (ex : a.tiles.my-instance.com, b.tiles.my_istances.com ...)
-MAX_TILE_ZOOM = 15  # Vector tiles are usable on display up to max zoom + 3
+###################
+# django-geostore #
+###################
+
+# used to improve performances by generating tilejson with multiple domains
+# (ex : a.tiles.my-instance.com, b.tiles.my_istances.com ...)
+TERRA_TILES_HOSTNAMES = os.getenv('TERRA_TILES_HOSTNAMES', '').split(',')
+MAX_TILE_ZOOM = 17 # Vector tiles are usable on display up to max zoom + 3
 MIN_TILE_ZOOM = 2  # geostore bug if zoom < 2
 
 # TERRALEGO and terra-admin related settings
@@ -213,7 +218,7 @@ TERRA_APPLIANCE_SETTINGS = {
     "title": os.getenv("FRONTEND_TITLE", "GeoCRUD"),
     "theme": {
         "logo": {
-            "src": f"data:image/png;base64,{ get_b64_content(LOGO_PATH) }",
+            "src": "https://github.com/Terralego.png",
             "alt": os.getenv("FRONTEND_TITLE", "GeoCRUD")
         },
         "heading": os.getenv("FRONTEND_HEADING", ""),
@@ -242,7 +247,6 @@ REST_FRAMEWORK = {
 }
 
 FRONT_URL = os.getenv('FRONT_URL', '')
-HOSTNAME = os.getenv('HOSTNAME', '')
 
 TERRA_GEOCRUD = {
     'EXTENT': [-4, 40, 6, 50],
