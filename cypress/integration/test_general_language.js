@@ -1,0 +1,31 @@
+describe('Language authent', () => {
+  it('Check fallback no language login page', () => {
+    cy.server()
+    cy.fixture('settings_nolang.json').as('apiSettings')
+    cy.route('GET', 'api/settings', '@apiSettings')
+    cy.visit('')
+    cy.get('form')
+    cy.should("contain", "Mot de passe")
+  })
+  it('Check fallback bad language login page', () => {
+    cy.server()
+    cy.fixture('settings_it.json').as('apiSettings')
+    cy.route('GET', 'api/settings', '@apiSettings')
+    cy.visit('')
+    cy.get('form')
+    cy.should("contain", "Password")
+  })
+  it('Check language english login page', () => {
+    cy.visit('')
+    cy.get('form')
+    cy.should("contain", "Password")
+  })
+  it('Check language french login page', () => {
+    cy.server()
+    cy.fixture('settings_fr.json').as('apiSettings')
+    cy.route('GET', 'api/settings', '@apiSettings')
+    cy.visit('')
+    cy.get('form')
+    cy.should("contain", "Mot de passe")
+  })
+})

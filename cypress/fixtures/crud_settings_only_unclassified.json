@@ -1,0 +1,196 @@
+{
+  "menu": [
+    {
+      "id": null,
+      "name": "Unclassified",
+      "order": null,
+      "pictogram": null,
+      "crud_views": [
+        {
+          "id": 1,
+          "name": "Points",
+          "object_name": "Points",
+          "object_name_plural": "Points",
+          "pictogram": null,
+          "order": 30,
+          "map_style": {
+            "type": "circle",
+            "paint": {
+              "circle-color": "#000",
+              "circle-radius": 8
+            }
+          },
+          "form_schema": {
+            "required": [],
+            "properties": {
+              "infos": {
+                "type": "object",
+                "title": "Infos",
+                "required": [],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "title": "Name"
+                  }
+                }
+              },
+              "administrative": {
+                "type": "object",
+                "title": "Administrative",
+                "required": [],
+                "properties": {
+                  "city": {
+                    "type": "string",
+                    "title": "City"
+                  },
+                  "country": {
+                    "type": "string",
+                    "title": "Country"
+                  }
+                }
+              }
+            }
+          },
+          "ui_schema": {
+            "infos": {
+              "ui:order": [
+                "*"
+              ]
+            },
+            "administrative": {
+              "ui:order": [
+                "*"
+              ]
+            },
+            "ui:order": [
+              "infos",
+              "administrative",
+              "*"
+            ]
+          },
+          "settings": {},
+          "layer": {
+            "id": 1,
+            "tilejson": "/api/crud/layers/1/tilejson/",
+            "authorized_groups": [],
+            "name": "points",
+            "created_at": "2020-05-29T11:58:05.814000Z",
+            "updated_at": "2020-05-29T12:06:26.416000Z",
+            "settings": {},
+            "geom_type": 0
+          },
+          "feature_endpoint": "/api/crud/layers/1/features/",
+          "extent": [
+            1.05326971078065,
+            44.1493768693921,
+            1.05326971078065,
+            44.1493768693921
+          ],
+          "exports": [
+            {
+              "name": "shapefile",
+              "url": "/api/crud/layers/1/shapefile/"
+            },
+            {
+              "name": "geojson",
+              "url": "/api/crud/layers/1/features.geojson"
+            }
+          ],
+          "feature_list_properties": {
+            "city": {
+              "title": "City",
+              "selected": true,
+              "type": "string"
+            },
+            "country": {
+              "title": "Country",
+              "selected": true,
+              "type": "string"
+            },
+            "name": {
+              "title": "Name",
+              "selected": true,
+              "type": "string"
+            }
+          },
+          "map_layers": [
+            {
+              "title": "Points",
+              "id_layer_vt": "points",
+              "style": {
+                "type": "circle",
+                "paint": {
+                  "circle-color": "#000",
+                  "circle-radius": 8
+                }
+              },
+              "main": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "default": {
+      "EXTENT": [
+        -4,
+        40,
+        6,
+        50
+      ],
+      "DATA_FILE_STORAGE_CLASS": "django.core.files.storage.FileSystemStorage",
+      "IMAGE_EXTENSION_ALLOWED": [
+        ".jpeg",
+        ".jpg",
+        ".png",
+        ".gif",
+        ".bmp"
+      ],
+      "FILE_UPLOAD_MAX_MEMORY_SIZE": 104857600,
+      "MBGLRENDERER_URL": "http://mbglrenderer",
+      "map": {
+        "mapbox_access_token": "",
+        "center": [
+          2,
+          46
+        ],
+        "zoom": 5,
+        "maxZoom": 18,
+        "minZoom": 3
+      },
+      "STYLES": {
+        "line": {
+          "type": "line",
+          "paint": {
+            "line-color": "#000",
+            "line-width": 3
+          }
+        },
+        "point": {
+          "type": "circle",
+          "paint": {
+            "circle-color": "#000",
+            "circle-radius": 8
+          }
+        },
+        "polygon": {
+          "type": "fill",
+          "paint": {
+            "fill-color": "#000"
+          }
+        }
+      },
+      "MAX_ZOOM": 17
+    },
+    "BASE_LAYERS": [
+      {
+        "Foo": {
+          "id": 2,
+          "url": "/api/mapbox-baselayer/mapbox-baselayers/2/tilejson/"
+        }
+      }
+    ],
+    "attachment_categories": "/api/crud/attachment-categories/"
+  }
+}
