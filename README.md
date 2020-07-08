@@ -58,7 +58,7 @@ the following requirements:
 
 ## Installation
 
-These instructions will guide you to install the application for dvelopment or on a production server.
+These instructions will guide you to install the application for development or on a production server.
 
 To install it we need to achieve the following steps:
 
