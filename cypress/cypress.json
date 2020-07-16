@@ -4,7 +4,7 @@
   "integrationFolder": "integration",
   "pluginsFile": false,
   "screenshotsFolder": "screenshots",
-  "baseUrl": "http://front:3000",
+  "baseUrl": "http://localhost:3000",
   "video": true,
   "requestTimeout": 50000
 }

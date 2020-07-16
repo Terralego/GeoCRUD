@@ -2,7 +2,7 @@ version: "3"
 services:
   cypress:
     environment:
-      - CYPRESS_baseUrl=http://front
+      - CYPRESS_BASE_URL=http://front
       # - DISPLAY
     image: cypress/included:4.9.0
     volumes:
