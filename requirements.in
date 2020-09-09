@@ -1,4 +1,4 @@
-django==3.0.*  # Fix with last django available (or LTS)
+django==3.1.*  # Fix with last django available (or LTS)
 # django==2.2.*
 
 django-terra-geocrud
