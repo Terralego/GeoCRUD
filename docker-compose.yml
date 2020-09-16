@@ -1,7 +1,7 @@
 version: "3"
 services:
   postgres:
-    image: makinacorpus/pgrouting:10-2.5-2.6
+    image: pgrouting/pgrouting:12-3.0-3.1.0
     ports:
       - "127.0.0.1:${PGPORT}:${PGPORT}"
     env_file:
@@ -13,7 +13,7 @@ services:
     image: memcached:1.6-alpine
 
   django:
-    image: juank/geocrud-back:latest
+    image: registry.makina-corpus.net/terralego/geocrud-back:latest
     build:
       context: .
       dockerfile: .docker/Dockerfile.back
@@ -34,7 +34,7 @@ services:
     image: consbio/mbgl-renderer:0.4.0
 
   front:
-    image: juank/geocrud-front:latest
+    image: registry.makina-corpus.net/terralego/geocrud-front:latest
     build:
       context: ./front
       dockerfile: ../.docker/Dockerfile.front
