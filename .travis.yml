@@ -1,0 +1,23 @@
+dist: bionic
+
+services:
+  - docker
+
+stages:
+  - lint
+  - build
+
+script:
+  - docker-compose build
+
+after_script:
+  - codecov
+
+jobs:
+  include:
+    - stage: lint
+      install:
+        - pip install flake8
+      before_script: skip
+      script:
+        - flake8 src
