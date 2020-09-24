@@ -17,8 +17,9 @@ build:
     - echo "${REGISTRY_PASSWORD}" |docker login -u ${REGISTRY_USER} --password-stdin https://registry.makina-corpus.net/
     - make all
     - if ["$CI_COMMIT_REF_NAME" = "master"]; then
-        docker tag registry.makina-corpus.net/terralego/geocrud-back:latest juank/geocrud-back:$CI_COMMIT_SHORT_SHA;
-        docker tag registry.makina-corpus.net/terralego/geocrud-front:latest juank/geocrud-front:$CI_COMMIT_SHORT_SHA;
+        VERSION=python3 -c "import flake8; print(flake8.__version__)"
+        docker tag registry.makina-corpus.net/terralego/geocrud-back:latest registry.makina-corpus.net/terralego/geocrud-back:$CI_COMMIT_SHORT_SHA;
+        docker tag registry.makina-corpus.net/terralego/geocrud-front:latest registry.makina-corpus.net/terralego/geocrud-front:$CI_COMMIT_SHORT_SHA;
       https://registry.makina-corpus.net/
         docker push registry.makina-corpus.net/terralego/geocrud-back:$CI_COMMIT_SHORT_SHA;
         docker push registry.makina-corpus.net/terralego/geocrud-front:$CI_COMMIT_SHORT_SHA;
