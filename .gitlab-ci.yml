@@ -1,0 +1,28 @@
+image: docker/compose:latest
+stages:
+  - build
+
+build:
+  stage: build
+  tags: [visu-cicd-docker]
+  services:
+    - docker:dind
+
+  before_script:
+    - apk update
+    - apk add git make
+    - cp .env.dist .env
+
+  script:
+    - echo "${REGISTRY_PASSWORD}" |docker login -u ${REGISTRY_USER} --password-stdin https://registry.makina-corpus.net/
+    - make all
+    - if ["$CI_COMMIT_REF_NAME" = "master"]; then
+        docker tag registry.makina-corpus.net/terralego/geocrud-back:latest juank/geocrud-back:$CI_COMMIT_SHORT_SHA;
+        docker tag registry.makina-corpus.net/terralego/geocrud-front:latest juank/geocrud-front:$CI_COMMIT_SHORT_SHA;
+      https://registry.makina-corpus.net/
+        docker push registry.makina-corpus.net/terralego/geocrud-back:$CI_COMMIT_SHORT_SHA;
+        docker push registry.makina-corpus.net/terralego/geocrud-front:$CI_COMMIT_SHORT_SHA;
+        docker push registry.makina-corpus.net/terralego/geocrud-back:latest;
+        docker push registry.makina-corpus.net/terralego/geocrud-front:latest;
+      fi;
+

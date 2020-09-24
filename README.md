@@ -58,7 +58,7 @@ the following requirements:
 
 ## Installation
 
-These instructions will guide you to install the application on a production server.
+These instructions will guide you to install the application for development or on a production server.
 
 To install it we need to achieve the following steps:
 
@@ -70,13 +70,14 @@ To install it we need to achieve the following steps:
 ### Get the latest version
 
 ```bash
-git clone https://github.com/Terralego/GeoCRUD.git
+wget https://github.com/Terralego/GeoCRUD/archive/master.zip
+unzip master.zip GeoCRUD/
 cd GeoCRUD
-git submodule init
-git submodule update
 ```
 
-### Configure
+### Configuration
+
+Create environment file from template
 
 ```bash
 cp .env.dist .env
@@ -96,10 +97,8 @@ cp .env.dist .env
 After a last verification of the files, to run with docker, just type:
 
 ```bash
-docker-compose build (or make all)
-docker-compose up (or make run)
+docker-compose up
 ```
-
 
 ## Create a superuser
 
@@ -123,6 +122,10 @@ docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/de
 ## Production
 
 ### Recommended settings
+
+* choose port to bind to host
+
+FRONT_PORT can be overrided in .env file
 
 * enable ssl in backend
 

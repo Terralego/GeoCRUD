@@ -26,6 +26,7 @@ cssselect2==0.3.0         # via cairosvg, weasyprint
 deepmerge==0.1.0          # via django-geostore
 defusedxml==0.6.0         # via cairosvg
 django-admin-ordering==0.12.0  # via django-terra-geocrud
+django-admin-thumbnails==0.2.5  # via django-terra-geocrud
 django-filter==2.3.0      # via django-geostore
 django-geostore==0.4.0    # via django-terra-geocrud
 django-js-asset==1.2.2    # via django-admin-ordering
@@ -36,17 +37,17 @@ django-reversion==3.0.8   # via django-terra-geocrud
 django-template-engines==1.3.1  # via django-terra-geocrud
 django-template-model==1.0.6  # via django-terra-geocrud
 django-terra-accounts==0.3.13  # via django-terra-geocrud
-django-terra-geocrud==0.3.44  # via -r requirements.in
+django-terra-geocrud==0.3.47  # via -r requirements.in
 django-terra-utils==0.3.11  # via django-terra-accounts
 django-token-tools==0.1.2  # via django-geostore
 django-url-filter==0.3.15  # via django-terra-accounts, django-terra-utils
-django==3.1.1             # via -r requirements.in, django-filter, django-geostore, django-mapbox-baselayer, django-reversion, django-template-engines, django-template-model, django-terra-accounts, django-terra-geocrud, django-terra-utils, django-token-tools, django-url-filter, djangorestframework, drf-yasg
+django==3.1.1             # via -r requirements.in, django-admin-thumbnails, django-filter, django-geostore, django-mapbox-baselayer, django-reversion, django-template-engines, django-template-model, django-terra-accounts, django-terra-geocrud, django-terra-utils, django-token-tools, django-url-filter, djangorestframework, drf-yasg
 djangorestframework-gis==0.16  # via django-geostore, django-terra-geocrud
 djangorestframework-jwt==1.11.0  # via django-terra-accounts
 djangorestframework==3.11.1  # via django-geostore, django-terra-accounts, django-terra-geocrud, django-terra-utils, djangorestframework-gis, drf-yasg
 drf-yasg==1.17.1          # via -r requirements.in
 enum-compat==0.0.3        # via django-url-filter
-fiona==1.8.16             # via django-geostore
+fiona==1.8.17             # via django-geostore
 future==0.18.2            # via django-json-widget
 gevent==20.6.2            # via gunicorn
 greenlet==0.4.16          # via gevent
@@ -70,15 +71,15 @@ pyjwt==1.7.1              # via djangorestframework-jwt
 pyopenssl==19.1.0         # via requests
 pyparsing==2.4.7          # via packaging
 pyphen==0.9.5             # via weasyprint
-pyrsistent==0.17.2        # via jsonschema
+pyrsistent==0.17.3        # via jsonschema
 python-magic==0.4.18      # via django-terra-utils
 python-memcached==1.59    # via -r requirements.in
 pytz==2020.1              # via celery, django
 requests[security]==2.24.0  # via coreapi, django-geostore, django-template-engines, django-terra-geocrud
 ruamel.yaml.clib==0.2.2   # via ruamel.yaml
 ruamel.yaml==0.16.12      # via drf-yasg
-sentry-sdk==0.17.3        # via -r requirements.in
-six==1.15.0               # via cryptography, django-url-filter, drf-yasg, fiona, html5lib, jsonschema, munch, packaging, pyopenssl, python-memcached
+sentry-sdk==0.17.6        # via -r requirements.in
+six==1.15.0               # via cryptography, django-admin-thumbnails, django-url-filter, drf-yasg, fiona, html5lib, jsonschema, munch, packaging, pyopenssl, python-memcached
 sorl-thumbnail==12.6.3    # via django-terra-geocrud
 soupsieve==2.0.1          # via beautifulsoup4
 sqlparse==0.3.1           # via django
