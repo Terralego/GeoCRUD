@@ -80,3 +80,6 @@ jobs:
 
           docker tag registry.makina-corpus.net/terralego/geocrud-back registry.makina-corpus.net/terralego/geocrud-back:$VERSION
           docker push registry.makina-corpus.net/terralego/geocrud-back:$VERSION
+
+          docker tag registry.makina-corpus.net/terralego/geocrud-front registry.makina-corpus.net/terralego/geocrud-front:$VERSION
+          docker push registry.makina-corpus.net/terralego/geocrud-front:$VERSION
