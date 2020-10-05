@@ -32,12 +32,9 @@ jobs:
       - name: Run tests
         run: |
             docker pull registry.makina-corpus.net/terralego/geocrud-back
-            docker pull registry.makina-corpus.net/terralego/geocrud-front
-            git submodule init
-            git submodule update
             cp .env.dist .env
             sed -i.bak 's/^\(POSTGRES_PASSWORD=\).*/\1test/' .env
-            docker-compose build
+            docker-compose build django
             docker-compose run --rm django ./manage.py test
 
   # Push image to registry.
