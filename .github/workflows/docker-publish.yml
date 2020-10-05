@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Log into Container Registry
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login https://registry.makina-corpus.net/geomak -u ${{ secrets.DOCKER_USER }} --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login https://registry.makina-corpus.net/terralego -u ${{ secrets.DOCKER_USER }} --password-stdin
 
       - name: Run tests
         run: |
@@ -52,7 +52,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Log into Container Registry
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login https://registry.makina-corpus.net/geomak -u ${{ secrets.DOCKER_USER }} --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login https://registry.makina-corpus.net/terralego -u ${{ secrets.DOCKER_USER }} --password-stdin
 
       - name: Build image
         run: |
