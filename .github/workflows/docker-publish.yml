@@ -48,6 +48,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Log into Container Registry
+        # TODO: Create a PAT with `read:packages` and `write:packages` scopes and save it as an Actions secret `CR_PAT`
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login https://registry.makina-corpus.net -u ${{ secrets.DOCKER_USER }} --password-stdin
+
       - name: Build image
         run: |
             docker pull registry.makina-corpus.net/terralego/geocrud-back
@@ -56,10 +60,6 @@ jobs:
             git submodule update
             cp .env.dist .env
             docker-compose build
-
-      - name: Log into Container Registry
-      # TODO: Create a PAT with `read:packages` and `write:packages` scopes and save it as an Actions secret `CR_PAT`
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login https://registry.makina-corpus.net -u ${{ secrets.DOCKER_USER }} --password-stdin
 
       - name: Push image to GitHub Container Registry
         run: |
