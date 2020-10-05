@@ -28,6 +28,7 @@ jobs:
 
       - name: Run tests
         run: |
+            cp .env.dist .env
             docker-compose build
             docker-compose run ./manage.py test
 
