@@ -1,0 +1,88 @@
+name: Docker
+
+on:
+  push:
+    # Publish `master` as Docker `latest` image.
+    branches:
+      - master
+
+    # Publish `v1.2.3` tags as releases.
+    tags:
+      - v*
+
+  # Run tests for any PRs.
+  pull_request:
+
+env:
+  # TODO: Change variable to your image's name.
+  IMAGE_NAME: image
+
+jobs:
+  # Run tests.
+  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Log into Container Registry
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login https://registry.makina-corpus.net/terralego -u ${{ secrets.DOCKER_USER }} --password-stdin
+
+      - name: Run tests
+        run: |
+            docker pull registry.makina-corpus.net/terralego/geocrud-back
+            docker pull registry.makina-corpus.net/terralego/geocrud-front
+            git submodule init
+            git submodule update
+            cp .env.dist .env
+            sed -i.bak 's/^\(POSTGRES_PASSWORD=\).*/\1test/' .env
+            docker-compose build
+            docker-compose run --rm django ./manage.py test
+
+  # Push image to GitHub Packages.
+  # See also https://docs.docker.com/docker-hub/builds/
+  push:
+    # Ensure test job passes before pushing image.
+    needs: test
+
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Log into Container Registry
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login https://registry.makina-corpus.net/terralego -u ${{ secrets.DOCKER_USER }} --password-stdin
+
+      - name: Build image
+        run: |
+            docker pull registry.makina-corpus.net/terralego/geocrud-back
+            docker pull registry.makina-corpus.net/terralego/geocrud-front
+            git submodule init
+            git submodule update
+            cp .env.dist .env
+            sed -i.bak 's/^\(POSTGRES_PASSWORD=\).*/\1test/' .env
+            docker-compose build
+
+      - name: Push image to GitHub Container Registry
+        run: |
+          IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
+
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          # Use Docker `latest` tag convention
+          [ "$VERSION" == "master" ] && VERSION=latest
+
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+
+          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
