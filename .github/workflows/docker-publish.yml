@@ -36,6 +36,7 @@ jobs:
             git submodule init
             git submodule update
             cp .env.dist .env
+            sed -i.bak 's/^\(POSTGRES_PASSWORD=\).*/\1test/' .env
             docker-compose build
             docker-compose run --rm django ./manage.py test
 
@@ -61,6 +62,7 @@ jobs:
             git submodule init
             git submodule update
             cp .env.dist .env
+            sed -i.bak 's/^\(POSTGRES_PASSWORD=\).*/\1test/' .env
             docker-compose build
 
       - name: Push image to GitHub Container Registry
