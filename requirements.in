@@ -7,6 +7,9 @@ django-terra-geocrud
 drf-yasg
 djangorestframework==3.11.*  # drf 12 is not yet supported by drf-yasg
 
+# dev
+django-debug-toolbar
+
 # prod & supervision
 gunicorn[gevent]
 python-memcached

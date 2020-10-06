@@ -1,8 +1,10 @@
 import os
 
+import debug_toolbar
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
+from django.views.static import serve
 
 from config.views import schema_view
 from .utils import str2bool
@@ -29,4 +31,14 @@ if str2bool(os.getenv('API_DOC_ENABLED')):
         path('api/redoc/',
              schema_view.with_ui('redoc', cache_timeout=0),
              name='schema-redoc'),
+    ]
+
+if settings.DEBUG:
+    urlpatterns += [
+        # serve media files in local dev env
+        re_path(r'^media/(?P<path>.*)$', serve, {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+        # enable django-debug-toolbar
+        path('__debug__/', include(debug_toolbar.urls)),
     ]

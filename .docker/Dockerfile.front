@@ -1,5 +1,5 @@
 ARG NODE=12.16
-FROM node:$NODE
+FROM node:$NODE as dev
 
 WORKDIR /usr/src/app
 
@@ -8,8 +8,8 @@ RUN npm ci
 COPY . .
 RUN [ "npm", "run", "build" ]
 
-FROM nginx:stable
-COPY --from=0 /usr/src/app/build/ /var/www/
+FROM nginx:stable as prod
+COPY --from=dev /usr/src/app/build/ /var/www/
 WORKDIR /var/www/
 
 HEALTHCHECK CMD curl --fail http://127.0.0.1/ || exit 1
