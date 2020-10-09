@@ -186,7 +186,9 @@ EMAIL_PORT = os.getenv('EMAIL_PORT', 25)
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', "ro-reply@geo.crud")
 EMAIL_SUBJECT_PREFIX = os.getenv('EMAIL_SUBJECT_PREFIX', "[GeoCRUD]")
 
-
+LOCALE_PATHS = [
+    os.path.join(PROJECT_DIR, 'locale'),
+]
 ###################
 # django-geostore #
 ###################
