@@ -13,7 +13,7 @@ services:
     image: memcached:1.6-alpine
 
   django:
-    image: registry.makina-corpus.net/terralego/geocrud-back:latest
+    image: geocrud/back:latest
     build:
       context: .
       dockerfile: .docker/Dockerfile.back
@@ -34,7 +34,7 @@ services:
     image: consbio/mbgl-renderer:0.4.0
 
   front:
-    image: registry.makina-corpus.net/terralego/geocrud-front:latest
+    image: geocrud/front:latest
     build:
       context: ./front
       dockerfile: ../.docker/Dockerfile.front
