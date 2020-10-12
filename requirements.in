@@ -13,4 +13,3 @@ django-debug-toolbar
 # prod & supervision
 gunicorn[gevent]
 python-memcached
-sentry-sdk

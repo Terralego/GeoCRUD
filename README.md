@@ -53,8 +53,6 @@ the following requirements:
 * Optional (recommended): a set of extra subdomains also pointing to the backend
   server to serve tiles from the same server but bypass the browser limit.
   Drastically improve performances
-* Optional: you can use an instance of [sentry](https://sentry.io/welcome/)
-  to track server errors
 
 ## Installation
 
@@ -132,8 +130,6 @@ FRONT_PORT can be overrided in .env file
 Once SSL configuration and / or frontend proxy configuration enabled, add
 
 SSL_ENABLE=True in your .env field and restart stack
-
-* add SENTRY_DSN or configure error tracking by email (configure EMAIL_ variables and set ADMINS tuple in custom.py)
 
 
 ### Backup

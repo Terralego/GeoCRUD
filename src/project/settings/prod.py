@@ -16,20 +16,6 @@ CACHES = {
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 
-sentry_dsn = os.getenv('SENTRY_DSN')
-
-if sentry_dsn:
-    import sentry_sdk
-    from sentry_sdk.integrations.django import DjangoIntegration
-
-    sentry_sdk.init(
-        dsn=os.getenv('SENTRY_DSN'),
-        release=os.getenv('GIT_REV'),
-        integrations=[DjangoIntegration()],
-        # If you wish to associate users to errors (assuming you are using
-        # django.contrib.auth) you may enable sending PII data.
-        send_default_pii=True
-    )
 
 if str2bool(os.getenv('SSL_ENABLED', '')):
     # ENABLE SSL HANDLING

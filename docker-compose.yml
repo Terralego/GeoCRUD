@@ -2,8 +2,6 @@ version: "3"
 services:
   postgres:
     image: pgrouting/pgrouting:12-3.0-3.1.0
-    ports:
-      - "127.0.0.1:${PGPORT}:${PGPORT}"
     env_file:
       - .env
     volumes:
