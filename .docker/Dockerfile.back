@@ -1,4 +1,4 @@
-FROM makinacorpus/geodjango:bionic-3.8
+FROM makinacorpus/geodjango:focal-3.8
 
 # required for next compilemessages
 ENV SECRET_KEY 'override-me-override-me'
