@@ -55,6 +55,7 @@ jobs:
         run: |
             docker pull geocrud/back
             docker pull geocrud/front
+            docker pull nginx:stable
             git submodule init
             git submodule update
             cp .env.dist .env
