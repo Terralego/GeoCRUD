@@ -36,7 +36,7 @@ if str2bool(os.getenv('API_DOC_ENABLED')):
 if settings.DEBUG:
     urlpatterns += [
         # serve media files in local dev env
-        re_path(r'^media/(?P<path>.*)$', serve, {
+        re_path(r'^config/media/(?P<path>.*)$', serve, {
             'document_root': settings.MEDIA_ROOT,
         }),
         # enable django-debug-toolbar
