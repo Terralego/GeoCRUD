@@ -7,7 +7,7 @@ ALLOWED_HOSTS = [
 ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-MEDIA_URL = 'http://127.0.0.1:8000/media/'  # frontend cant resolve urls without domain
+MEDIA_URL = 'http://127.0.0.1:8000/config/media/'  # frontend cant resolve urls without domain
 
 INSTALLED_APPS += (
     'debug_toolbar',
