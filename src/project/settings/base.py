@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django_json_widget',
     'admin_ordering',
     'django_object_actions',
+    'nested_admin'
 ]
 
 MIDDLEWARE = [
