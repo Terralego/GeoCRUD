@@ -10,8 +10,8 @@ attrs==20.2.0             # via fiona, jsonschema
 beautifulsoup4==4.9.3     # via django-template-engines
 billiard==3.6.3.0         # via celery
 cached-property==1.5.2    # via django-url-filter
-cairocffi==1.1.0          # via cairosvg, weasyprint
-cairosvg==2.4.2           # via weasyprint
+cairocffi==1.2.0          # via cairosvg, weasyprint
+cairosvg==2.5.0           # via weasyprint
 celery==5.0.1             # via django-geostore
 certifi==2020.6.20        # via requests
 cffi==1.14.3              # via cairocffi, cryptography, weasyprint
@@ -24,7 +24,7 @@ cligj==0.7.0              # via fiona
 coreapi==2.3.3            # via django-terra-utils, drf-yasg
 coreschema==0.0.4         # via coreapi, django-terra-utils, drf-yasg
 cryptography==3.2.1       # via pyopenssl, requests
-cssselect2==0.3.0         # via cairosvg, weasyprint
+cssselect2==0.4.1         # via cairosvg, weasyprint
 deepmerge==0.1.1          # via django-geostore
 defusedxml==0.6.0         # via cairosvg
 django-admin-ordering==0.13.1  # via django-terra-geocrud
@@ -34,7 +34,7 @@ django-filter==2.4.0      # via django-geostore
 django-geostore==0.5.1    # via django-terra-geocrud
 django-js-asset==1.2.2    # via django-admin-ordering
 django-json-widget==1.0.1  # via django-terra-geocrud
-django-mapbox-baselayer==0.0.6  # via django-terra-geocrud
+django-mapbox-baselayer==0.0.7  # via django-terra-geocrud
 django-nested-admin==3.3.2  # via django-terra-geocrud
 django-object-actions==3.0.1  # via django-terra-geocrud
 django-reversion==3.0.8   # via django-terra-geocrud
@@ -69,14 +69,14 @@ markupsafe==1.1.1         # via jinja2
 mercantile==1.1.6         # via django-geostore
 munch==2.5.0              # via fiona
 packaging==20.4           # via drf-yasg
-pillow==8.0.1             # via cairosvg, django-geostore, django-template-engines, django-terra-geocrud
+pillow==8.0.1             # via cairosvg, django-geostore, django-template-engines, django-terra-geocrud, weasyprint
 prompt-toolkit==3.0.8     # via click-repl
 psycopg2==2.8.6           # via django-geostore, django-terra-accounts, django-terra-utils
 pycparser==2.20           # via cffi
 pyjwt==1.7.1              # via djangorestframework-jwt
 pyopenssl==19.1.0         # via requests
 pyparsing==2.4.7          # via packaging
-pyphen==0.9.5             # via weasyprint
+pyphen==0.10.0            # via weasyprint
 pyrsistent==0.17.3        # via jsonschema
 python-magic==0.4.18      # via django-terra-utils
 python-memcached==1.59    # via -r requirements.in
@@ -90,12 +90,12 @@ six==1.15.0               # via click-repl, cryptography, django-admin-thumbnail
 sorl-thumbnail==12.6.3    # via django-terra-geocrud
 soupsieve==2.0.1          # via beautifulsoup4
 sqlparse==0.4.1           # via django, django-debug-toolbar
-tinycss2==1.0.2           # via cairosvg, cssselect2, weasyprint
+tinycss2==1.1.0           # via cairosvg, cssselect2, weasyprint
 uritemplate==3.0.1        # via coreapi, drf-yasg
 urllib3==1.25.11          # via requests
 vine==5.0.0               # via amqp, celery
 wcwidth==0.2.5            # via prompt-toolkit
-weasyprint==51            # via django-template-engines
+weasyprint==52            # via django-template-engines
 webencodings==0.5.1       # via cssselect2, html5lib, tinycss2
 zope.event==4.5.0         # via gevent
 zope.interface==5.1.2     # via gevent
