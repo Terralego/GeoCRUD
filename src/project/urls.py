@@ -17,6 +17,7 @@ urlpatterns = [
     # APIs
     path('api/mapbox-baselayer/', include('mapbox_baselayer.urls')),
     path('api/crud/', include('terra_geocrud.urls')),
+    path('api/', include('terra_settings.urls')),
     path('api/', include('terra_accounts.urls')),
     # admin
     path('api/admin/', admin.site.urls),

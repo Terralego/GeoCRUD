@@ -31,7 +31,7 @@ INSTALLED_APPS = [
     'sorl.thumbnail',
     'drf_yasg',
     'mapbox_baselayer',
-    'terra_utils',
+    'terra_settings',
     'terra_accounts',
     'terra_geocrud',
     'geostore',
@@ -237,7 +237,7 @@ TERRA_APPLIANCE_SETTINGS = {
 
 # REQUIRED
 REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'terra_utils.pagination.PagePagination',
+    'DEFAULT_PAGINATION_CLASS': 'terra_settings.pagination.PagePagination',
     'PAGE_SIZE': 100,
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
