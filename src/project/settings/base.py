@@ -197,7 +197,7 @@ LOCALE_PATHS = [
 # used to improve performances by generating tilejson with multiple domains
 # (ex : a.tiles.my-instance.com, b.tiles.my_istances.com ...)
 TERRA_TILES_HOSTNAMES = os.getenv('TERRA_TILES_HOSTNAMES', '').split(',')
-MAX_TILE_ZOOM = 17 # Vector tiles are usable on display up to max zoom + 3
+MAX_TILE_ZOOM = 17  # Vector tiles are usable on display up to max zoom + 3
 MIN_TILE_ZOOM = 2  # geostore bug if zoom < 2
 
 # TERRALEGO and terra-admin related settings
@@ -221,7 +221,7 @@ TERRA_APPLIANCE_SETTINGS = {
     "title": os.getenv("FRONTEND_TITLE", "GeoCRUD"),
     "theme": {
         "logo": {
-            "src": "https://github.com/Terralego.png",
+            "src": os.getenv("FRONTEND_LOGO", "https://github.com/Terralego.png"),
             "alt": os.getenv("FRONTEND_TITLE", "GeoCRUD")
         },
         "heading": os.getenv("FRONTEND_HEADING", ""),
