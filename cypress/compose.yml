@@ -6,7 +6,7 @@ services:
       # - DISPLAY
     image: cypress/included:4.9.0
     volumes:
-      - $PWD:/e2e
+      - $PWD/cypress:/e2e
       #- /tmp/.X11-unix:/tmp/.X11-unix
     working_dir: /e2e
     # entrypoint: cypress open --project /e2e
