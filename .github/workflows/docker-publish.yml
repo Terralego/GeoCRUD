@@ -36,11 +36,37 @@ jobs:
             docker-compose build django
             docker-compose run --rm django ./manage.py test
 
+  test_e2e:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Log into Container Registry
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USER }} --password-stdin
+
+      - name: Before tests
+        run: |
+          git submodule init
+          git submodule update
+
+      - name: Run tests
+        run: |
+          cp .env.dist .env
+          sed -i 's,TERRA_TILES_HOSTNAMES=http://127.0.0.1:3000,TERRA_TILES_HOSTNAMES=http://front:3000,' .env
+          sed -i.bak 's/^\(POSTGRES_PASSWORD=\).*/\1test/' .env
+          sed -i 's,DOMAIN_NAME=127.0.0.1,DOMAIN_NAME=front,' .env
+          docker-compose build
+          docker-compose up -d
+          docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/e2e.json
+          docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
+          docker-compose -f docker-compose.yml -f cypress/compose.yml run cypress cypress run
+
   # Push image to registry.
   # See also https://docs.docker.com/docker-hub/builds/
   push:
     # Ensure test job passes before pushing image.
-    needs: test
+    needs: [test, test_e2e]
 
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
