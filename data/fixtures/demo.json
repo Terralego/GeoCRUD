@@ -102,6 +102,114 @@
     }
 },
 {
+    "model": "geostore.layer",
+    "pk": 1,
+    "fields": {
+        "created_at": "2020-05-29T11:58:05.814Z",
+        "updated_at": "2020-05-29T12:06:26.416Z",
+        "settings": {},
+        "geom_type": 0,
+        "name": "points",
+        "schema": {
+            "required": [],
+            "properties": {
+                "city": {
+                    "type": "string",
+                    "title": "City"
+                },
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "country": {
+                    "type": "string",
+                    "title": "Country"
+                }
+            }
+        },
+        "authorized_groups": []
+    }
+},
+{
+    "model": "geostore.layer",
+    "pk": 2,
+    "fields": {
+        "created_at": "2020-06-02T08:35:07.178Z",
+        "updated_at": "2020-06-03T10:10:57.932Z",
+        "settings": {},
+        "geom_type": 1,
+        "name": "treks",
+        "schema": {
+            "required": [],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "length": {
+                    "type": "number",
+                    "title": "Length"
+                },
+                "duration": {
+                    "type": "number",
+                    "title": "Duration"
+                },
+                "description": {
+                    "type": "string",
+                    "title": "Description"
+                }
+            }
+        },
+        "authorized_groups": []
+    }
+},
+{
+    "model": "geostore.layer",
+    "pk": 3,
+    "fields": {
+        "created_at": "2020-06-02T08:40:15.731Z",
+        "updated_at": "2020-06-04T09:23:11.269Z",
+        "settings": {},
+        "geom_type": 6,
+        "name": "cities",
+        "schema": {
+            "required": [],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "Name"
+                },
+                "zip_codes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "title": "ZIP codes"
+                },
+                "population": {
+                    "type": "integer",
+                    "title": "Population"
+                },
+                "description": {
+                    "type": "string",
+                    "title": "Description"
+                },
+                "main_picture": {
+                    "type": "string",
+                    "title": "Main picture",
+                    "format": "data-url"
+                },
+                "population_date": {
+                    "type": "string",
+                    "title": "Population date",
+                    "format": "date"
+                }
+            }
+        },
+        "authorized_groups": []
+    }
+},
+{
     "model": "terra_geocrud.crudgroupview",
     "pk": 1,
     "fields": {
@@ -711,114 +819,6 @@
         "geom": "SRID=4326;POINT (1.45279883639887 43.59720101461766)",
         "properties": {},
         "identifier": "52a0e8fd-4a52-4196-99cb-4946e81d98a1"
-    }
-},
-{
-    "model": "geostore.layer",
-    "pk": 1,
-    "fields": {
-        "created_at": "2020-05-29T11:58:05.814Z",
-        "updated_at": "2020-05-29T12:06:26.416Z",
-        "settings": {},
-        "geom_type": 0,
-        "name": "points",
-        "schema": {
-            "required": [],
-            "properties": {
-                "city": {
-                    "type": "string",
-                    "title": "City"
-                },
-                "name": {
-                    "type": "string",
-                    "title": "Name"
-                },
-                "country": {
-                    "type": "string",
-                    "title": "Country"
-                }
-            }
-        },
-        "authorized_groups": []
-    }
-},
-{
-    "model": "geostore.layer",
-    "pk": 2,
-    "fields": {
-        "created_at": "2020-06-02T08:35:07.178Z",
-        "updated_at": "2020-06-03T10:10:57.932Z",
-        "settings": {},
-        "geom_type": 1,
-        "name": "treks",
-        "schema": {
-            "required": [],
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "title": "Name"
-                },
-                "length": {
-                    "type": "number",
-                    "title": "Length"
-                },
-                "duration": {
-                    "type": "number",
-                    "title": "Duration"
-                },
-                "description": {
-                    "type": "string",
-                    "title": "Description"
-                }
-            }
-        },
-        "authorized_groups": []
-    }
-},
-{
-    "model": "geostore.layer",
-    "pk": 3,
-    "fields": {
-        "created_at": "2020-06-02T08:40:15.731Z",
-        "updated_at": "2020-06-04T09:23:11.269Z",
-        "settings": {},
-        "geom_type": 6,
-        "name": "cities",
-        "schema": {
-            "required": [],
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "title": "Name"
-                },
-                "zip_codes": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "title": "ZIP codes"
-                },
-                "population": {
-                    "type": "integer",
-                    "title": "Population"
-                },
-                "description": {
-                    "type": "string",
-                    "title": "Description"
-                },
-                "main_picture": {
-                    "type": "string",
-                    "title": "Main picture",
-                    "format": "data-url"
-                },
-                "population_date": {
-                    "type": "string",
-                    "title": "Population date",
-                    "format": "date"
-                }
-            }
-        },
-        "authorized_groups": []
     }
 }
 ]

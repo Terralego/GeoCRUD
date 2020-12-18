@@ -7,22 +7,26 @@ describe('Filter ', () => {
   })
   it('Filter city', () => {
     cy.server()
-    cy.route('**/hot/*/*/*.png').as('tilejson')
+    cy.route({
+      method: 'GET',      // Route all GET requests
+      url: 'api/crud/layers/3/tilejson/**'
+    }).as('tiles')
+
     cy.visit('CRUD/map/cities')
-    cy.wait('@tilejson.all')
-    cy.wait(100)
-    cy.get('input[type="search"][title="Search in table"]').type('other')
-    cy.get('div.bp3-table-quadrant-scroll-container').should('not.contain', 'CityTest')
-    cy.get('input[type="search"][title="Search in table"]').clear()
-    cy.get('input[type="search"][title="Search in table"]').type('CityTest')
-    cy.get('div.bp3-table-quadrant-scroll-container').should('contain', 'CityTest')
+    cy.wait('@tiles.all')
+    cy.get('input[type="search"][title="Search in table"]').type('Toulouse')
+    cy.get('div.bp3-table-quadrant-scroll-container', {timeout: 20000}).should('contain', 'Toulouse')
+    cy.get('div.bp3-table-quadrant-scroll-container', {timeout: 20000}).should('not.contain', 'Paris')
   })
   it('Check properties filter', () => {
     cy.server()
-    cy.route('**/hot/*/*/*.png').as('tilejson')
+    cy.route({
+      method: 'GET',      // Route all GET requests
+      url: 'api/crud/layers/3/tilejson/**'
+    }).as('tiles')
+
     cy.visit('CRUD/map/cities')
-    cy.wait('@tilejson.all')
-    cy.wait(100)
+    cy.wait('@tiles.all')
     cy.get('button.bp3-intent-primary').contains("properties").click({force: true})
     cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
         expect($ch).to.be.checked
@@ -38,11 +42,14 @@ describe('Filter ', () => {
     })
   })
   it('Remove properties filter', () => {
-    cy.server()
-    cy.route('**/hot/*/*/*.png').as('tilejson')
+        cy.server()
+    cy.route({
+      method: 'GET',      // Route all GET requests
+      url: 'api/crud/layers/3/tilejson/**'
+    }).as('tiles')
+
     cy.visit('CRUD/map/cities')
-    cy.wait('@tilejson.all')
-    cy.wait(100)
+    cy.wait('@tiles.all')
     cy.get('button.bp3-intent-primary').contains("properties").click({force: true})
     cy.get('input[type="checkbox"]').first().click({force: true})
     cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
@@ -76,9 +83,13 @@ describe('Filter ', () => {
     cy.route('**/hot/*/*/*.png').as('tilejson')
     cy.fixture('crud_settings.json').as('apiCrudSettings')
     cy.route('GET', 'api/crud/settings', '@apiCrudSettings')
+    cy.route({
+      method: 'GET',      // Route all GET requests
+      url: 'api/crud/layers/3/tilejson/**'
+    }).as('tiles')
+
     cy.visit('CRUD/map/cities')
-    cy.wait('@tilejson.all')
-    cy.wait(100)
+    cy.wait('@tiles')
     cy.get('button.bp3-intent-primary').contains("properties").click({force: true})
     cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
         expect($ch).not.to.be.checked

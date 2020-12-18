@@ -41,9 +41,17 @@ describe('Logout', () => {
       cy.login(email, password)
   })
   it('Logout', () => {
+    cy.server()
+    cy.route({
+      method: 'GET',      // Route all GET requests
+      url: 'api/crud/layers/3/tilejson/**'
+    }).as('tiles')
+
     cy.visit('CRUD/map/cities')
+    cy.wait('@tiles')
     cy.get("span.bp3-button-text").contains("admin@admin.admin").click()
     cy.get("a.bp3-popover-dismiss").contains("Log out").click()
+    cy.wait(3000)
     cy.contains("Email")
   })
 })

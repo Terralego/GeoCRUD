@@ -6,10 +6,12 @@ describe('Show/Unshow List ', () => {
   })
   it('Show Unclassified', () => {
     cy.server()
-    cy.route('**/hot/*/*/*.png').as('tilejson')
+    cy.route({
+      method: 'GET',      // Route all GET requests
+      url: 'api/crud/layers/3/tilejson/**'
+    }).as('tiles')
     cy.visit('CRUD/map/cities')
-    cy.wait('@tilejson.all')
-    cy.wait(100)
+    cy.wait('@tiles.all')
     cy.get('div.bp3-collapse').should('not.contain', 'Points')
     cy.get('.bp3-button-text').next('.bp3-icon-chevron-down').click()
     cy.get('div.bp3-collapse').should('contain', 'Points')
@@ -18,11 +20,14 @@ describe('Show/Unshow List ', () => {
   })
   it('Unshow list', () => {
     cy.server()
-    cy.route('**/hot/*/*/*.png').as('tilejson')
+    cy.route({
+      method: 'GET',      // Route all GET requests
+      url: 'api/crud/layers/3/tilejson/**'
+    }).as('tiles')
+
     cy.visit('CRUD/map/cities')
-    cy.wait('@tilejson.all')
-    cy.wait(100)
-    cy.get('button.bp3-intent-primary').children('[icon="arrows-vertical"]').click()
+    cy.wait('@tiles.all')
+    cy.get('button.bp3-intent-primary').get('[icon="arrows-vertical"]').click()
     cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
     cy.get('.CRUD-map').should('be.visible')
     cy.get('[icon="minus"]').click()
@@ -31,17 +36,19 @@ describe('Show/Unshow List ', () => {
   })
   it('Enlarge/Unlarge list', () => {
     cy.server()
-    cy.route('**/hot/*/*/*.png').as('tilejson')
+    cy.route({
+      method: 'GET',      // Route all GET requests
+      url: 'api/crud/layers/3/tilejson/**'
+    }).as('tiles')
     cy.visit('CRUD/map/cities')
-    cy.wait('@tilejson.all')
-    cy.wait(100)
+    cy.wait('@tiles.all')
     cy.get('button.bp3-intent-primary').children('[icon="arrows-vertical"]').click()
     cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
     cy.get('.CRUD-map').should('be.visible')
     cy.get('.bp3-icon-maximize').click()
     cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
     cy.get('.CRUD-map').should('not.be.visible')
-    cy.get('button.bp3-intent-primary').children('[icon="arrows-vertical"]').click()
+    cy.get('button.bp3-intent-primary').get('[icon="arrows-vertical"]').click()
     cy.get('span.bp3-icon-minimize').click()
     cy.get('.CRUD-map').should('be.visible')
     cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
