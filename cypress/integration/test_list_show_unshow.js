@@ -42,7 +42,7 @@ describe('Show/Unshow List ', () => {
     }).as('tiles')
     cy.visit('CRUD/map/cities')
     cy.wait('@tiles.all')
-    cy.get('button.bp3-intent-primary').children('[icon="arrows-vertical"]').click()
+    cy.get('button.bp3-intent-primary').get('[icon="arrows-vertical"]').click()
     cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
     cy.get('.CRUD-map').should('be.visible')
     cy.get('.bp3-icon-maximize').click()

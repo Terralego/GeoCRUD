@@ -27,7 +27,7 @@ describe('Filter ', () => {
 
     cy.visit('CRUD/map/cities')
     cy.wait('@tiles.all')
-    cy.get('button.bp3-intent-primary').contains("properties").click({force: true})
+    cy.get('button.bp3-intent-primary', {timeout:8000}).contains("properties").click({force: true})
     cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
         expect($ch).to.be.checked
     })
