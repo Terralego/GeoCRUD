@@ -58,7 +58,6 @@ jobs:
           sed -i 's,DOMAIN_NAME=127.0.0.1,DOMAIN_NAME=front,' .env
           docker-compose build
           docker-compose up -d
-          docker-compose run --rm django ./manage.py migrate
           docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/e2e.json
           docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/demo.json
           docker-compose -f docker-compose.yml -f cypress/compose.yml run cypress cypress run
