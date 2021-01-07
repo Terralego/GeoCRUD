@@ -1,6 +1,8 @@
 describe('No settings', () => {
   it('Settings 500', () => {
     cy.server()
+    cy.fixture('settings_en.json').as('apiSettings')
+    cy.route('GET', 'api/settings', '@apiSettings')
     cy.route({
       method: 'GET',
       url: 'api/settings',

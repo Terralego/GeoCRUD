@@ -5,7 +5,7 @@ describe('Language authent', () => {
     cy.route('GET', 'api/settings', '@apiSettings')
     cy.visit('')
     cy.get('form')
-    cy.should("contain", "Mot de passe")
+    cy.should("contain", "Password")
   })
   it('Check fallback bad language login page', () => {
     cy.server()
