@@ -1,0 +1,22 @@
+{
+  "version": 8,
+  "sources": {
+    "wikimedia": {
+      "type": "raster",
+      "tiles": [
+        "//maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+      ],
+      "minzoom": 0,
+      "maxzoom": 19,
+      "attribution": "This is a test, wikimedia",
+      "tileSize": 256
+    }
+  },
+  "layers": [
+    {
+      "id": "wikimedia-background",
+      "type": "raster",
+      "source": "wikimedia"
+    }
+  ]
+}

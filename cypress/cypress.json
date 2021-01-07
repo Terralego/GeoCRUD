@@ -1,0 +1,11 @@
+{
+  "fixturesFolder": "fixtures",
+  "supportFile": "support",
+  "integrationFolder": "integration",
+  "pluginsFile": false,
+  "screenshotsFolder": "screenshots",
+  "baseUrl": "http://localhost:3000",
+  "video": true,
+  "requestTimeout": 50000,
+  "experimentalFetchPolyfill": true
+}

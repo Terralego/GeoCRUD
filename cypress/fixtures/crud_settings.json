@@ -1,0 +1,522 @@
+{
+  "menu": [
+    {
+      "id": 2,
+      "crud_views": [
+        {
+          "id": 3,
+          "name": "Cities",
+          "object_name": "city",
+          "object_name_plural": "cities",
+          "pictogram": "/config/media/demo/crud/views/pictograms/administration-2031343_640.png",
+          "order": 10,
+          "map_style": {
+            "type": "fill",
+            "paint": {
+              "fill-color": "red",
+              "fill-opacity": 0.3
+            }
+          },
+          "form_schema": {
+            "required": [],
+            "properties": {
+              "infos": {
+                "type": "object",
+                "title": "Infos",
+                "required": [],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "title": "Name"
+                  },
+                  "main_picture": {
+                    "type": "string",
+                    "title": "Main picture",
+                    "format": "data-url"
+                  },
+                  "description": {
+                    "type": "string",
+                    "title": "Description"
+                  }
+                }
+              },
+              "others": {
+                "type": "object",
+                "title": "Others",
+                "required": [],
+                "properties": {
+                  "zip_codes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "title": "ZIP codes"
+                  },
+                  "population": {
+                    "type": "integer",
+                    "title": "Population"
+                  },
+                  "population_date": {
+                    "type": "string",
+                    "title": "Population date",
+                    "format": "date"
+                  }
+                }
+              }
+            }
+          },
+          "ui_schema": {
+            "infos": {
+              "ui:order": [
+                "*"
+              ],
+              "main_picture": {
+                "ui:options": {
+                  "accept": [
+                    ".jpg",
+                    ".png",
+                    ".bmp",
+                    ".gif"
+                  ]
+                }
+              },
+              "description": {
+                "ui:field": "rte"
+              }
+            },
+            "others": {
+              "ui:order": [
+                "*"
+              ]
+            },
+            "ui:order": [
+              "infos",
+              "others",
+              "*"
+            ]
+          },
+          "settings": {},
+          "layer": {
+            "id": 3,
+            "tilejson": "/api/crud/layers/3/tilejson/",
+            "authorized_groups": [],
+            "name": "cities",
+            "created_at": "2020-06-02T08:40:15.731000Z",
+            "updated_at": "2020-06-04T09:23:11.269000Z",
+            "settings": {},
+            "geom_type": 6
+          },
+          "feature_endpoint": "/api/crud/layers/3/features/",
+          "extent": [
+            1.35102518267564,
+            43.536175068176,
+            2.46982938354492,
+            48.9027443901263
+          ],
+          "exports": [
+            {
+              "name": "shapefile",
+              "url": "/api/crud/layers/3/shapefile/"
+            },
+            {
+              "name": "geojson",
+              "url": "/api/crud/layers/3/features.geojson"
+            }
+          ],
+          "feature_list_properties": {
+            "name": {
+              "title": "Name",
+              "selected": false,
+              "type": "string"
+            },
+            "population": {
+              "title": "Population",
+              "selected": false,
+              "type": "integer"
+            },
+            "population_date": {
+              "title": "Population date",
+              "selected": true,
+              "type": "string"
+            },
+            "zip_codes": {
+              "title": "ZIP codes",
+              "selected": true,
+              "type": "array"
+            },
+            "description": {
+              "title": "test",
+              "selected": true,
+              "type": "string"
+            }
+          },
+          "map_layers": [
+            {
+              "title": "Cities",
+              "id_layer_vt": "cities",
+              "style": {
+                "type": "fill",
+                "paint": {
+                  "fill-color": "red",
+                  "fill-opacity": 0.3
+                }
+              },
+              "main": true
+            },
+            {
+              "title": "Center",
+              "id_layer_vt": "cities-center",
+              "style": {
+                "type": "circle",
+                "paint": {
+                  "circle-color": "#000",
+                  "circle-radius": 8
+                }
+              },
+              "main": false
+            },
+            {
+              "title": "Centroïd",
+              "id_layer_vt": "cities-centroid",
+              "style": {
+                "type": "circle",
+                "paint": {
+                  "circle-color": "#000",
+                  "circle-radius": 8
+                }
+              },
+              "main": false
+            }
+          ]
+        }
+      ],
+      "name": "Administration",
+      "order": 10,
+      "pictogram": null
+    },
+    {
+      "id": 1,
+      "crud_views": [
+        {
+          "id": 2,
+          "name": "Treks",
+          "object_name": "trek",
+          "object_name_plural": "treks",
+          "pictogram": "/config/media/demo/crud/views/pictograms/unnamed.png",
+          "order": 20,
+          "map_style": {
+            "type": "line",
+            "paint": {
+              "line-color": "#0000FF",
+              "line-width": 3
+            }
+          },
+          "form_schema": {
+            "required": [],
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Name"
+              },
+              "description": {
+                "type": "string",
+                "title": "Description"
+              },
+              "length": {
+                "type": "number",
+                "title": "Length"
+              },
+              "duration": {
+                "type": "number",
+                "title": "Duration"
+              }
+            }
+          },
+          "ui_schema": {
+            "length": {
+              "ui:help": "in Km"
+            },
+            "duration": {
+              "ui:help": "in Hours"
+            },
+            "description": {
+              "ui:field": "rte"
+            }
+          },
+          "settings": {},
+          "layer": {
+            "id": 2,
+            "tilejson": "/api/crud/layers/2/tilejson/",
+            "authorized_groups": [],
+            "name": "treks",
+            "created_at": "2020-06-02T08:35:07.178000Z",
+            "updated_at": "2020-06-03T10:10:57.932000Z",
+            "settings": {},
+            "geom_type": 1
+          },
+          "feature_endpoint": "/api/crud/layers/2/features/",
+          "extent": [
+            0.667905298320448,
+            43.0007784598121,
+            1.44643480805141,
+            43.6087878007384
+          ],
+          "exports": [
+            {
+              "name": "shapefile",
+              "url": "/api/crud/layers/2/shapefile/"
+            },
+            {
+              "name": "geojson",
+              "url": "/api/crud/layers/2/features.geojson"
+            }
+          ],
+          "feature_list_properties": {
+            "duration": {
+              "title": "Duration",
+              "selected": true,
+              "type": "number"
+            },
+            "length": {
+              "title": "Length",
+              "selected": true,
+              "type": "number"
+            },
+            "name": {
+              "title": "Name",
+              "selected": true,
+              "type": "string"
+            }
+          },
+          "map_layers": [
+            {
+              "title": "Treks",
+              "id_layer_vt": "treks",
+              "style": {
+                "type": "line",
+                "paint": {
+                  "line-color": "#0000FF",
+                  "line-width": 3
+                }
+              },
+              "main": true
+            },
+            {
+              "title": "Information Desks",
+              "id_layer_vt": "treks-information-desks",
+              "style": {
+                "type": "circle",
+                "paint": {
+                  "circle-color": "#000",
+                  "circle-radius": 8
+                }
+              },
+              "main": false
+            }
+          ]
+        }
+      ],
+      "name": "Outdoor Activities",
+      "order": 20,
+      "pictogram": "/config/media/demo/crud/groups/pictograms/images.png"
+    },
+    {
+      "id": null,
+      "name": "Unclassified",
+      "order": null,
+      "pictogram": null,
+      "crud_views": [
+        {
+          "id": 1,
+          "name": "Points",
+          "object_name": "Points",
+          "object_name_plural": "Points",
+          "pictogram": null,
+          "order": 30,
+          "map_style": {
+            "type": "circle",
+            "paint": {
+              "circle-color": "#000",
+              "circle-radius": 8
+            }
+          },
+          "form_schema": {
+            "required": [],
+            "properties": {
+              "infos": {
+                "type": "object",
+                "title": "Infos",
+                "required": [],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "title": "Name"
+                  }
+                }
+              },
+              "administrative": {
+                "type": "object",
+                "title": "Administrative",
+                "required": [],
+                "properties": {
+                  "city": {
+                    "type": "string",
+                    "title": "City"
+                  },
+                  "country": {
+                    "type": "string",
+                    "title": "Country"
+                  }
+                }
+              }
+            }
+          },
+          "ui_schema": {
+            "infos": {
+              "ui:order": [
+                "*"
+              ]
+            },
+            "administrative": {
+              "ui:order": [
+                "*"
+              ]
+            },
+            "ui:order": [
+              "infos",
+              "administrative",
+              "*"
+            ]
+          },
+          "settings": {},
+          "layer": {
+            "id": 1,
+            "tilejson": "/api/crud/layers/1/tilejson/",
+            "authorized_groups": [],
+            "name": "points",
+            "created_at": "2020-05-29T11:58:05.814000Z",
+            "updated_at": "2020-05-29T12:06:26.416000Z",
+            "settings": {},
+            "geom_type": 0
+          },
+          "feature_endpoint": "/api/crud/layers/1/features/",
+          "extent": [
+            1.05326971078065,
+            44.1493768693921,
+            1.05326971078065,
+            44.1493768693921
+          ],
+          "exports": [
+            {
+              "name": "shapefile",
+              "url": "/api/crud/layers/1/shapefile/"
+            },
+            {
+              "name": "geojson",
+              "url": "/api/crud/layers/1/features.geojson"
+            }
+          ],
+          "feature_list_properties": {
+            "city": {
+              "title": "City",
+              "selected": true,
+              "type": "string"
+            },
+            "country": {
+              "title": "Country",
+              "selected": true,
+              "type": "string"
+            },
+            "name": {
+              "title": "Name",
+              "selected": true,
+              "type": "string"
+            }
+          },
+          "map_layers": [
+            {
+              "title": "Points",
+              "id_layer_vt": "points",
+              "style": {
+                "type": "circle",
+                "paint": {
+                  "circle-color": "#000",
+                  "circle-radius": 8
+                }
+              },
+              "main": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "config": {
+    "default": {
+      "EXTENT": [
+        -4,
+        40,
+        6,
+        50
+      ],
+      "DATA_FILE_STORAGE_CLASS": "django.core.files.storage.FileSystemStorage",
+      "IMAGE_EXTENSION_ALLOWED": [
+        ".jpeg",
+        ".jpg",
+        ".png",
+        ".gif",
+        ".bmp"
+      ],
+      "FILE_UPLOAD_MAX_MEMORY_SIZE": 104857600,
+      "MBGLRENDERER_URL": "http://mbglrenderer",
+      "map": {
+        "mapbox_access_token": "",
+        "center": [
+          2,
+          46
+        ],
+        "zoom": 5,
+        "maxZoom": 18,
+        "minZoom": 3
+      },
+      "STYLES": {
+        "line": {
+          "type": "line",
+          "paint": {
+            "line-color": "#000",
+            "line-width": 3
+          }
+        },
+        "point": {
+          "type": "circle",
+          "paint": {
+            "circle-color": "#000",
+            "circle-radius": 8
+          }
+        },
+        "polygon": {
+          "type": "fill",
+          "paint": {
+            "fill-color": "#000"
+          }
+        }
+      },
+      "MAX_ZOOM": 17
+    },
+    "BASE_LAYERS": [
+      {
+        "OSM": {
+          "id": 2,
+          "url": "/api/mapbox-baselayer/mapbox-baselayers/2/tilejson/"
+        }
+      },
+      {
+        "OpenTopoMap": {
+          "id": 3,
+          "url": "/api/mapbox-baselayer/mapbox-baselayers/3/tilejson/"
+        }
+      }
+    ],
+    "attachment_categories": "/api/crud/attachment-categories/"
+  }
+}
