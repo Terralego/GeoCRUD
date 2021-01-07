@@ -9,3 +9,6 @@ __pycache__/
 /data/media/cache/
 /doc/_build/
 src/project/settings/custom.py
+/cypress/cypress/videos/
+/cypress/cypress/screenshots/
+/cypress/screenshots/
