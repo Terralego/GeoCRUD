@@ -1,8 +1,6 @@
 describe('No settings', () => {
   it('Settings 500', () => {
     cy.server()
-    cy.fixture('settings_en.json').as('apiSettings')
-    cy.route('GET', 'api/settings', '@apiSettings')
     cy.route({
       method: 'GET',
       url: 'api/settings',
@@ -10,6 +8,6 @@ describe('No settings', () => {
       response: {}
     })
     cy.visit('')
-    cy.get('p').should("contain", "Impossible de charger la configuration. Veuillez contacter un administrateur.")
+    cy.get('p').should("contain", "Unable to load settings. Please contact your administrator.")
   })
 })
