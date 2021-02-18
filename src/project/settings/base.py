@@ -228,10 +228,6 @@ TERRA_APPLIANCE_SETTINGS = {
     },
     "favicon": f"data:image/x-icon;base64,{ get_b64_content(FAVICON_PATH) }",
     # temp module settings
-    "enabled_modules": [
-        "CRUD",
-        "User"
-    ],
     "landing_module": "CRUD",
 }
 
