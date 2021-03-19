@@ -184,7 +184,7 @@ munch==2.5.0
     # via fiona
 packaging==20.9
     # via drf-yasg
-pillow==8.1.0
+pillow==8.1.1
     # via
     #   cairosvg
     #   django-geostore
@@ -226,8 +226,6 @@ requests[security]==2.25.1
     #   django-geostore
     #   django-template-engines
     #   django-terra-geocrud
-ruamel.yaml.clib==0.2.2
-    # via ruamel.yaml
 ruamel.yaml==0.16.12
     # via drf-yasg
 simplekml==1.3.5
