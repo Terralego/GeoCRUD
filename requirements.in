@@ -1,7 +1,7 @@
 django==3.1.*  # Fix with last django available (or LTS)
 # django==2.2.*
 
-django-terra-geocrud
+django-terra-geocrud>=1.0.15
 
 # optionnal, if you want to expose API swagger / redoc
 drf-yasg
