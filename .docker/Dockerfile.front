@@ -11,7 +11,13 @@ RUN npm ci
 # FIX to use npm 7 with node 12
 RUN npm rebuild node-sass
 # ENDFIX
+
 COPY . .
+
+# FIX F****** postbuild
+RUN sed -i '/postbuild/d' ./package.json
+# ENDFIX
+
 RUN [ "npm", "run", "build" ]
 
 FROM nginx:stable as prod
