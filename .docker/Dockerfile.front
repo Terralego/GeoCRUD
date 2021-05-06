@@ -4,7 +4,13 @@ FROM node:$NODE as dev
 WORKDIR /usr/src/app
 
 COPY package*.json ./
+# FIX to use npm 7 with node 12
+RUN npm install -g npm
+# ENDFIX
 RUN npm ci
+# FIX to use npm 7 with node 12
+RUN npm rebuild node-sass
+# ENDFIX
 COPY . .
 RUN [ "npm", "run", "build" ]
 
