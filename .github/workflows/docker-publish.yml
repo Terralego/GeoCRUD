@@ -50,6 +50,8 @@ jobs:
           sed -i 's,TERRA_TILES_HOSTNAMES=http://127.0.0.1:3000,TERRA_TILES_HOSTNAMES=http://front:3000,' .env
           sed -i.bak 's/^\(POSTGRES_PASSWORD=\).*/\1test/' .env
           sed -i 's,DOMAIN_NAME=127.0.0.1,DOMAIN_NAME=front,' .env
+          docker-compose down -v
+          docker-compose run --rm django ./manage.py migrate
           docker-compose build
           docker-compose up -d
           docker-compose run --rm django ./manage.py loaddata /app/public/data/fixtures/e2e.json
