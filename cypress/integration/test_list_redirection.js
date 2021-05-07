@@ -28,7 +28,7 @@ describe('List ', () => {
     cy.wait('@tiles')
     cy.get('a[href="/CRUD/map/cities/create"][tabindex="0"]').click()
     cy.url().should('include', '/CRUD/map/cities/create')
-    cy.get('span.bp3-button-text', {timeout:8000}).should('contain', 'Add city')
+    cy.get('h2.details__title', {timeout:8000}).should('contain', 'Add city')
   })
   it('Redirects to add. Bottom pannel', () => {
     cy.server()
@@ -41,6 +41,6 @@ describe('List ', () => {
     cy.wait('@tiles')
     cy.get('a.table-header__create').click()
     cy.url().should('include', '/CRUD/map/cities/create')
-    cy.get('span.bp3-button-text', {timeout:8000}).should('contain', 'Add city')
+    cy.get('h2.details__title', {timeout:8000}).should('contain', 'Add city')
   })
 })
