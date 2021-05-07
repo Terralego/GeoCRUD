@@ -4,17 +4,17 @@
 #
 #    pip-compile
 #
-amqp==5.0.5
+amqp==5.0.6
     # via kombu
-asgiref==3.3.1
+asgiref==3.3.4
     # via django
-attrs==20.3.0
+attrs==21.1.0
     # via
     #   fiona
     #   jsonschema
 beautifulsoup4==4.9.3
     # via django-template-engines
-billiard==3.6.3.0
+billiard==3.6.4.0
     # via celery
 cached-property==1.5.2
     # via django-url-filter
@@ -22,7 +22,7 @@ cairocffi==1.2.0
     # via
     #   cairosvg
     #   weasyprint
-cairosvg==2.5.1
+cairosvg==2.5.2
     # via weasyprint
 celery==5.0.5
     # via django-geostore
@@ -62,7 +62,7 @@ coreschema==0.0.4
     # via
     #   coreapi
     #   drf-yasg
-cryptography==3.4.6
+cryptography==3.4.7
     # via
     #   pyopenssl
     #   requests
@@ -70,19 +70,17 @@ cssselect2==0.4.1
     # via
     #   cairosvg
     #   weasyprint
-deepmerge==0.1.1
+deepmerge==0.3.0
     # via django-geostore
-defusedxml==0.6.0
+defusedxml==0.7.1
     # via cairosvg
-django-admin-ordering==0.13.1
+django-admin-ordering==0.14.0
     # via django-terra-geocrud
 django-admin-thumbnails==0.2.5
     # via django-terra-geocrud
-django-debug-toolbar==3.2
+django-debug-toolbar==3.2.1
     # via -r requirements.in
-django-filter==2.4.0
-    # via django-geostore
-django-geostore==0.5.7
+django-geostore==0.6.0
     # via django-terra-geocrud
 django-js-asset==1.2.2
     # via django-admin-ordering
@@ -94,7 +92,7 @@ django-mapbox-baselayer==0.0.8
     #   django-terra-settings
 django-nested-admin==3.3.3
     # via django-terra-geocrud
-django-object-actions==3.0.1
+django-object-actions==3.0.2
     # via django-terra-geocrud
 django-reversion==3.0.9
     # via django-terra-geocrud
@@ -102,22 +100,21 @@ django-template-engines==1.3.8
     # via django-terra-geocrud
 django-template-model==1.0.6
     # via django-terra-geocrud
-django-terra-accounts==1.0.3.1
+django-terra-accounts==1.0.7
     # via django-terra-geocrud
-django-terra-geocrud==1.0.9
+django-terra-geocrud==1.0.15
     # via -r requirements.in
-django-terra-settings==1.0.2
+django-terra-settings==1.0.3
     # via django-terra-accounts
 django-token-tools==0.1.2
     # via django-geostore
 django-url-filter==0.3.15
     # via django-terra-accounts
-django==3.1.6
+django==3.1.10
     # via
     #   -r requirements.in
     #   django-admin-thumbnails
     #   django-debug-toolbar
-    #   django-filter
     #   django-geostore
     #   django-mapbox-baselayer
     #   django-reversion
@@ -136,7 +133,7 @@ djangorestframework-gis==0.17
     #   django-terra-geocrud
 djangorestframework-jwt==1.11.0
     # via django-terra-accounts
-djangorestframework==3.12.2
+djangorestframework==3.12.4
     # via
     #   django-geostore
     #   django-terra-accounts
@@ -148,7 +145,7 @@ drf-yasg==1.20.0
     # via -r requirements.in
 enum-compat==0.0.3
     # via django-url-filter
-fiona==1.8.18
+fiona==1.8.19
     # via django-geostore
 future==0.18.2
     # via django-json-widget
@@ -156,9 +153,9 @@ gevent==21.1.2
     # via gunicorn
 gpxpy==1.4.2
     # via django-geostore
-greenlet==1.0.0
+greenlet==1.1.0
     # via gevent
-gunicorn[gevent]==20.0.4
+gunicorn[gevent]==20.1.0
     # via -r requirements.in
 html5lib==1.1
     # via weasyprint
@@ -174,24 +171,23 @@ jsonschema==3.2.0
     # via django-geostore
 kombu==5.0.2
     # via celery
-lxml==4.6.2
+lxml==4.6.3
     # via django-template-engines
 markupsafe==1.1.1
     # via jinja2
-mercantile==1.1.6
+mercantile==1.2.1
     # via django-geostore
 munch==2.5.0
     # via fiona
 packaging==20.9
     # via drf-yasg
-pillow==8.1.0
+pillow==8.2.0
     # via
     #   cairosvg
-    #   django-geostore
     #   django-template-engines
     #   django-terra-geocrud
     #   weasyprint
-prompt-toolkit==3.0.16
+prompt-toolkit==3.0.18
     # via click-repl
 psycopg2==2.8.6
     # via
@@ -228,11 +224,11 @@ requests[security]==2.25.1
     #   django-terra-geocrud
 ruamel.yaml.clib==0.2.2
     # via ruamel.yaml
-ruamel.yaml==0.16.12
+ruamel.yaml==0.17.4
     # via drf-yasg
 simplekml==1.3.5
     # via django-geostore
-six==1.15.0
+six==1.16.0
     # via
     #   click-repl
     #   django-admin-thumbnails
@@ -247,7 +243,7 @@ six==1.15.0
     #   python-monkey-business
 sorl-thumbnail==12.7.0
     # via django-terra-geocrud
-soupsieve==2.2
+soupsieve==2.2.1
     # via beautifulsoup4
 sqlparse==0.4.1
     # via
@@ -262,7 +258,7 @@ uritemplate==3.0.1
     # via
     #   coreapi
     #   drf-yasg
-urllib3==1.26.3
+urllib3==1.26.4
     # via requests
 vine==5.0.0
     # via
@@ -270,7 +266,7 @@ vine==5.0.0
     #   celery
 wcwidth==0.2.5
     # via prompt-toolkit
-weasyprint==52.2
+weasyprint==52.5
     # via django-template-engines
 webencodings==0.5.1
     # via
@@ -279,7 +275,7 @@ webencodings==0.5.1
     #   tinycss2
 zope.event==4.5.0
     # via gevent
-zope.interface==5.2.0
+zope.interface==5.4.0
     # via gevent
 
 # The following packages are considered to be unsafe in a requirements file:

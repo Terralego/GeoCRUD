@@ -10,10 +10,6 @@
         "heading": "Test"
     },
     "favicon": "data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAoKCj/KCgo/0FBQf+Pj4//zc3N//f39//39/f/9vb2//b29v/29vb/9/f3//b29v/29vb/9vb2/4yMjP8oKCj/KCgo/ygoKP8oKCj/KCgo/19fX//w8PD/9/f3//b29v/39/f/9vb2//b29v/29vb/9vb2/+jo6P+BgYH/bm5u/ygoKP8oKCj/LS0t/6ioqP/29vb/9vb2//b29v/39/f/9vb2//f39//39/f/9vb2/8bGxv9AQED/Y2Nj/319ff8oKCj/KSkp/7S0tP/39/f/9/f3//f39//a2tr/29vb/9XV1f/w8PD/9/f3//b29v/29vb/tbW1/ykpKf8oKCj/KCgo/3x8fP/29vb/9vb2//T09P+Hh4f/ZWVl/7a2tv/FxcX/i4uL/+vr6//39/f/9vb2//b29v9/f3//KCgo/yoqKv/f39//9/f3//b29v+FhYX/NDQ0/25ubv/09PT/9fX1/9zc3P+kpKT/9vb2//f39//29vb/4eHh/yoqKv9TU1P/9vb2//f39/+5ubn/NDQ0/zQ0NP81NTX/jIyM/9DQ0P/09PT/goKC//Hx8f/39/f/9/f3//b29v9VVVX/dHR0//b29v/x8fH/dXV1/0VFRf80NDT/NDQ0/zQ0NP81NTX/Ojo6/zQ0NP/Jycn/9/f3//f39//29vb/dnZ2/3l5ef/w8PD/t7e3/9/f3//d3d3/vb29/5mZmf9+fn7/UVFR/zU1Nf80NDT/qamp//f39//39/f/9vb2/3t7e/9eXl7/9/f3//b29v/19fX/39/f/9/f3//h4eH/29vb/9/f3//U1NT/uLi4/7q6uv/29vb/9/f3//b29v9gYGD/MDAw/+Tk5P9xcXH/5OTk/9zc3P/e3t7/4+Pj//f39//39/f/8vLy/9vb2/+tra3/9fX1//f39//u7u7/MjIy/ygoKP+YmJj/9vb2//f39//39/f/9/f3//b29v/29vb/9/f3//Ly8v/z8/P/5ubm/9LS0v/19fX/nZ2d/ygoKP8oKCj/NDQ0/8vLy//19fX/9vb2//b29v/39/f/9/f3//f39//FxcX/ZmZm//Hx8f/39/f/2dnZ/zQ0NP8oKCj/KCgo/ygoKP9CQkL/1tbW//f39//39/f/9/f3//f39//39/f/9vb2//Pz8//29vb/19fX/0NDQ/8oKCj/KCgo/ygoKP8oKCj/KCgo/zExMf+UlJT/6Ojo//f39//29vb/9vb2/+3t7f/i4uL/lpaW/zIyMv8oKCj/KCgo/ygoKP8oKCj/KCgo/ygoKP8oKCj/KCgo/ywsLP9WVlb/bW1t/21tbf9WVlb/LS0t/ygoKP8oKCj/KCgo/ygoKP8oKCj/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-    "enabled_modules": [
-        "CRUD",
-        "User"
-    ],
     "landing_module": "CRUD",
     "modules": {
         "CRUD": {
