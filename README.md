@@ -73,6 +73,11 @@ unzip master.zip GeoCRUD/
 cd GeoCRUD
 ```
 
+```bash
+docker pull terralego/geocrud-front:latest
+docker pull terralego/geocrud-back:latest
+```
+
 ### Configuration
 
 Create environment file from template
