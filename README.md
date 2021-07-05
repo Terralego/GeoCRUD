@@ -171,6 +171,3 @@ SSL_ENABLE=True in your .env field and restart stack
 
 # ✍️ Authors <a name = "authors"></a>
 - [@terralego](https://github.com/terralego) - Idea & Initial work
-* powered by 
-  
-  <img src="https://avatars2.githubusercontent.com/u/546696?s=200&v=4" width="100" />
