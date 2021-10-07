@@ -1,1 +1,4 @@
 
+[submodule "front"]
+	path = front
+	url = git@github.com:Terralego/GeoCRUD-front.git
