@@ -9,7 +9,7 @@ describe('Test theme ', () => {
     cy.route('**/hot/*/*/*.png').as('tilejson')
     cy.fixture('settings_1.json').as('apiSettings')
     cy.route('GET', 'api/settings', '@apiSettings')
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tilejson.all')
     cy.fixture('accessibility-troller.png').then((logo) => {
         cy.get('.main-header__logo').should('have.attr', 'src').should('include', logo)

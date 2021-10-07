@@ -10,7 +10,7 @@ describe('Sorting ', () => {
       method: 'GET',      // Route all GET requests
       url: 'api/crud/layers/3/tilejson/**'
     }).as('tiles')
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tiles.all')
     cy.get('.bp3-table-column-name[title="Name"]').contains('Name').rightclick({force: true})
     cy.get('[icon="sort-alphabetical"]').click()
@@ -43,7 +43,7 @@ describe('Sorting ', () => {
       method: 'GET',      // Route all GET requests
       url: 'api/crud/layers/3/tilejson/**'
     }).as('tiles')
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tiles.all')
     cy.get('.bp3-table-column-name[title="Population"]').contains('Population').rightclick({force: true})
     cy.get('[icon="sort-alphabetical"]').click()
@@ -78,7 +78,7 @@ describe('Sorting ', () => {
       url: 'api/crud/layers/3/tilejson/**'
     }).as('tiles')
 
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tiles.all')
     cy.get('.bp3-table-column-name[title="ZIP codes"]').contains('ZIP codes').rightclick({force: true})
     cy.get('[icon="sort-alphabetical"]').click()

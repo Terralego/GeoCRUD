@@ -10,7 +10,7 @@ describe('Show/Unshow List ', () => {
       method: 'GET',      // Route all GET requests
       url: 'api/crud/layers/3/tilejson/**'
     }).as('tiles')
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tiles.all')
     cy.get('div.bp3-collapse').should('not.contain', 'Points')
     cy.get('.bp3-button-text').next('.bp3-icon-chevron-down').click()
@@ -25,7 +25,7 @@ describe('Show/Unshow List ', () => {
 //      method: 'GET',      // Route all GET requests
 //      url: 'api/crud/layers/3/tilejson/**'
 //    }).as('tiles')
-//    cy.visit('CRUD/map/cities')
+//    cy.visit('map/cities')
 //    cy.wait('@tiles.all')
 //    cy.get('button.bp3-intent-primary').get('[icon="arrows-vertical"]').click()
 //    cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')
@@ -40,7 +40,7 @@ describe('Show/Unshow List ', () => {
 //      method: 'GET',      // Route all GET requests
 //      url: 'api/crud/layers/3/tilejson/**'
 //    }).as('tiles')
-//    cy.visit('CRUD/map/cities')
+//    cy.visit('map/cities')
 //    cy.wait('@tiles.all')
 //    cy.get('button.bp3-intent-primary').get('[icon="arrows-vertical"]').click()
 //    cy.get('.bp3-button-text').contains("Toulouse").should('be.visible')

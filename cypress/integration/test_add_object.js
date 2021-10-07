@@ -10,7 +10,7 @@
       method: 'GET',      // Route all GET requests
       url: 'api/crud/layers/3/tilejson/**'
     }).as('tiles')
-    cy.visit('CRUD/map/cities/create')
+    cy.visit('map/cities/create')
     cy.wait('@tiles')
     cy.get('button.mapbox-gl-draw_polygon').click()
     cy.get('.tf-map')
@@ -28,7 +28,7 @@
   it('Add same geometry city', () => {
     cy.server()*/
     //cy.route('**/hot/*/*/*.png').as('tilejson')
-/*    cy.visit('CRUD/map/cities')
+/*    cy.visit('map/cities')
     cy.wait('@tilejson.all')
     cy.wait(100)
     cy.get('button.mapbox-gl-draw_polygon').click()
