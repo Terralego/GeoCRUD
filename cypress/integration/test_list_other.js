@@ -7,7 +7,7 @@ describe('Other List ', () => {
   it('Picture', () => {
     cy.server()
     cy.route('**/hot/*/*/*.png').as('tilejson')
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tilejson.all')
     cy.wait(100)
     cy.get('button.mapboxgl-ctrl-icon[aria-label="Capture"]').click()
@@ -19,7 +19,7 @@ describe('Other List ', () => {
       url: 'api/crud/layers/3/tilejson/**'
     }).as('tiles')
 
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tiles')
     cy.get('.CRUD-nav__list').should('contain', 'Cities')
     cy.get('[icon="menu-closed"]').click()
@@ -35,7 +35,7 @@ describe('Other List ', () => {
   //    url: 'api/crud/layers/3/tilejson/**'
   //  }).as('tiles')
 
-  //  cy.visit('CRUD/map/cities')
+  //  cy.visit('map/cities')
   //  cy.wait('@tiles')
   //  cy.get('button.mapboxgl-ctrl-icon').as('icons')
   //  cy.get('@icons').children('[icon="layers"].bp3-icon.bp3-icon-layers').click()

@@ -12,7 +12,7 @@ describe('Detail ', () => {
 //      method: 'GET',      // Route all GET requests
 //      url: 'api/crud/layers/3/tilejson/**'
 //    }).as('tiles')
-//    cy.visit('CRUD/map/cities')
+//    cy.visit('map/cities')
 //    cy.wait('@tiles')
 //    cy.get('.tf-map')
 //      .then(elements => Promise.resolve(elements[0].mapboxInstance))

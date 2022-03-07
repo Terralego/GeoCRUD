@@ -28,7 +28,7 @@ describe('Login from home page', () => {
       .type('admin')
       .should('have.value', 'admin')
     cy.get("button[type='submit']").click()
-    cy.url().should('include', '/CRUD/map/cities')
+    cy.url().should('include', '/map/cities')
     cy.get("span.bp3-button-text").contains("admin@admin.admin")
     localStorage.getItem('tf:auth:token')
   })
@@ -47,7 +47,7 @@ describe('Logout', () => {
       url: 'api/crud/layers/3/tilejson/**'
     }).as('tiles')
 
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tiles')
     cy.get("span.bp3-button-text").contains("admin@admin.admin").click()
     cy.get("a.bp3-popover-dismiss").contains("Log out").click()

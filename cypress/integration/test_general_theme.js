@@ -9,19 +9,16 @@ describe('Test theme ', () => {
     cy.route('**/hot/*/*/*.png').as('tilejson')
     cy.fixture('settings_1.json').as('apiSettings')
     cy.route('GET', 'api/settings', '@apiSettings')
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tilejson.all')
     cy.fixture('accessibility-troller.png').then((logo) => {
         cy.get('.main-header__logo').should('have.attr', 'src').should('include', logo)
     })
     cy.get('.main').should('contain', 'Test')
-    cy.get('.bp3-button-text').contains('Modules').click()
-    cy.get('.bp3-menu-item').should('contain', 'Users')
-    cy.get('.bp3-menu-item').should('contain', 'Geographic editor')
   })
   it('Landing module CRUD',() => {
     cy.visit('')
-    cy.url().should('include', 'CRUD')
+    cy.url().should('include', 'map/cities')
   })
 
   //it('Landing module User',() => {

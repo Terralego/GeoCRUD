@@ -12,7 +12,7 @@ describe('Filter ', () => {
       url: 'api/crud/layers/3/tilejson/**'
     }).as('tiles')
 
-    cy.visit('CRUD/map/cities')
+    cy.visit('map/cities')
     cy.wait('@tiles.all')
     cy.get('input[type="search"][title="Search in table"]').type('Toulouse')
     cy.get('div.bp3-table-quadrant-scroll-container', {timeout: 20000}).should('contain', 'Toulouse')
@@ -25,7 +25,7 @@ describe('Filter ', () => {
 //      method: 'GET',      // Route all GET requests
 //      url: 'api/crud/layers/3/tilejson/**'
 //    }).as('tiles')
-//    cy.visit('CRUD/map/cities')
+//    cy.visit('map/cities')
 //    cy.wait('@tiles.all')
 //    cy.get('button.bp3-intent-primary', {timeout:8000}).contains("properties").click({force: true})
 //    cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
@@ -48,7 +48,7 @@ describe('Filter ', () => {
 //      url: 'api/crud/layers/3/tilejson/**'
 //    }).as('tiles')
 //
-//    cy.visit('CRUD/map/cities')
+//    cy.visit('map/cities')
 //    cy.wait('@tiles.all')
 //    cy.get('button.bp3-intent-primary').contains("properties").click({force: true})
 //    cy.get('input[type="checkbox"]').first().click({force: true})
@@ -88,7 +88,7 @@ describe('Filter ', () => {
 //      url: 'api/crud/layers/3/tilejson/**'
 //    }).as('tiles')
 //
-//    cy.visit('CRUD/map/cities')
+//    cy.visit('map/cities')
 //    cy.wait('@tiles')
 //    cy.get('button.bp3-intent-primary').contains("properties").click({force: true})
 //    cy.get('input[type="checkbox"][value="name"]').should(($ch) => {
