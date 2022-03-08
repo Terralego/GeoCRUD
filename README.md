@@ -165,13 +165,13 @@ SSL_ENABLE=True in your .env field and restart stack
 
  
 # ⛏️ Built Using <a name = "built_using"></a> 
-  * [![Build Status](https://img.shields.io/gitlab/pipeline/terralego/terra-admin)]()
-[**terra-admin**](https://github.com/Terralego/terra-admin)
+  * [![Build Status](https://github.com/Terralego/GeoCRUD-front/actions/workflows/jsbuild.yml/badge.svg)]()
+[**GeoCRUD-front**](https://github.com/Terralego/GeoCRUD-front)
 
-  * [![Build Status](https://travis-ci.org/Terralego/django-terra-geocrud.svg?branch=master)](https://travis-ci.org/Terralego/django-terra-geocrud)
+  * [![Build Status](https://github.com/Terralego/django-terra-geocrud/actions/workflows/python-package.yml/badge.svg)]()
 [**django-terra-geocrud**](https://github.com/Terralego/django-terra-geocrud)
   
-  * [![Build Status](https://travis-ci.org/Terralego/django-geostore.svg?branch=master)](https://travis-ci.org/Terralego/django-terra-geocrud)
+  * [![Build Status](https://github.com/Terralego/django-geostore/actions/workflows/python-package.yml/badge.svg)]()
 [**django-geostore**](https://github.com/Terralego/django-geostore)
 
 # ✍️ Authors <a name = "authors"></a>
