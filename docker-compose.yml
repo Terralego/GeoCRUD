@@ -36,8 +36,6 @@ services:
     build:
       context: ./front
       dockerfile: ../.docker/Dockerfile.front
-      args:
-        NODE: 12.16
     ports:
       - "${FRONT_PORT}:80"
     env_file:
