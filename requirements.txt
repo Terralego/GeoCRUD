@@ -59,7 +59,7 @@ cssselect2==0.5.0
     # via weasyprint
 deepmerge==1.0.1
     # via django-geostore
-django==3.2.12
+django==3.2.13
     # via
     #   -r requirements.in
     #   django-admin-thumbnails
@@ -149,8 +149,6 @@ html5lib==1.1
     # via weasyprint
 idna==3.3
     # via requests
-importlib-resources==5.4.0
-    # via jsonschema
 inflection==0.5.1
     # via drf-yasg
 itypes==1.2.0
@@ -261,8 +259,6 @@ webencodings==0.5.1
     #   cssselect2
     #   html5lib
     #   tinycss2
-zipp==3.7.0
-    # via importlib-resources
 zope-event==4.5.0
     # via gevent
 zope-interface==5.4.0
