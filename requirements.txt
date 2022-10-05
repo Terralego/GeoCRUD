@@ -81,7 +81,7 @@ django-admin-ordering==0.15.0
     # via django-terra-geocrud
 django-admin-thumbnails==0.2.6
     # via django-terra-geocrud
-django-debug-toolbar==3.2.4
+django-debug-toolbar==3.7.0
     # via -r requirements.in
 django-geostore==0.6.7
     # via django-terra-geocrud
