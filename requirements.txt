@@ -127,7 +127,7 @@ djangorestframework-gis==0.18
     #   django-terra-geocrud
 djangorestframework-jwt==1.11.0
     # via django-terra-accounts
-drf-yasg==1.20.0
+drf-yasg==1.21.4
     # via -r requirements.in
 enum-compat==0.0.3
     # via django-url-filter
@@ -204,6 +204,7 @@ pytz==2021.3
     #   celery
     #   django
     #   djangorestframework
+    #   drf-yasg
 requests[security]==2.27.1
     # via
     #   coreapi
