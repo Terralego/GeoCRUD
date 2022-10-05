@@ -59,7 +59,7 @@ cssselect2==0.5.0
     # via weasyprint
 deepmerge==1.0.1
     # via django-geostore
-django==3.2.13
+django==3.2.15
     # via
     #   -r requirements.in
     #   django-admin-thumbnails
