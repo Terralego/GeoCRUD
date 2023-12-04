@@ -6,12 +6,14 @@
 #
 amqp==5.1.0
     # via kombu
-asgiref==3.5.0
+asgiref==3.7.2
     # via django
 attrs==21.4.0
     # via
     #   fiona
     #   jsonschema
+backports-zoneinfo==0.2.1
+    # via django
 beautifulsoup4==4.10.0
     # via django-template-engines
 billiard==3.6.4.0
@@ -59,7 +61,7 @@ cssselect2==0.5.0
     # via weasyprint
 deepmerge==1.0.1
     # via django-geostore
-django==3.2.13
+django==4.2.8
     # via
     #   -r requirements.in
     #   django-admin-thumbnails
@@ -134,7 +136,9 @@ enum-compat==0.0.3
 fiona==1.8.21
     # via django-geostore
 fonttools[woff]==4.29.1
-    # via weasyprint
+    # via
+    #   fonttools
+    #   weasyprint
 future==0.18.2
     # via django-json-widget
 gevent==21.12.0
@@ -149,6 +153,8 @@ html5lib==1.1
     # via weasyprint
 idna==3.3
     # via requests
+importlib-resources==6.1.1
+    # via jsonschema
 inflection==0.5.1
     # via drf-yasg
 itypes==1.2.0
@@ -202,7 +208,6 @@ python-monkey-business==1.0.0
 pytz==2021.3
     # via
     #   celery
-    #   django
     #   djangorestframework
 requests[security]==2.27.1
     # via
@@ -239,6 +244,8 @@ tinycss2==1.1.1
     # via
     #   cssselect2
     #   weasyprint
+typing-extensions==4.8.0
+    # via asgiref
 uritemplate==4.1.1
     # via
     #   coreapi
@@ -259,6 +266,8 @@ webencodings==0.5.1
     #   cssselect2
     #   html5lib
     #   tinycss2
+zipp==3.17.0
+    # via importlib-resources
 zope-event==4.5.0
     # via gevent
 zope-interface==5.4.0
