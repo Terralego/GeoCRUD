@@ -105,7 +105,7 @@ django-template-model==1.0.6
     # via django-terra-geocrud
 django-terra-accounts==1.0.7
     # via django-terra-geocrud
-django-terra-geocrud==1.0.25
+django-terra-geocrud==1.0.29
     # via -r requirements.in
 django-terra-settings==1.0.3
     # via django-terra-accounts
